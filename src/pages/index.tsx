@@ -13,7 +13,7 @@ export default function Home() {
         <meta name="description" content="Your Trusted Digital Specialist" />
       </Head>
       <section className="app grid place-items-center w-full h-screen bg-[#f5f5f5]">
-        <h2 className="font-bold text-4xl">Onimisea</h2>
+        <h2 className=" text-4xl font-lm2">Onimisea</h2>
       </section>
     </>
   );
