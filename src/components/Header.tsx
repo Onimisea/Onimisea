@@ -8,17 +8,18 @@ import Call2Action from "./Call2Action";
 type Props = {};
 const Header = (props: Props) => {
   const { systemTheme, theme, setTheme } = useTheme();
-  const currentTheme = theme === "system" ? systemTheme : theme;
-
+  
   const [darkMode, setDarkMode] = useState(false);
 
   const flexBetween = "flex items-center justify-between";
 
 useEffect(()=>{
+const currentTheme = theme === "system" ? systemTheme : theme;
+
 alert(JSON.stringify(currentTheme));
 alert(JSON.stringify(systemTheme));
 alert(JSON.stringify(theme));
-}, []);
+}, [systemTheme, theme, setTheme]);
 
   
 
