@@ -1,15 +1,20 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
-
+import { useTheme } from "next-themes";
 import { HiMoon, HiSun, HiOutlineMenuAlt4 } from "react-icons/hi";
 
 import Call2Action from "./Call2Action";
 
 type Props = {};
 const Header = (props: Props) => {
+  const { systemTheme, theme, setTheme } = useTheme();
+  const currentTheme = theme === "system" ? systemTheme: theme;
+
   const [darkMode, setDarkMode] = useState(false);
 
   const flexBetween = "flex items-center justify-between";
+
+  alert(JSON.stringify(currentTheme));
 
   return (
     <nav
