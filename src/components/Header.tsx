@@ -1,12 +1,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
-// import {
-//   Bars2Icon,
-//   XMarkIcon,
-//   MoonIcon,
-//   SunIcon,
-// } from "@heroicons/react/24/solid";
-import { HiMoon, HiSun } from "react-icons/hi";
+
+import { HiMoon, HiSun, HiOutlineMenuAlt4 } from "react-icons/hi";
 
 import Call2Action from "./Call2Action";
 
@@ -71,6 +66,10 @@ const Header = (props: Props) => {
           </section>
         )}
       </section>
+
+<section className="text-2xl text-secondary-500 hover:bg-gradient-primsec-f cursor-pointer w-fit duration-500 ml-7 flex lg:hidden">
+            <HiOutlineMenuAlt4 />
+          </section>
     </nav>
   );
 };
