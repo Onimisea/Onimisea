@@ -14,7 +14,11 @@ const Header = (props: Props) => {
 
   const flexBetween = "flex items-center justify-between";
 
-  alert(JSON.stringify(currentTheme));
+useEffect(()=>{
+alert(JSON.stringify(currentTheme));
+}, []);
+
+  
 
   return (
     <nav
