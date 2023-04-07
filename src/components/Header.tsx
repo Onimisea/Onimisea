@@ -8,7 +8,7 @@ import Call2Action from "./Call2Action";
 type Props = {};
 const Header = (props: Props) => {
   const { systemTheme, theme, setTheme } = useTheme();
-  const currentTheme = theme === "system" ? systemTheme: theme;
+  const currentTheme = theme === "system" ? systemTheme : theme;
 
   const [darkMode, setDarkMode] = useState(false);
 
@@ -16,6 +16,8 @@ const Header = (props: Props) => {
 
 useEffect(()=>{
 alert(JSON.stringify(currentTheme));
+alert(JSON.stringify(systemTheme));
+alert(JSON.stringify(theme));
 }, []);
 
   
