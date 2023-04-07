@@ -6,7 +6,7 @@ type Props = {
 const Call2Action = ({ buttonText, buttonType }: Props) => {
   return (
     <button
-      className={`${
+      className={`grid place-items-center ${
         buttonType === "primary"
           ? "bg-gradient-primsec-f hover:bg-gradient-primsec-b text-white text-sm px-6 py-[5px] rounded-full cursor-pointer duration-500 ml-4 hover:shadow-md hidden sm:flex"
           : buttonType === "secondary"
