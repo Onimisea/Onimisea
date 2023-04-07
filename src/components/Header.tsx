@@ -67,7 +67,7 @@ const Header = (props: Props) => {
         )}
       </section>
 
-<section className="text-2xl text-secondary-500 hover:bg-gradient-primsec-f cursor-pointer w-fit duration-500 ml-7 flex lg:hidden">
+<section className="text-2xl text-secondary-500 hover:text-primary-500 cursor-pointer w-fit duration-500 ml-7 flex lg:hidden">
             <HiOutlineMenuAlt4 />
           </section>
     </nav>
