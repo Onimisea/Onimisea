@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 type Props = {
   buttonText: string;
   buttonType: string;
@@ -5,6 +7,11 @@ type Props = {
 };
 
 const Call2Action = ({ buttonText, buttonType, isMenuToggled }: Props) => {
+
+useEffect(()=>{
+alert(isMenuToggled);
+}, []);
+
   return (
     <button
       className={`w-fit px-4 pt-2 pb-1  ${
