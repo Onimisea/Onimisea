@@ -88,7 +88,7 @@ setDarkMode(false);
 
 
 {isMenuToggled && (
-<section class name="fixed right-0 bottom-0 w-[300px] h-full bg-primary-500 dark:bg-secondary-500 z-40 drop-shadow-xl">
+<section className="fixed right-0 bottom-0 w-[300px] h-full bg-primary-500 dark:bg-secondary-500 z-40 drop-shadow-xl">
 Navigation 
 </section>
 )}
