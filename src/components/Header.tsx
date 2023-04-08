@@ -94,8 +94,8 @@ setDarkMode(false);
    </section> 
 
 
-<section className={`w-full h-[70%] flex items-center justify-center bg-green-500`}>
-<section className={`w-[80%] flex flex-col gap-0 text-3xl bg-red-500`}>
+<section className={`w-full h-[50%] flex items-center justify-center`}>
+<section className={`w-[80%] flex flex-col text-4xl`}>
           <Link
             href="/"
             className={`px-4 py-1 text-[16.5px] hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-200 duration-500 cursor-pointer`}
