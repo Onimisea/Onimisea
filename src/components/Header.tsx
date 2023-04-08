@@ -124,8 +124,8 @@ text-secondary-500 hover:text-gray-200 hover:text-secondary-500 dark:text-second
           </Link>
 
 <section className={`w-full`}>
-        <Call2Action buttonText="CV" buttonType="secondary" />
-        <Call2Action buttonText="Hire Me" buttonType="primary" />
+        <Call2Action buttonText="CV" buttonType="secondary" isMenuToggled={isMenuToggled} />
+        <Call2Action buttonText="Hire Me" buttonType="primary" isMenuToggled={isMenuToggled} />
       </section>
         </section>
 
