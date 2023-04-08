@@ -22,16 +22,13 @@ setDarkMode(true);
 setDarkMode(false);
 }
 
-alert(JSON.stringify(currentTheme));
-alert(JSON.stringify(systemTheme));
-alert(JSON.stringify(theme));
 }, [systemTheme, theme, setTheme, setDarkMode]);
 
   
 
   return (
     <nav
-      className={`w-[100%] h-[60px] ${flexBetween} sticky top-0 left-0 z-30 bg-white`}
+      className={`w-[100%] h-[60px] ${flexBetween} sticky top-0 left-0 z-30 bg-white dark:bg-dark`}
     >
       <section className="w-fit">
         <Link href="/">
@@ -85,7 +82,7 @@ alert(JSON.stringify(theme));
         )}
       </section>
 
-<section className="text-2xl text-secondary-500 hover:text-primary-500 cursor-pointer w-fit duration-500 ml-7 flex lg:hidden">
+<section className="text-2xl text-primary-500 hover:text-secondary-500 cursor-pointer w-fit duration-500 ml-7 flex lg:hidden">
             <HiOutlineMenuAlt4 />
           </section>
     </nav>
