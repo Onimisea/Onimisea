@@ -82,7 +82,7 @@ setDarkMode(false);
         )}
       </section>
 
-<section className="text-2xl text-primary-500 hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-tertiary-500 cursor-pointer w-fit duration-500 ml-7 flex lg:hidden">
+<section className="text-2xl text-primary-500 hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-300 cursor-pointer w-fit duration-500 ml-7 flex lg:hidden">
             <HiOutlineMenuAlt4 />
           </section>
     </nav>
