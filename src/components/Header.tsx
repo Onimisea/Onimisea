@@ -94,8 +94,8 @@ setDarkMode(false);
    </section> 
 
 
-<section className={`w-full h-[50%] flex items-center justify-center`}>
-<section className={`w-[80%] flex flex-col text-4xl`}>
+<section className={`w-full h-[40%] flex items-center justify-center`}>
+<section className={`w-[70%] flex flex-col text-4xl`}>
           <Link
             href="/"
             className={`px-4 py-1 text-[16.5px] hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-200 duration-500 cursor-pointer`}
@@ -121,6 +121,23 @@ setDarkMode(false);
             Contacts
           </Link>
         </section>
+
+<section className={`w-fit ${flexBetween}`}>
+        <Call2Action buttonText="CV" buttonType="secondary" />
+        <Call2Action buttonText="Hire Me" buttonType="primary" />
+
+        {darkMode ? (
+          <button className="text-xl text-white dark:text-secondary-500 dark:hover:text-gray-200 hover:text-secondary-500 cursor-pointer w-fit duration-500 ml-7" onClick={()=>setTheme("light")}>
+            <HiSun />
+          </button>
+        ) : (
+          <button className="text-xl text-primary-500 hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-200 cursor-pointer w-fit duration-500 ml-7" onClick={()=>setTheme("dark")}>
+            <HiMoon />
+          </button>
+        )}
+      </section>
+
+
 </section>
 
 </section>
