@@ -8,7 +8,7 @@ const Layout = ({ children }: PropsWithChildren) => {
   // console.log(router);
 
   return (
-    <section className="w-full h-screen dark:bg-backg dark:bg-dark font-p22Regular text-textColor-light dark:text-textColor-dark overflow-x-hidden overflow-y-auto scrollbar-thin scrollbar-track-primary-500 scrollbar-thumb-tertiary-500 scrollbar-track-rounded-md scrollbar-thumb-rounded-md">
+    <section className="w-full h-screen dark:bg-dark font-p22Regular text-textColor-light dark:text-secondary-500 overflow-x-hidden overflow-y-auto scrollbar-thin scrollbar-track-primary-500 scrollbar-thumb-tertiary-500 scrollbar-track-rounded-md scrollbar-thumb-rounded-md">
       {router.asPath === "/admin" ? (
         <section className="bg-blue-200 w-[90%] mx-auto relative">
           {/* Header */}
@@ -21,7 +21,7 @@ const Layout = ({ children }: PropsWithChildren) => {
           {/* <Footer /> */}
         </section>
       ) : (
-        <section className="bg-white w-[90%] mx-auto relative">
+        <section className="bg-white dark:bg-dark w-[90%] mx-auto relative">
           {/* Header */}
           <Header />
 
