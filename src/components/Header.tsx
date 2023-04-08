@@ -72,17 +72,17 @@ setDarkMode(false);
         <Call2Action buttonText="Hire Me" buttonType="primary" />
 
         {darkMode ? (
-          <section className="text-xl text-white hover:text-secondary-500 cursor-pointer w-fit duration-500 ml-7" onClick={()=>setTheme("light")}>
+          <section className="text-xl text-white dark:text-secondary-500 dark:hover:text-gray-200 hover:text-secondary-500 cursor-pointer w-fit duration-500 ml-7" onClick={()=>setTheme("light")}>
             <HiSun />
           </section>
         ) : (
-          <section className="text-xl text-primary-500 hover:text-secondary-500 cursor-pointer w-fit duration-500 ml-7" onClick={()=>setTheme("dark")}>
+          <section className="text-xl text-primary-500 hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-200 cursor-pointer w-fit duration-500 ml-7" onClick={()=>setTheme("dark")}>
             <HiMoon />
           </section>
         )}
       </section>
 
-<section className="text-2xl text-primary-500 hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-150 cursor-pointer w-fit duration-500 ml-7 flex lg:hidden">
+<section className="text-2xl text-primary-500 hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-200 cursor-pointer w-fit duration-500 ml-7 flex lg:hidden">
             <HiOutlineMenuAlt4 />
           </section>
     </nav>
