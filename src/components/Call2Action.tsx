@@ -1,7 +1,7 @@
 type Props = {
   buttonText: string;
   buttonType: string;
-  isMenuToggled: Boolean;
+  isMenuToggled: boolean;
 };
 
 const Call2Action = ({ buttonText, buttonType, isMenuToggled }: Props) => {
