@@ -16,10 +16,16 @@ const Header = (props: Props) => {
 useEffect(()=>{
 const currentTheme = theme === "system" ? systemTheme : theme;
 
+if(currentTheme === "dark") {
+setDarkMode(true);
+} else {
+setDarkMode(false);
+}
+
 alert(JSON.stringify(currentTheme));
 alert(JSON.stringify(systemTheme));
 alert(JSON.stringify(theme));
-}, [systemTheme, theme, setTheme]);
+}, [systemTheme, theme, setTheme, setDarkMode]);
 
   
 
@@ -69,12 +75,12 @@ alert(JSON.stringify(theme));
         <Call2Action buttonText="Hire Me" buttonType="primary" />
 
         {darkMode ? (
-          <section className="text-xl text-white hover:text-secondary-500 cursor-pointer w-fit duration-500 ml-7">
-            <HiMoon />
+          <section className="text-xl text-white hover:text-secondary-500 cursor-pointer w-fit duration-500 ml-7" onClick={()=>setTheme("light")}>
+            <HiSun />
           </section>
         ) : (
-          <section className="text-xl text-primary-500 hover:text-secondary-500 cursor-pointer w-fit duration-500 ml-7">
-            <HiSun />
+          <section className="text-xl text-primary-500 hover:text-secondary-500 cursor-pointer w-fit duration-500 ml-7" onClick={()=>setTheme("dark")}>
+            <HiMoon />
           </section>
         )}
       </section>
