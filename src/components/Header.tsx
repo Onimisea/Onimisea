@@ -72,19 +72,19 @@ setDarkMode(false);
         <Call2Action buttonText="Hire Me" buttonType="primary" />
 
         {darkMode ? (
-          <section className="text-xl text-white dark:text-secondary-500 dark:hover:text-gray-200 hover:text-secondary-500 cursor-pointer w-fit duration-500 ml-7" onClick={()=>setTheme("light")}>
+          <button className="text-xl text-white dark:text-secondary-500 dark:hover:text-gray-200 hover:text-secondary-500 cursor-pointer w-fit duration-500 ml-7" onClick={()=>setTheme("light")}>
             <HiSun />
-          </section>
+          </button>
         ) : (
-          <section className="text-xl text-primary-500 hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-200 cursor-pointer w-fit duration-500 ml-7" onClick={()=>setTheme("dark")}>
+          <button className="text-xl text-primary-500 hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-200 cursor-pointer w-fit duration-500 ml-7" onClick={()=>setTheme("dark")}>
             <HiMoon />
-          </section>
+          </button>
         )}
       </section>
 
-<section className="text-2xl text-primary-500 hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-200 cursor-pointer w-fit duration-500 ml-7 flex lg:hidden" onClick={()=>setIsMenuToggled(!isMenuToggled)}>
+<button className="text-2xl text-primary-500 hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-200 cursor-pointer w-fit duration-500 ml-7 flex lg:hidden" onClick={()=>setIsMenuToggled(!isMenuToggled)}>
             <HiOutlineMenuAlt4 />
-          </section>
+          </button>
 
 
 {isMenuToggled && (
@@ -92,6 +92,37 @@ setDarkMode(false);
    <section className="text-2xl text-secondary-500 hover:text-primary-500 dark:text-secondary-500 dark:hover:text-primary-500 cursor-pointer w-full duration-500 flex justify-end p-6" onClick={()=>setIsMenuToggled(!isMenuToggled)}>
       <MdClose />
    </section> 
+
+
+<section className={`w-full grid place-items-center`}>
+<section className={`w-[80%] flex flex-col gap-10 text-2xl`}>
+          <Link
+            href="/"
+            className={`px-4 py-1 text-[16.5px] hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-200 duration-500 cursor-pointer`}
+          >
+            Home
+          </Link>
+          <Link
+            href="/"
+            className={`px-4 py-1 text-[16.5px] hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-200 duration-500 cursor-pointer`}
+          >
+            About
+          </Link>
+          <Link
+            href="/"
+            className={`px-4 py-1 text-[16.5px] hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-200 duration-500 cursor-pointer`}
+          >
+            Portfolio
+          </Link>
+          <Link
+            href="/"
+            className={`px-4 py-1 text-[16.5px] hover:text-secondary-500 duration-500 dark:text-secondary-500 dark:hover:text-gray-200 cursor-pointer`}
+          >
+            Contacts
+          </Link>
+        </section>
+
+
 </section>
 )}
 
