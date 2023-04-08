@@ -4,6 +4,7 @@ import { useTheme } from "next-themes";
 import { HiMoon, HiSun, HiOutlineMenuAlt4 } from "react-icons/hi";
 import { MdClose } from "react-icons/md";
 import Call2Action from "./Call2Action";
+import Call2Action2 from "./Call2Action2";
 
 type Props = {};
 const Header = (props: Props) => {
@@ -13,21 +14,18 @@ const Header = (props: Props) => {
 
   const flexBetween = "flex items-center justify-between";
 
-useEffect(()=>{
-const currentTheme = theme === "system" ? systemTheme : theme;
+  useEffect(() => {
+    const currentTheme = theme === "system" ? systemTheme : theme;
 
-if(currentTheme === "dark") {
-setDarkMode(true);
-} else {
-setDarkMode(false);
-}
-
-}, [systemTheme, theme, setTheme, setDarkMode]);
-
-  
+    if (currentTheme === "dark") {
+      setDarkMode(true);
+    } else {
+      setDarkMode(false);
+    }
+  }, [systemTheme, theme, setTheme, setDarkMode]);
 
   return (
-    <nav
+    <header
       className={`w-[100%] h-[60px] ${flexBetween} sticky top-0 left-0 z-30 bg-white dark:bg-dark`}
     >
       <section className="w-fit">
@@ -36,108 +34,108 @@ setDarkMode(false);
         </Link>
       </section>
 
-      <section className={`w-fit hidden lg:flex ${flexBetween} `}>
-        <section className={`w-full ${flexBetween}`}>
-          <Link
-            href="/"
-            className={`px-4 py-1 text-[16.5px] hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-200 duration-500 cursor-pointer`}
-          >
-            Home
-          </Link>
-          <Link
-            href="/"
-            className={`px-4 py-1 text-[16.5px] hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-200 duration-500 cursor-pointer`}
-          >
-            About
-          </Link>
-          <Link
-            href="/"
-            className={`px-4 py-1 text-[16.5px] hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-200 duration-500 cursor-pointer`}
-          >
-            Portfolio
-          </Link>
-          <Link
-            href="/"
-            className={`px-4 py-1 text-[16.5px] hover:text-secondary-500 duration-500 dark:text-secondary-500 dark:hover:text-gray-200 cursor-pointer`}
-          >
-            Contacts
-          </Link>
-        </section>
-
-        <section className="w-fit hidden"></section>
-      </section>
+      <nav className={`w-fit hidden lg:flex ${flexBetween} `}>
+        <Link
+          href="/"
+          className={`px-4 py-1 text-[16.5px] hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-200 duration-500 cursor-pointer`}
+        >
+          Home
+        </Link>
+        <Link
+          href="/"
+          className={`px-4 py-1 text-[16.5px] hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-200 duration-500 cursor-pointer`}
+        >
+          About
+        </Link>
+        <Link
+          href="/"
+          className={`px-4 py-1 text-[16.5px] hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-200 duration-500 cursor-pointer`}
+        >
+          Portfolio
+        </Link>
+        <Link
+          href="/"
+          className={`px-4 py-1 text-[16.5px] hover:text-secondary-500 duration-500 dark:text-secondary-500 dark:hover:text-gray-200 cursor-pointer`}
+        >
+          Contacts
+        </Link>
+      </nav>
 
       <section className={`w-fit ${flexBetween}`}>
-        <Call2Action buttonText="CV" buttonType="secondary" isMenuToggled={isMenuToggled} />
-        <Call2Action buttonText="Hire Me" buttonType="primary" isMenuToggled={isMenuToggled} />
+        <Call2Action buttonText="CV" buttonType="secondary" />
+        <Call2Action buttonText="Hire Me" buttonType="primary" />
 
         {darkMode ? (
-          <button className="text-xl text-white dark:text-secondary-500 dark:hover:text-gray-200 hover:text-secondary-500 cursor-pointer w-fit duration-500 ml-7" onClick={()=>setTheme("light")}>
+          <button
+            className="text-xl text-white dark:text-secondary-500 dark:hover:text-gray-200 hover:text-secondary-500 cursor-pointer w-fit duration-500 ml-7"
+            onClick={() => setTheme("light")}
+          >
             <HiSun />
           </button>
         ) : (
-          <button className="text-xl text-primary-500 hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-200 cursor-pointer w-fit duration-500 ml-7" onClick={()=>setTheme("dark")}>
+          <button
+            className="text-xl text-primary-500 hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-200 cursor-pointer w-fit duration-500 ml-7"
+            onClick={() => setTheme("dark")}
+          >
             <HiMoon />
           </button>
         )}
       </section>
 
-<button className="text-2xl text-primary-500 hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-200 cursor-pointer w-fit duration-500 ml-7 flex lg:hidden" onClick={()=>setIsMenuToggled(!isMenuToggled)}>
-            <HiOutlineMenuAlt4 />
-          </button>
+      <button
+        className="text-2xl text-primary-500 hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-200 cursor-pointer w-fit duration-500 ml-7 flex lg:hidden"
+        onClick={() => setIsMenuToggled(!isMenuToggled)}
+      >
+        <HiOutlineMenuAlt4 />
+      </button>
 
-
-{isMenuToggled && (
-<section className="fixed right-0 bottom-0 w-[300px] h-full bg-primary-500 dark:bg-primary-500 z-40 drop-shadow-xl">
-   <section className="text-2xl text-secondary-500 hover:text-primary-500 dark:text-secondary-500 dark:hover:text-primary-500 cursor-pointer w-full duration-500 flex justify-end p-6" onClick={()=>setIsMenuToggled(!isMenuToggled)}>
-      <MdClose />
-   </section> 
-
-
-<section className={`w-full h-[50%] flex items-center justify-center bg-white`}>
-<section className={`w-[70%] flex flex-col text-4xl bg-green-500`}>
-          <Link
-            href="/"
-            className={`px-4 py-1 text-[16.5px] text-secondary-500 hover:text-gray-200 dark:text-secondary-500 dark:hover:text-gray-200 duration-500 cursor-pointer`}
+      {isMenuToggled && (
+        <aside className="fixed right-0 bottom-0 w-[200px] h-full bg-primary-500 dark:bg-primary-500 z-40 drop-shadow-xl">
+          <section
+            className="text-2xl text-secondary-500 hover:text-primary-500 dark:text-secondary-500 dark:hover:text-tertiary-500 cursor-pointer w-full duration-500 flex justify-end p-6"
+            onClick={() => setIsMenuToggled(!isMenuToggled)}
           >
-            Home
-          </Link>
-          <Link
-            href="/"
-            className={`px-4 py-1 text-[16.5px] 
-text-secondary-500 hover:text-gray-200 hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-200 duration-500 cursor-pointer`}
-          >
-            About
-          </Link>
-          <Link
-            href="/"
-            className={`px-4 py-1 text-[16.5px] 
-text-secondary-500 hover:text-gray-200 hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-200 duration-500 cursor-pointer`}
-          >
-            Portfolio
-          </Link>
-          <Link
-            href="/"
-            className={`px-4 py-1 text-[16.5px] text-secondary-500 hover:text-gray-200 hover:text-secondary-500 duration-500 dark:text-secondary-500 dark:hover:text-gray-200 cursor-pointer`}
-          >
-            Contacts
-          </Link>
+            <MdClose />
+          </section>
 
-<section className={`w-full`}>
-        <Call2Action buttonText="CV" buttonType="secondary" isMenuToggled={isMenuToggled} />
-        <Call2Action buttonText="Hire Me" buttonType="primary" isMenuToggled={isMenuToggled} />
-      </section>
-        </section>
+          <nav className={`w-full flex justify-center`}>
+            <section className={`w-[70%] flex flex-col text-2xl`}>
+              <Link
+                href="/"
+                className={`px-4 py-1 text-[16.5px] text-secondary-500 hover:text-gray-200 dark:text-secondary-500 dark:hover:text-gray-200 duration-500 cursor-pointer`}
+              >
+                Home
+              </Link>
+              <Link
+                href="/"
+                className={`px-4 py-1 text-[16.5px] text-secondary-500 hover:text-gray-200 dark:text-secondary-500 dark:hover:text-gray-200 duration-500 cursor-pointer`}
+              >
+                About
+              </Link>
+              <Link
+                href="/"
+                className={`px-4 py-1 text-[16.5px] text-secondary-500 hover:text-gray-200 dark:text-secondary-500 dark:hover:text-gray-200 duration-500 cursor-pointer`}
+              >
+                Portfolio
+              </Link>
+              <Link
+                href="/"
+                className={`px-4 py-1 text-[16.5px] text-secondary-500 hover:text-gray-200 dark:text-secondary-500 dark:hover:text-gray-200 duration-500 cursor-pointer`}
+              >
+                Contacts
+              </Link>
 
-
-
-
-</section>
-
-</section>
-)}
-
-    </nav>
+              <section className={`w-fit px-4 mt-3`}>
+                <Call2Action2 buttonText="CV" buttonType="secondary" />
+              </section>
+              <section className={`w-fit px-4 mt-6`}>
+                <Call2Action2 buttonText="Hire Me" buttonType="primary" />
+              </section>
+            </section>
+          </nav>
+        </aside>
+      )}
+    </header>
   );
 };
 export default Header;
