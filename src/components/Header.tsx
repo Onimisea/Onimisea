@@ -88,8 +88,8 @@ setDarkMode(false);
 
 
 {isMenuToggled && (
-<section className="fixed right-0 bottom-0 w-[300px] h-full bg-primary-500 dark:bg-tertiary-500 z-40 drop-shadow-xl">
-   <section className="text-2xl text-secondary-500 hover:text-primary-500 dark:text-secondary-500 dark:hover:text-gray-200 cursor-pointer w-fit duration-500 flex justify-end p-12" onClick={()=>setIsMenuToggled(!isMenuToggled)}>
+<section className="fixed right-0 bottom-0 w-[300px] h-full bg-primary-500 dark:bg-primary-500 z-40 drop-shadow-xl">
+   <section className="text-2xl text-secondary-500 hover:text-primary-500 dark:text-secondary-500 dark:hover:text-primary-500 cursor-pointer w-full duration-500 flex justify-end p-6" onClick={()=>setIsMenuToggled(!isMenuToggled)}>
       <MdClose />
    </section> 
 </section>
