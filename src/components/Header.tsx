@@ -94,34 +94,36 @@ setDarkMode(false);
    </section> 
 
 
-<section className={`w-full h-[50%] flex items-center justify-center`}>
-<section className={`w-[70%] flex flex-col text-4xl`}>
+<section className={`w-full h-[50%] flex items-center justify-center bg-white`}>
+<section className={`w-[70%] flex flex-col text-4xl bg-green-500`}>
           <Link
             href="/"
-            className={`px-4 py-1 text-[16.5px] hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-200 duration-500 cursor-pointer`}
+            className={`px-4 py-1 text-[16.5px] text-secondary-500 hover:text-gray-200 dark:text-secondary-500 dark:hover:text-gray-200 duration-500 cursor-pointer`}
           >
             Home
           </Link>
           <Link
             href="/"
-            className={`px-4 py-1 text-[16.5px] hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-200 duration-500 cursor-pointer`}
+            className={`px-4 py-1 text-[16.5px] 
+text-secondary-500 hover:text-gray-200 hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-200 duration-500 cursor-pointer`}
           >
             About
           </Link>
           <Link
             href="/"
-            className={`px-4 py-1 text-[16.5px] hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-200 duration-500 cursor-pointer`}
+            className={`px-4 py-1 text-[16.5px] 
+text-secondary-500 hover:text-gray-200 hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-200 duration-500 cursor-pointer`}
           >
             Portfolio
           </Link>
           <Link
             href="/"
-            className={`px-4 py-1 text-[16.5px] hover:text-secondary-500 duration-500 dark:text-secondary-500 dark:hover:text-gray-200 cursor-pointer`}
+            className={`px-4 py-1 text-[16.5px] text-secondary-500 hover:text-gray-200 hover:text-secondary-500 duration-500 dark:text-secondary-500 dark:hover:text-gray-200 cursor-pointer`}
           >
             Contacts
           </Link>
 
-<section className={`w-full ${flexBetween}`}>
+<section className={`w-full`}>
         <Call2Action buttonText="CV" buttonType="secondary" />
         <Call2Action buttonText="Hire Me" buttonType="primary" />
       </section>
