@@ -1,12 +1,12 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { HiMoon, HiSun, HiOutlineMenuAlt4 } from "react-icons/hi";
-import { MdClose } from "react-icons/md";
 import Call2Action from "./Call2Action";
-import Call2Action2 from "./Call2Action2";
+import Sidebar from "./Sidebar";
 
 type Props = {};
+
 const Header = (props: Props) => {
   const { systemTheme, theme, setTheme } = useTheme();
   const [darkMode, setDarkMode] = useState(false);
@@ -90,50 +90,13 @@ const Header = (props: Props) => {
       </button>
 
       {isMenuToggled && (
-        <aside className="fixed right-0 bottom-0 w-[200px] h-full bg-primary-500 dark:bg-primary-500 z-40 drop-shadow-xl">
-          <section
-            className="text-2xl text-secondary-500 hover:text-primary-500 dark:text-secondary-500 dark:hover:text-tertiary-500 cursor-pointer w-full duration-500 flex justify-end p-6"
-            onClick={() => setIsMenuToggled(!isMenuToggled)}
-          >
-            <MdClose />
-          </section>
-
-          <nav className={`w-full flex justify-center`}>
-            <section className={`w-[70%] flex flex-col text-2xl`}>
-              <Link
-                href="/"
-                className={`px-4 py-1 text-[16.5px] text-secondary-500 hover:text-gray-200 dark:text-secondary-500 dark:hover:text-gray-200 duration-500 cursor-pointer`}
-              >
-                Home
-              </Link>
-              <Link
-                href="/"
-                className={`px-4 py-1 text-[16.5px] text-secondary-500 hover:text-gray-200 dark:text-secondary-500 dark:hover:text-gray-200 duration-500 cursor-pointer`}
-              >
-                About
-              </Link>
-              <Link
-                href="/"
-                className={`px-4 py-1 text-[16.5px] text-secondary-500 hover:text-gray-200 dark:text-secondary-500 dark:hover:text-gray-200 duration-500 cursor-pointer`}
-              >
-                Portfolio
-              </Link>
-              <Link
-                href="/"
-                className={`px-4 py-1 text-[16.5px] text-secondary-500 hover:text-gray-200 dark:text-secondary-500 dark:hover:text-gray-200 duration-500 cursor-pointer`}
-              >
-                Contacts
-              </Link>
-
-              <section className={`w-fit px-4 mt-3`}>
-                <Call2Action2 buttonText="CV" buttonType="secondary" />
-              </section>
-              <section className={`w-fit px-4 mt-6`}>
-                <Call2Action2 buttonText="Hire Me" buttonType="primary" />
-              </section>
-            </section>
-          </nav>
-        </aside>
+        <Sidebar
+          onClickOutside={() => {
+            setIsMenuToggled(false);
+          }}
+          isMenuToggled={isMenuToggled}
+          setIsMenuToggled={setIsMenuToggled}
+        />
       )}
     </header>
   );
