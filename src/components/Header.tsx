@@ -8,8 +8,8 @@ import Call2Action from "./Call2Action";
 type Props = {};
 const Header = (props: Props) => {
   const { systemTheme, theme, setTheme } = useTheme();
-  
   const [darkMode, setDarkMode] = useState(false);
+  const [isMenuToggled, setIsMenuToggled] = useState(false);
 
   const flexBetween = "flex items-center justify-between";
 
@@ -82,9 +82,17 @@ setDarkMode(false);
         )}
       </section>
 
-<section className="text-2xl text-primary-500 hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-200 cursor-pointer w-fit duration-500 ml-7 flex lg:hidden">
+<section className="text-2xl text-primary-500 hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-200 cursor-pointer w-fit duration-500 ml-7 flex lg:hidden" onClick={()=>setIsMenuToggled(!isMenuToggled)}>
             <HiOutlineMenuAlt4 />
           </section>
+
+
+{isMenuToggled && (
+<section class name="fixed right-0 bottom-0 w-[300px] h-full bg-primary-500 dark:bg-secondary-500 z-40 drop-shadow-xl">
+Navigation 
+</section>
+)}
+
     </nav>
   );
 };
