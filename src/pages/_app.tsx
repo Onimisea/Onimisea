@@ -17,7 +17,7 @@ function App({ Component, pageProps, ...rest }: AppProps) {
 
   return (
     <Provider store={store}>
-      <ThemeProvider>
+      <ThemeProvider attribute="class">
         <Layout>
           <Component {...props.pageProps} />
         </Layout>
