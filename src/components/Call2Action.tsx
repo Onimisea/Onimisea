@@ -10,8 +10,8 @@ const Call2Action = ({ buttonText, buttonType }: Props) => {
         buttonType === "primary"
           ? "bg-gradient-primsec-f hover:bg-gradient-primsec-b text-white text-sm rounded-full cursor-pointer duration-500 ml-4 hover:shadow-md hidden lg:flex "
           : buttonType === "secondary"
-          ? "bg-white text-textColor-light border border-primary-500 hover:bg-gradient-primsec-b hover:border-none hover:text-white text-sm rounded-full cursor-pointer duration-500 hover:shadow-md hidden lg:flex"
-          : "bg-white hover:bg-gradient-primsec-b text-textColor-light hover:text-white text-sm rounded-full cursor-pointer duration-500 hover:shadow-md hidden lg:flex "
+          ? "bg-white dark:bg-tertiary-500 text-textColor-light dark:text-gray-200 border dark:border-none border-primary-500 hover:bg-gradient-primsec-b hover:border-none hover:text-white text-sm rounded-full cursor-pointer duration-500 hover:shadow-md hidden lg:flex"
+          : "bg-white dark:bg-tertiary-500 hover:bg-gradient-primsec-b text-textColor-light dark:text-gray-200 hover:text-white text-sm rounded-full cursor-pointer duration-500 hover:shadow-md hidden lg:flex "
       }`}
     >
       {buttonText}
