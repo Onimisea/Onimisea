@@ -40,25 +40,25 @@ setDarkMode(false);
         <section className={`w-full ${flexBetween}`}>
           <Link
             href="/"
-            className={`px-4 py-1 text-[16.5px] hover:text-secondary-500 duration-500 cursor-pointer`}
+            className={`px-4 py-1 text-[16.5px] hover:text-secondary-500 dark:text-tertiary-500 dark:hover:text-secondary-500 duration-500 cursor-pointer`}
           >
             Home
           </Link>
           <Link
             href="/"
-            className={`px-4 py-1 text-[16.5px] hover:text-secondary-500 duration-500 cursor-pointer`}
+            className={`px-4 py-1 text-[16.5px] hover:text-secondary-500 dark:text-tertiary-500 dark:hover:text-secondary-500 duration-500 cursor-pointer`}
           >
             About
           </Link>
           <Link
             href="/"
-            className={`px-4 py-1 text-[16.5px] hover:text-secondary-500 duration-500 cursor-pointer`}
+            className={`px-4 py-1 text-[16.5px] hover:text-secondary-500 dark:text-tertiary-500 dark:hover:text-secondary-500 duration-500 cursor-pointer`}
           >
             Portfolio
           </Link>
           <Link
             href="/"
-            className={`px-4 py-1 text-[16.5px] hover:text-secondary-500 duration-500 cursor-pointer`}
+            className={`px-4 py-1 text-[16.5px] hover:text-secondary-500 duration-500 dark:text-tertiary-500 dark:hover:text-secondary-500 cursor-pointer`}
           >
             Contacts
           </Link>
