@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { HiMoon, HiSun, HiOutlineMenuAlt4 } from "react-icons/hi";
-
+import { MdClose } from "react-icons/md";
 import Call2Action from "./Call2Action";
 
 type Props = {};
@@ -88,8 +88,10 @@ setDarkMode(false);
 
 
 {isMenuToggled && (
-<section className="fixed right-0 bottom-0 w-[300px] h-full bg-primary-500 dark:bg-secondary-500 z-40 drop-shadow-xl">
-Navigation 
+<section className="fixed right-0 bottom-0 w-[300px] h-full bg-primary-500 dark:bg-tertiary-500 z-40 drop-shadow-xl">
+   <section className="text-2xl text-secondary-500 hover:text-primary-500 dark:text-secondary-500 dark:hover:text-gray-200 cursor-pointer w-fit duration-500 flex justify-end p-12" onClick={()=>setIsMenuToggled(!isMenuToggled)}>
+      <MdClose />
+   </section> 
 </section>
 )}
 
