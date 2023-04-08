@@ -68,8 +68,8 @@ setDarkMode(false);
       </section>
 
       <section className={`w-fit ${flexBetween}`}>
-        <Call2Action buttonText="CV" buttonType="secondary" />
-        <Call2Action buttonText="Hire Me" buttonType="primary" />
+        <Call2Action buttonText="CV" buttonType="secondary" isMenuToggled={isMenuToggled} />
+        <Call2Action buttonText="Hire Me" buttonType="primary" isMenuToggled={isMenuToggled} />
 
         {darkMode ? (
           <button className="text-xl text-white dark:text-secondary-500 dark:hover:text-gray-200 hover:text-secondary-500 cursor-pointer w-fit duration-500 ml-7" onClick={()=>setTheme("light")}>
