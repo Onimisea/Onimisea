@@ -1,10 +1,16 @@
-import { PropsWithChildren } from "react";
+import { PropsWithChildren, useState } from "react";
 import { useRouter } from "next/router";
 import Footer from "./Footer";
 import Header from "./Header";
 
+type Props = {
+  activePage: string;
+  setActivePage: (value: string) => void;
+};
+
 const Layout = ({ children }: PropsWithChildren) => {
   const router = useRouter();
+
   // console.log(router);
 
   return (
@@ -26,7 +32,7 @@ const Layout = ({ children }: PropsWithChildren) => {
           <Header />
 
           {/* Main */}
-          <section className="py-6 bg-orange-200">{children}</section>
+          <section className="py-6 bg-gray-100">{children}</section>
 
           {/* Footer */}
           <Footer />

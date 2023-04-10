@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import { selectAuthState, setAuthState } from "../redux/authSlice";
 import { wrapper } from "@/redux/store";
+import HeroSection from "@/components/HeroSection";
 
 export default function Home() {
   const authState = useSelector(selectAuthState);
@@ -17,7 +18,8 @@ export default function Home() {
         <meta name="description" content="Your Trusted Digital Specialist" />
       </Head>
       {/* bg-gray-50 sm:bg-gray-200 md:bg-gray-400 lg:bg-gray-600 xl:bg-gray-800 */}
-      <section className="">
+     
+      <section className="w-full">
         {/* <div>
           <div>{authState ? "Logged in" : "Not Logged In"}</div>
           <button
@@ -31,12 +33,15 @@ export default function Home() {
           </button>
         </div> */}
 
-        <section className="">
+        {/* <section className="">
           <h2 className=" text-4xl font-lmBold">Onimisea</h2>
           <h2 className=" text-4xl font-p22Regular">
             Full-stack Web/3 Developer
           </h2>
-        </section>
+        </section> */}
+
+
+        <HeroSection />
 
       </section>
     </>
