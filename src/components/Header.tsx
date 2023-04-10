@@ -5,15 +5,9 @@ import { HiMoon, HiSun, HiOutlineMenuAlt4 } from "react-icons/hi";
 import Call2Action from "./Call2Action";
 import Sidebar from "./Sidebar";
 import { useRouter } from "next/router";
+import { NavLink } from "@/shared/types";
 
 type Props = {};
-
-type NavLink = {
-  id: number,
-  name: string,
-  href: string,
-  active: boolean,
-}
 
 const Header = (props: Props) => {
   const router = useRouter();
@@ -39,7 +33,6 @@ const Header = (props: Props) => {
   }, [systemTheme, theme, setTheme, setDarkMode]);
 
   useEffect(() => {
-    
     if (typeof window !== undefined || typeof window !== null) {
       if (router.route) {
         setPages([
@@ -132,7 +125,8 @@ const Header = (props: Props) => {
             setIsMenuToggled(false);
           }}
           isMenuToggled={isMenuToggled}
-          setIsMenuToggled={setIsMenuToggled} pages={pages}
+          setIsMenuToggled={setIsMenuToggled}
+          pages={pages}
         />
       )}
     </header>

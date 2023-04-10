@@ -3,24 +3,21 @@ import Link from "next/link";
 import { MdClose } from "react-icons/md";
 import Call2Action2 from "./Call2Action2";
 import { useRouter } from "next/router";
+import { NavLink } from "@/shared/types";
 
 type Props = {
   onClickOutside(): void;
   setIsMenuToggled(value: boolean): void;
   isMenuToggled: boolean;
-  pages: NavLink[],
+  pages: NavLink[];
 };
 
-type NavLink = {
-  id: number;
-  name: string;
-  href: string;
-  active: boolean;
-};
-
-const Sidebar = (
-  { onClickOutside, setIsMenuToggled, isMenuToggled, pages }: Props
-) => {
+const Sidebar = ({
+  onClickOutside,
+  setIsMenuToggled,
+  isMenuToggled,
+  pages,
+}: Props) => {
   const ref = useRef<HTMLElement>(null);
   const router = useRouter();
 
