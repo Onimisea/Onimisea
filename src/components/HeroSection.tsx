@@ -26,19 +26,19 @@ const HeroSection = (props: Props) => {
         </section>
 
         <section className="bg-gray-100 w-full h-full lg:w-[45%] rounded-md flex flex-col items-center justify-center gap-6 group px-6 py-10">
-<section className="w-[265px] h-[265px] rounded-full bg-gradient-primsec-ir group-hover:bg-gradient-primsec-i
+<section className="w-[267px] h-[267px] rounded-full bg-gradient-primsec-ir group-hover:bg-gradient-primsec-i
  grid place-items-center shadow-lg overflow:hidden">
-<section className="w-[255px] h-[255px] rounded-full bg-white grid place-items-center">
+<section className="w-[253px] h-[253px] rounded-full bg-white grid place-items-center">
 <Image src={opp} alt="Onimisea | Coolest Dev in Africa" width={250} height={250} loading="eager" className="w-[250px] h-[250px] rounded-full object-cover" />
 </section>
 </section>
 
 <section className="w-full flex items-center justify-center gap-6">
-<Link href="/" className="text-xl hover:text-2xl text-tertiary-500 hover:text-secondary-500 group-hover:text-primary"><BsFacebook /></Link>
-<Link href="/" className="text-xl hover:text-2xl text-tertiary-500 hover:text-secondary-500 group-hover:text-primary"><BsTwitter /></Link>
-<Link href="/" className="text-xl hover:text-2xl text-tertiary-500 hover:text-secondary-500 group-hover:text-primary"><BsInstagram /></Link>
-<Link href="/" className="text-xl hover:text-2xl text-tertiary-500 hover:text-secondary-500 group-hover:text-primary"><BsLinkedin /></Link>
-<Link href="/" className="text-xl hover:text-2xl text-tertiary-500 hover:text-secondary-500 group-hover:text-primary"><BsGithub /></Link>
+<Link href="/" className="text-2xl hover:text-3xl text-tertiary-500 hover:text-secondary-500 group-hover:text-primary"><BsFacebook /></Link>
+<Link href="/" className="text-2xl hover:text-3xl text-tertiary-500 hover:text-secondary-500 group-hover:text-primary"><BsTwitter /></Link>
+<Link href="/" className="text-2xl hover:text-3xl text-tertiary-500 hover:text-secondary-500 group-hover:text-primary"><BsInstagram /></Link>
+<Link href="/" className="text-2xl hover:text-3xl text-tertiary-500 hover:text-secondary-500 group-hover:text-primary"><BsLinkedin /></Link>
+<Link href="/" className="text-2xl hover:text-3xl text-tertiary-500 hover:text-secondary-500 group-hover:text-primary"><BsGithub /></Link>
 </section>
 </section>
       </section>
