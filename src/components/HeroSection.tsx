@@ -6,7 +6,7 @@ type Props = {};
 const HeroSection = (props: Props) => {
   return (
     <section className="w-full pt-4 pb-10 md:h-full flex flex-col lg:flex-row items-center justify-center">
-      <section className="w-full flex flex-col lg:flex-row items-center justify-between lg:gap-20">
+      <section className="w-full flex flex-col lg:flex-row items-center justify-between">
         <section className="w-full lg:w-[45%]">
           <p className="text-tertiary-500 text-md">Hello, I&apos;m</p>
 
@@ -21,10 +21,10 @@ const HeroSection = (props: Props) => {
           <EmailSubscriptionForm />
         </section>
 
-        <section className="bg-gray-200 w-full lg:w-[45%] rounded-md flex flex-col items-center justify-center gap-4">
-<section className="w-[250px] h-[250px] rounded-full bg-gradient-primsec-ir hover:bg-gradient-primsec-i p-2
+        <section className="bg-gray-200 w-full lg:w-[42%] rounded-md flex flex-col items-center justify-center gap-4 group">
+<section className="w-[250px] h-[250px] rounded-full bg-gradient-primsec-ir group-hover:bg-gradient-primsec-i p-2
  grid place-items-center">
-<section className="w-full h-full rounded-full bg-white font-lmMedium text-2xl grid place-items-center">
+<section className="w-full h-full rounded-full bg-white font-lmBold text-3xl grid place-items-center">
 Onimisea
 </section>
 </section>
