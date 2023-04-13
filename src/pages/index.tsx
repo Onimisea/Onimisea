@@ -41,7 +41,7 @@ export default function Home() {
         </section> */}
 
 
-        <HeroSection />
+        <HeroSection /> 
 
       </section>
     </>
