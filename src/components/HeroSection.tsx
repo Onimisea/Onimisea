@@ -7,7 +7,7 @@ const HeroSection = (props: Props) => {
   return (
     <section className="w-full pt-4 pb-10 md:h-full flex flex-col lg:flex-row items-center justify-center">
       <section className="w-full flex flex-col lg:flex-row items-center justify-between">
-        <section className="w-full lg:w-[45%]">
+        <section className="w-full lg:w-[42%]">
           <p className="text-tertiary-500 text-md">Hello, I&apos;m</p>
 
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-p22Bold">Your Fullstack <span className="text-tertiary-500">Web/3</span> <br />Developer <span className="text-tertiary-500 text-lg md:text-xl lg:text-2xl">&</span> <span className="text-xl md:text-2xl lg:text-3xl">Software <br />Engineer</span></h1>
@@ -21,7 +21,7 @@ const HeroSection = (props: Props) => {
           <EmailSubscriptionForm />
         </section>
 
-        <section className="bg-gray-200 w-full h-full lg:w-[42%] rounded-md flex flex-col items-center justify-center gap-4 group">
+        <section className="bg-gray-200 w-full h-full lg:w-[42%] rounded-md flex flex-col items-center justify-center gap-4 group p-6">
 <section className="w-[250px] h-[250px] rounded-full bg-gradient-primsec-ir group-hover:bg-gradient-primsec-i p-2
  grid place-items-center">
 <section className="w-full h-full rounded-full bg-white font-lmBold text-3xl grid place-items-center">
