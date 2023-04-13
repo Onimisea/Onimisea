@@ -1,8 +1,7 @@
 import Image from "next/image"
 import Link from "next/link";
 import EmailSubscriptionForm from "./EmailSubscriptionForm";
-import { BsFacebook, BsLinkedin, BsGithub } from "react-icons/bs";
-import { AiFillTwitterCircle, AiFillInstagram } from "react-icons/ai";
+import { BsFacebook, BsLinkedin, BsGithub, BsTwitter, BsInstagram } from "react-icons/bs";
 
 
 
@@ -26,7 +25,7 @@ const HeroSection = (props: Props) => {
           <EmailSubscriptionForm />
         </section>
 
-        <section className="bg-gray-100 w-full h-full lg:w-[45%] rounded-md flex flex-col items-center justify-center gap-4 group p-6">
+        <section className="bg-gray-100 w-full h-full lg:w-[45%] rounded-md flex flex-col items-center justify-center gap-6 group p-6">
 <section className="w-[250px] h-[250px] rounded-full bg-gradient-primsec-ir group-hover:bg-gradient-primsec-i p-2
  grid place-items-center">
 <section className="w-full h-full rounded-full bg-white font-lmBold text-3xl grid place-items-center">
@@ -36,23 +35,10 @@ Onimisea
 
 <section className="w-full flex items-center justify-center gap-6">
 <Link href="/" className="text-xl hover:text-2xl text-tertiary-500 hover:text-secondary-500 group-hover:text-primary"><BsFacebook /></Link>
-<Link href="/" className="text-xl hover:text-2xl text-tertiary-500 hover:text-secondary-500 group-hover:text-primary"><AiFillTwitterCircle /></Link>
-<Link href="/" className="text-xl hover:text-2xl text-tertiary-500 hover:text-secondary-500 group-hover:text-primary"><AiFillInstagram /></Link>
+<Link href="/" className="text-xl hover:text-2xl text-tertiary-500 hover:text-secondary-500 group-hover:text-primary"><BsTwitter /></Link>
+<Link href="/" className="text-xl hover:text-2xl text-tertiary-500 hover:text-secondary-500 group-hover:text-primary"><BsInstagram /></Link>
 <Link href="/" className="text-xl hover:text-2xl text-tertiary-500 hover:text-secondary-500 group-hover:text-primary"><BsLinkedin /></Link>
 <Link href="/" className="text-xl hover:text-2xl text-tertiary-500 hover:text-secondary-500 group-hover:text-primary"><BsGithub /></Link>
-
-
-
-
-
-
-
-
-
-
-
-
-
 </section>
 </section>
       </section>
