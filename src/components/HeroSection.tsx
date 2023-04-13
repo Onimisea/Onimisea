@@ -9,9 +9,11 @@ const HeroSection = (props: Props) => {
         <section className="bg-white w-full lg:w-[50%]">
           <p className="text-tertiary-500">Hello, I&apos;m</p>
 
-          <section className="">
-            <h1 className="">Fullstack Web/3 Developer</h1>
-            <p className="">And Your Trusted Digital Specialist</p>
+          <section className="w-full">
+            <h1 className="text-4xl">Fullstack Web/3 Developer</h1>
+            <p className="">
+              And Your Trusted Digital <span className="text-tertiary-500">Specialist</span>
+            </p>
           </section>
 
           <section className="">
