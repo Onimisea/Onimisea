@@ -25,14 +25,6 @@ darkMode: "class",
         h3_d: `1.5rem;`,
         h3_t: `1.25rem;`,
         h3_m: `1.125rem;`,
-
-        h4_d: `1.25rem;`,
-        h4_t: `1.125rem;`,
-        h4_m: `1rem;`,
-
-        h5_d: `1.125rem;`,
-        h5_t: `1rem;`,
-        h5_m: `0.85rem;`,
       },
 
       colors: {
@@ -87,9 +79,9 @@ darkMode: "class",
         "gradient-primsec-o":
           "linear-gradient(45deg, #007FFF 0%, #4da5ff 100%)",
 "gradient-primsec-i":
-          "linear-gradient(135deg, #051550 0%, #3219c8 50%, #007FFF 100%)",
+          "linear-gradient(45deg, #051550 0%, #3219c8 50%, #007FFF 100%)",
 "gradient-primsec-ir":
-          "linear-gradient(-135deg, #007FFF 0%, #3219c8 50%, #051550 100%)",
+          "linear-gradient(-45deg, #007FFF 0%, #3219c8 50%, #051550 100%)",
         // "mobile-home": "url('./assets/HomePageGraphic.png')",
       }),
     },
