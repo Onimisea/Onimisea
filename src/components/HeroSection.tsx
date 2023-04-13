@@ -29,7 +29,7 @@ const HeroSection = (props: Props) => {
 <section className="w-[250px] h-[250px] rounded-full bg-gradient-primsec-ir group-hover:bg-gradient-primsec-i p-2
  grid place-items-center shadow-lg">
 <section className="w-full h-full rounded-full bg-white font-lmBold text-3xl grid place-items-center">
-<Image src={oop} width={250} height={0} loading="eager" className="w-full h-full rounded-full" />
+<Image src={oop} alt="Onimisea | Coolest Dev in Africa" width={250} height={0} loading="eager" className="w-full h-full rounded-full" />
 </section>
 </section>
 
