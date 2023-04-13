@@ -86,6 +86,10 @@ darkMode: "class",
           "linear-gradient(45deg, #007FFF 0%, #3219C8 100%)",
         "gradient-primsec-o":
           "linear-gradient(45deg, #007FFF 0%, #4da5ff 100%)",
+"gradient-primsec-i":
+          "linear-gradient(135deg, #051550 0%, #3219c8 50%, #007FFF 100%)",
+"gradient-primsec-ir":
+          "linear-gradient(-135deg, #007FFF 0%, #3219c8 50%, #051550 100%)",
         // "mobile-home": "url('./assets/HomePageGraphic.png')",
       }),
     },
