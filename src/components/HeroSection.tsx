@@ -21,8 +21,8 @@ const HeroSection = (props: Props) => {
           <EmailSubscriptionForm />
         </section>
 
-        <section className="bg-gray-200 w-full lg:w-[50%] rounded-md flex flex-col items-center justify-center gap-4">
-<section className="w-[300px] h-[300px] rounded-full bg-gradient-primsec-i hover:bg-gradient-primsec-ir">
+        <section className="bg-gray-200 w-full lg:w-[45%] rounded-md flex flex-col items-center justify-center gap-4">
+<section className="w-[250px] h-[250px] rounded-full bg-gradient-primsec-ir hover:bg-gradient-primsec-i">
 </section>
 
 <section className="w-full flex items-center justify-center spacing-x-4"></section>
