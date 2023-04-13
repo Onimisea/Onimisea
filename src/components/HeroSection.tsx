@@ -34,12 +34,12 @@ Onimisea
 </section>
 </section>
 
-<section className="w-full flex items-center justify-center spacing-x-4">
-<Link href="/" className="text-md text-tertiary-500 hover:text-secondary-500 group-hover:text-primary"><BsFacebook /></Link>
-<Link href="/" className="text-md text-tertiary-500 hover:text-secondary-500 group-hover:text-primary"><AiFillTwitterCircle /></Link>
-<Link href="/" className="text-md text-tertiary-500 hover:text-secondary-500 group-hover:text-primary"><AiFillInstagram /></Link>
-<Link href="/" className="text-md text-tertiary-500 hover:text-secondary-500 group-hover:text-primary"><BsLinkedin /></Link>
-<Link href="/" className="text-md text-tertiary-500 hover:text-secondary-500 group-hover:text-primary"><BsGithub /></Link>
+<section className="w-full flex items-center justify-center gap-6 bg-red-500">
+<Link href="/" className="text-xl hover:2xl text-tertiary-500 hover:text-secondary-500 group-hover:text-primary"><BsFacebook /></Link>
+<Link href="/" className="text-xl hover:2xl text-tertiary-500 hover:text-secondary-500 group-hover:text-primary"><AiFillTwitterCircle /></Link>
+<Link href="/" className="text-xl hover:2xl text-tertiary-500 hover:text-secondary-500 group-hover:text-primary"><AiFillInstagram /></Link>
+<Link href="/" className="text-xl hover:2xl text-tertiary-500 hover:text-secondary-500 group-hover:text-primary"><BsLinkedin /></Link>
+<Link href="/" className="text-xl hover:2xl text-tertiary-500 hover:text-secondary-500 group-hover:text-primary"><BsGithub /></Link>
 
 
 
