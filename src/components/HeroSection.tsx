@@ -6,7 +6,7 @@ type Props = {};
 const HeroSection = (props: Props) => {
   return (
     <section className="w-full pt-4 pb-10 md:h-full flex flex-col lg:flex-row items-center justify-center">
-      <section className="w-full flex flex-col lg:flex-row items-center justify-center lg:gap-20">
+      <section className="w-full flex flex-col lg:flex-row items-center justify-between lg:gap-20">
         <section className="w-full lg:w-[50%]">
           <p className="text-tertiary-500 text-md">Hello, I&apos;m</p>
 
@@ -21,7 +21,12 @@ const HeroSection = (props: Props) => {
           <EmailSubscriptionForm />
         </section>
 
-        <section className="bg-red-500 w-full lg:w-[50%]">HeroSection</section>
+        <section className="bg-gray-200 w-full lg:w-[40%] rounded-md flex items-center justify-center gap-4">
+<section className="w-[400px] h-[400px] rounded-full bg-gradient-primsec-i hover:bg-gradient-primsec-ir">
+</section>
+
+<section className="w-full flex items-center justify-center spacing-x-4"></section>
+</section>
       </section>
     </section>
   );
