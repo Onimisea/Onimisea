@@ -9,18 +9,15 @@ const HeroSection = (props: Props) => {
         <section className="bg-white w-full lg:w-[50%]">
           <p className="text-tertiary-500 text-sm">Hello, I&apos;m</p>
 
-          <section className="w-full">
             <h1 className="text-4xl font-p22Bold">Your Fullstack <span className="text-tertiary-500">Web/3</span> Developer <span className="text-tertiary-500 text-2xl">&</span> <span className="text-3xl">Software Engineer</span></h1>
-          </section>
-
-          <section className="">
-            <p className="">
+          
+            <p className="my-4 text-justify">
               I design and develop bespoke websites and applications for small
               businesses, help them establish strong digital presence to
               maximize their marketing efforts and improve their sales. I drop useful nuggets regularly, be sure to subscribe.</p>
-          </section>
+          
 
-          <section className=""></section>
+          <section className="">Email Subscription Form</section>
         </section>
 
         <section className="bg-red-500 w-full lg:w-[50%]">HeroSection</section>
