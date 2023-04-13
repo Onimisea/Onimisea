@@ -7,13 +7,11 @@ const HeroSection = (props: Props) => {
     <section className="w-full pt-4 pb-10 md:h-full flex flex-col lg:flex-row items-center justify-center">
       <section className="w-full flex flex-col lg:flex-row items-center justify-center lg:gap-20">
         <section className="bg-white w-full lg:w-[50%]">
-          <p className="text-tertiary-500">Hello, I&apos;m</p>
+          <small className="text-tertiary-500">Hello, I&apos;m</small>
 
           <section className="w-full">
-            <h1 className="text-4xl">Fullstack Web/3 Developer</h1>
-            <p className="">
-              And Your Trusted Digital <span className="text-tertiary-500">Specialist</span>
-            </p>
+            <h1 className="text-4xl font-p22Bold">Your Fullstack <span className="text-tertiary-500">Web/3</span> Developer</h1>
+            <p className="text-2xl">Software Engineer:</p>
           </section>
 
           <section className="">
