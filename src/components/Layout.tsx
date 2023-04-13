@@ -32,7 +32,7 @@ const Layout = ({ children }: PropsWithChildren) => {
           <Header />
 
           {/* Main */}
-          <section className="py-6 bg-gray-100">{children}</section>
+          <section className="py-6">{children}</section>
 
           {/* Footer */}
           <Footer />
