@@ -25,7 +25,7 @@ const HeroSection = (props: Props) => {
           <EmailSubscriptionForm />
         </section>
 
-        <section className="bg-gray-100 w-full h-full lg:w-[45%] rounded-md flex flex-col items-center justify-center gap-6 group p-6">
+        <section className="bg-gray-100 w-full h-full lg:w-[45%] rounded-md flex flex-col items-center justify-center gap-6 group px-6 py-10">
 <section className="w-[250px] h-[250px] rounded-full bg-gradient-primsec-ir group-hover:bg-gradient-primsec-i p-2
  grid place-items-center">
 <section className="w-full h-full rounded-full bg-white font-lmBold text-3xl grid place-items-center">
