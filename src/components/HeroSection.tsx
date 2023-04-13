@@ -14,7 +14,7 @@ const HeroSection = (props: Props) => {
         <section className="w-full lg:w-[45%]">
           <p className="text-tertiary-500 text-md">Hello, I&apos;m</p>
 
-            <h1 className="text-3xl lg:text-4xl font-p22Bold">Your Fullstack <span className="text-tertiary-500">Web/3</span> <br />Developer <span className="text-tertiary-500 text-xl lg:text-2xl">&</span> <span className="text-2xl lg:text-3xl">Software <br />Engineer</span></h1>
+            <h1 className="text-3xl lg:text-4xl font-p22Bold">Your Fullstack <span className="text-tertiary-500">Web/3</span> Developer <span className="text-tertiary-500 text-xl lg:text-2xl">&</span> <span className="text-2xl lg:text-3xl">Software Engineer</span></h1>
           
             <p className="my-4 text-justify">
               I design and develop bespoke websites and applications for small
