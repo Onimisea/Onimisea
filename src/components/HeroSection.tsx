@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link";
 import EmailSubscriptionForm from "./EmailSubscriptionForm";
 import { BsFacebook, BsLinkedin, BsGithub, BsTwitter, BsInstagram } from "react-icons/bs";
-
+import opp from "../../public/OnimiseaProfilePicture.jpg";
 
 
 type Props = {};
@@ -27,9 +27,9 @@ const HeroSection = (props: Props) => {
 
         <section className="bg-gray-100 w-full h-full lg:w-[45%] rounded-md flex flex-col items-center justify-center gap-6 group px-6 py-10">
 <section className="w-[250px] h-[250px] rounded-full bg-gradient-primsec-ir group-hover:bg-gradient-primsec-i p-2
- grid place-items-center">
+ grid place-items-center shadow-lg">
 <section className="w-full h-full rounded-full bg-white font-lmBold text-3xl grid place-items-center">
-Onimisea
+<Image src={oop} width={250} height={0} loading="eager" className="w-full h-full rounded-full" />
 </section>
 </section>
 
