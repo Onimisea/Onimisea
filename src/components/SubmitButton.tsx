@@ -8,7 +8,7 @@ type Props = {
 const SubmitButton = ({ buttonText, buttonType }: Props) => {
   return (
     <button type="submit"
-      className={`w-full lg:w-fit px-4 pt-2 pb-1 text-center ${
+      className={`w-full lg:w-fit px-4 pt-2 pb-1 grid place-items-center ${
         buttonType === "primary"
           ? `bg-gradient-primsec-f hover:bg-gradient-primsec-b text-white text-sm rounded-full cursor-pointer duration-500 ml-0 lg:ml-4 hover:shadow-md flex`
           : buttonType === "secondary"
