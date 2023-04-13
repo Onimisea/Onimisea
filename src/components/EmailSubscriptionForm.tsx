@@ -1,4 +1,5 @@
 import { useForm, SubmitHandler } from "react-hook-form";
+import SubmitButton from "./SubmitButton";
 
 type FormValues = {
   email: string;
@@ -15,10 +16,10 @@ alert(JSON.stringify(data));
 
 
 return (
-<form onSubmit={handleSubmit(onSubmit)}>
+<form onSubmit={handleSubmit(onSubmit)} className="w-full bg-gray-300">
       <input type="email" {...register("email")} />
 
-      <input type="submit" />
+      <SubmitButton buttonText="Subscribe" buttonType="primary" />
     </form>
 )
 }
