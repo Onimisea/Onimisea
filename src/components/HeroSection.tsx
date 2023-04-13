@@ -10,7 +10,7 @@ type Props = {};
 const HeroSection = (props: Props) => {
   return (
     <section className="w-full pt-4 pb-10 md:h-full flex flex-col lg:flex-row items-center justify-center">
-      <section className="w-full flex flex-col lg:flex-row items-center justify-between">
+      <section className="w-full flex flex-col gap-6 lg:gap-0 lg:flex-row items-center justify-center lg:justify-between">
         <section className="w-full lg:w-[45%]">
           <p className="text-tertiary-500 text-md">Hello, I&apos;m</p>
 
