@@ -1,4 +1,4 @@
-import Call2Action from "./Call2Action";
+
 import EmailSubscriptionForm from "./EmailSubscriptionForm";
 
 type Props = {};
