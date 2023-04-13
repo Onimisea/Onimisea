@@ -10,7 +10,7 @@ const HeroSection = (props: Props) => {
           <p className="text-tertiary-500 text-sm">Hello, I&apos;m</p>
 
           <section className="w-full">
-            <h1 className="text-4xl font-p22Bold">Your Fullstack <span className="text-tertiary-500">Web/3</span> Developer <span className="text-2xl">and Software Engineer:</span></h1>
+            <h1 className="text-4xl font-p22Bold">Your Fullstack <span className="text-tertiary-500">Web/3</span> Developer <span className="text-tertiary-500 text-2xl">and</span> <span className="text-3xl">and Software Engineer</span></h1>
           </section>
 
           <section className="">
