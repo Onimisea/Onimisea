@@ -20,8 +20,8 @@ return (
 
 <section className="w-full flex items-center justify-start">
       <input type="email" {...register("email", { required: "Email Address is required"})} aria-invalid={errors.email ? "true" : "false"} 
-placeholder="email address" className="bg-white border-[2px] border-tertiary-500 rounded-full px-4 pt-[2px] w-full hover:outline-none focus:outline-none hover:border-[3px] focus:border-[3px]
-hover:border-secondary-500 focus:border-secondary-500 " />
+placeholder="email address" className="bg-white border-[1.5px] border-tertiary-500 rounded-full px-4 pt-[2px] w-full hover:outline-none focus:outline-none hover:border-[2.5px] focus:border-[2.5px]
+hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 " />
 <SubmitButton buttonText="Subscribe" buttonType="primary" />
 </section>
 
