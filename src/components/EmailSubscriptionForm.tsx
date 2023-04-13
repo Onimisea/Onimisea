@@ -18,13 +18,14 @@ alert(JSON.stringify(data));
 return (
 <form onSubmit={handleSubmit(onSubmit)} className="w-full flex flex-col">
 
-<section className="w-full bg-orange-400 flex items-center justify-start">
+<section className="w-full flex items-center justify-start">
       <input type="email" {...register("email", { required: "Email Address is required"})} aria-invalid={errors.email ? "true" : "false"} 
-placeholder="email address" className="bg-white border border-tertiary-500 rounded-full px-4 pt-[2px] w-full" />
+placeholder="email address" className="bg-white border-[2px] border-tertiary-500 rounded-full px-4 pt-[2px] w-full hover:outline-none focus:outline-none hover:border-[3px] focus:border-[3px]
+hover:border-secondary-500 focus:border-secondary-500 " />
 <SubmitButton buttonText="Subscribe" buttonType="primary" />
 </section>
 
-{errors.email && <p className="text-red-600 w-full text-sm mt-2" role="alert">{errors.email?.message}</p>}
+{errors.email && <p className="text-red-600 w-full text-sm mt-2 pl-4" role="alert">{errors.email?.message}</p>}
     
     </form>
 )
