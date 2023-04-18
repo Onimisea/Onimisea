@@ -33,12 +33,10 @@ const Register = (props: Props) => {
         <meta name="description" content="Your Trusted Digital Specialist" />
       </Head>
 
-      <section className="w-[90%] sm:w-[80%] lg:w-[25%] mx-auto flex flex-col items-center justify-center gap-6 overflow-x-hidden overflow-y-auto scrollbar-thin scrollbar-track-primary-500 scrollbar-thumb-tertiary-500 scrollbar-track-rounded-md scrollbar-thumb-rounded-md">
+      <section className="w-[90%] sm:w-[80%] lg:w-[25%] mx-auto flex flex-col items-center justify-center gap-8">
         <LogoBox />
+
         <section className="w-full flex flex-col items-center justify-center gap-5">
-          {/* <h1 className="font-p22Bold text-xl sm:text-2xl md:text-3xl text-primary-500">
-          Register
-        </h1> */}
 
           <form
             onSubmit={handleSubmit(onSubmit)}
@@ -198,7 +196,7 @@ hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 da
 
           <p className="text-center text-primary-500 text-sm">
             Already an Admin?{" "}
-            <span className="text-secondary-500">
+            <span className="text-secondary-500 hover:text-primary-500">
               <Link href="/admin/login">Log In</Link>
             </span>
           </p>
