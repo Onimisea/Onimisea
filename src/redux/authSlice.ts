@@ -2,15 +2,30 @@ import { createSlice } from "@reduxjs/toolkit";
 import { HYDRATE } from "next-redux-wrapper";
 import { AppState } from "./store";
 
+
+type Admin = {
+  username: string;
+  email: string;
+  phone: number;
+  role: string;
+};
+
 // Type for our state
 export interface AuthState {
   authState: boolean;
+  userInfo: Admin;
+  userToken: string | null;
+  error: string | null;
+  success: boolean;
 }
 
 // Initial state
 const initialState: AuthState = {
   authState: false,
-  
+  userInfo: {}, // for user object
+  userToken: null, // for storing the JWT
+  error: null,
+  success: false, // for monitoring the registration process.
 };
 
 // Actual Slice
