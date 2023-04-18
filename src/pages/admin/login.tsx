@@ -51,33 +51,7 @@ const {
             onSubmit={handleSubmit(onSubmit)}
             className="w-full flex flex-col gap-4"
           >
-            <label htmlFor="username" className="">
-              <input
-                type="text"
-                {...register("username", {
-                  required: {
-                    value: true,
-                    message: "Username is required",
-                  },
-                  pattern: {
-                    value: /^[A-Za-z0-9]*$/,
-                    message: "Please enter a valid username",
-                  },
-                })}
-                aria-invalid={errors.username ? "true" : "false"}
-                placeholder="username"
-                className="bg-white dark:bg-transparent border-[1.5px] dark:border-[2px] border-primary-500 rounded-full px-4 py-1 w-full hover:outline-none focus:outline-none hover:border-[2.5px] focus:border-[2.5px]
-hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 dark:placeholder-gray-300"
-              />
-              {errors.username && (
-                <p
-                  className="text-red-600 w-full text-sm mt-2 pl-4"
-                  role="alert"
-                >
-                  {errors.username?.message}
-                </p>
-              )}
-            </label>
+            
 
             <label htmlFor="email" className="">
               <input
@@ -108,38 +82,7 @@ hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 da
               )}
             </label>
 
-            <label htmlFor="phone" className="">
-              <input
-                type="number"
-                {...register("phone", {
-                  required: {
-                    value: true,
-                    message: "Phone Number is required",
-                  },
-                  pattern: {
-                    value: /^[0-9]*$/,
-                    message: "Please enter a valid phone number",
-                  },
-                  maxLength: {
-                    value: 11,
-                    message: "Phone number cannot be more than 11 digits",
-                  },
-                })}
-                aria-invalid={errors.phone ? "true" : "false"}
-                placeholder="phone number"
-                className="bg-white dark:bg-transparent border-[1.5px] dark:border-[2px] border-primary-500 rounded-full px-4 py-1 w-full hover:outline-none focus:outline-none hover:border-[2.5px] focus:border-[2.5px]
-hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 dark:placeholder-gray-300"
-              />
-              {errors.phone && (
-                <p
-                  className="text-red-600 w-full text-sm mt-2 pl-4"
-                  role="alert"
-                >
-                  {errors.phone?.message}
-                </p>
-              )}
-            </label>
-
+            
             <label htmlFor="password" className="">
               <input
                 type="password"
@@ -166,36 +109,6 @@ hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 da
                   role="alert"
                 >
                   {errors.password?.message}
-                </p>
-              )}
-            </label>
-
-            <label htmlFor="confirm-password" className="">
-              <input
-                type="password"
-                {...register("confirm_password", {
-                  required: {
-                    value: true,
-                    message: "Please confirm your password",
-                  },
-                  pattern: {
-                    value:
-                      /(?=^.{8,}$)(?=.*\d)(?=.*[!@#$%^&*]+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/,
-                    message:
-                      "The password length must be greater than or equal to 8, must contain at least 1 uppercase, 1 lowercase, 1 number and must contain 1 special character",
-                  },
-                })}
-                aria-invalid={errors.password ? "true" : "false"}
-                placeholder="confirm password"
-                className="bg-white dark:bg-transparent border-[1.5px] dark:border-[2px] border-primary-500 rounded-full px-4 py-1 w-full hover:outline-none focus:outline-none hover:border-[2.5px] focus:border-[2.5px]
-hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 dark:placeholder-gray-300"
-              />
-              {errors.confirm_password && (
-                <p
-                  className="text-red-600 w-full text-sm mt-2 pl-4"
-                  role="alert"
-                >
-                  {errors.confirm_password?.message}
                 </p>
               )}
             </label>
