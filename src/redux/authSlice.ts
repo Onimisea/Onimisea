@@ -13,7 +13,7 @@ type Admin = {
 // Type for our state
 export interface AuthState {
   authState: boolean;
-  userInfo: Admin;
+  userInfo: Admin{};
   userToken: string | null;
   error: string | null;
   success: boolean;
