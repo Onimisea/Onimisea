@@ -33,7 +33,7 @@ const Register = (props: Props) => {
         <meta name="description" content="Your Trusted Digital Specialist" />
       </Head>
 
-      <section className="w-[90%] sm:w-[80%] lg:w-[25%] mx-auto flex flex-col items-center justify-center gap-10">
+      <section className="w-[90%] sm:w-[60%] lg:w-[40%] mx-auto flex flex-col items-center justify-center gap-10">
         <LogoBox />
 
         <section className="w-full flex flex-col items-center justify-center gap-8">
