@@ -10,6 +10,7 @@ export interface AuthState {
 // Initial state
 const initialState: AuthState = {
   authState: false,
+  
 };
 
 // Actual Slice
