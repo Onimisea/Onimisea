@@ -33,14 +33,14 @@ const Register = (props: Props) => {
         <meta name="description" content="Your Trusted Digital Specialist" />
       </Head>
 
-      <section className="w-[90%] sm:w-[80%] lg:w-[25%] mx-auto flex flex-col items-center justify-center gap-8">
+      <section className="w-[90%] sm:w-[80%] lg:w-[25%] mx-auto flex flex-col items-center justify-center gap-10">
         <LogoBox />
 
-        <section className="w-full flex flex-col items-center justify-center gap-5">
+        <section className="w-full flex flex-col items-center justify-center gap-8">
 
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="w-full flex flex-col gap-3"
+            className="w-full flex flex-col gap-6"
           >
             <label htmlFor="username" className="">
               <input
