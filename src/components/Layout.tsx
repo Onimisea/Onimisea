@@ -19,7 +19,7 @@ const Layout = ({ children }: PropsWithChildren) => {
         <section>
           {router.asPath.includes("/admin/login") ||
           router.asPath.includes("/admin/register") ? (
-            <section className="h-screen my-20 md:my-30 lg:my-40 dark:bg-dark overflow-x-hidden overflow-y-auto scrollbar-thin scrollbar-track-primary-500 scrollbar-thumb-tertiary-500 scrollbar-track-rounded-md scrollbar-thumb-rounded-md">
+            <section className="my-20 md:my-30 lg:my-40 dark:bg-dark overflow-x-hidden overflow-y-auto scrollbar-thin scrollbar-track-primary-500 scrollbar-thumb-tertiary-500 scrollbar-track-rounded-md scrollbar-thumb-rounded-md">
               {/* Main */}
               <section className="w-full">{children}</section>
             </section>
