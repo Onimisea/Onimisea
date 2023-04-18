@@ -15,7 +15,7 @@ type FormValues = {
 
 
 
-const login = (props: Props) => {
+const Login = (props: Props) => {
 
 
 const {
@@ -214,4 +214,4 @@ hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 da
 </>
   );
 }
-export default login
+export default Login
