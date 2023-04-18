@@ -31,7 +31,7 @@ if (data.password === data.confirm_password) {
 } else {
 setError(
         "confirm_password",
-        { type: "unmatchPassword", message: "Passwords do not match!" },
+        { type: "unmatchPassword", message: "Passwords do not match! Please, confirm your password!" },
         { shouldFocus: true }
       );
 }
