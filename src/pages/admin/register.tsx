@@ -57,7 +57,7 @@ const Register = (props: Props) => {
                 })}
                 aria-invalid={errors.username ? "true" : "false"}
                 placeholder="username"
-                className="bg-white dark:bg-transparent border-[1.5px] dark:border-[2px] border-tertiary-500 rounded-full px-4 py-1 w-full hover:outline-none focus:outline-none hover:border-[2.5px] focus:border-[2.5px]
+                className="bg-white dark:bg-transparent border-[1.5px] dark:border-[2px] border-primary-500 rounded-full px-4 py-1 w-full hover:outline-none focus:outline-none hover:border-[2.5px] focus:border-[2.5px]
 hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 dark:placeholder-gray-300"
               />
               {errors.username && (
@@ -86,7 +86,7 @@ hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 da
                 })}
                 aria-invalid={errors.email ? "true" : "false"}
                 placeholder="email address"
-                className="bg-white dark:bg-transparent border-[1.5px] dark:border-[2px] border-tertiary-500 rounded-full px-4 py-1 w-full hover:outline-none focus:outline-none hover:border-[2.5px] focus:border-[2.5px]
+                className="bg-white dark:bg-transparent border-[1.5px] dark:border-[2px] border-primary-500 rounded-full px-4 py-1 w-full hover:outline-none focus:outline-none hover:border-[2.5px] focus:border-[2.5px]
 hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 dark:placeholder-gray-300"
               />
               {errors.email && (
@@ -118,7 +118,7 @@ hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 da
                 })}
                 aria-invalid={errors.phone ? "true" : "false"}
                 placeholder="phone number"
-                className="bg-white dark:bg-transparent border-[1.5px] dark:border-[2px] border-tertiary-500 rounded-full px-4 py-1 w-full hover:outline-none focus:outline-none hover:border-[2.5px] focus:border-[2.5px]
+                className="bg-white dark:bg-transparent border-[1.5px] dark:border-[2px] border-primary-500 rounded-full px-4 py-1 w-full hover:outline-none focus:outline-none hover:border-[2.5px] focus:border-[2.5px]
 hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 dark:placeholder-gray-300"
               />
               {errors.phone && (
@@ -148,7 +148,7 @@ hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 da
                 })}
                 aria-invalid={errors.password ? "true" : "false"}
                 placeholder="password"
-                className="bg-white dark:bg-transparent border-[1.5px] dark:border-[2px] border-tertiary-500 rounded-full px-4 py-1 w-full hover:outline-none focus:outline-none hover:border-[2.5px] focus:border-[2.5px]
+                className="bg-white dark:bg-transparent border-[1.5px] dark:border-[2px] border-primary-500 rounded-full px-4 py-1 w-full hover:outline-none focus:outline-none hover:border-[2.5px] focus:border-[2.5px]
 hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 dark:placeholder-gray-300"
               />
               {errors.password && (
@@ -178,7 +178,7 @@ hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 da
                 })}
                 aria-invalid={errors.password ? "true" : "false"}
                 placeholder="confirm password"
-                className="bg-white dark:bg-transparent border-[1.5px] dark:border-[2px] border-tertiary-500 rounded-full px-4 py-1 w-full hover:outline-none focus:outline-none hover:border-[2.5px] focus:border-[2.5px]
+                className="bg-white dark:bg-transparent border-[1.5px] dark:border-[2px] border-primary-500 rounded-full px-4 py-1 w-full hover:outline-none focus:outline-none hover:border-[2.5px] focus:border-[2.5px]
 hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 dark:placeholder-gray-300"
               />
               {errors.confirm_password && (
