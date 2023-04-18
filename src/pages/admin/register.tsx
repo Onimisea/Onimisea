@@ -40,7 +40,7 @@ const Register = (props: Props) => {
 
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="w-full flex flex-col gap-6"
+            className="w-full flex flex-col gap-4"
           >
             <label htmlFor="username" className="">
               <input
