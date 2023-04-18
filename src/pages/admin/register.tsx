@@ -18,11 +18,25 @@ const Register = (props: Props) => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors }, setError,
   } = useForm<FormValues>();
 
   const onSubmit: SubmitHandler<FormValues> = (data) => {
-    alert(JSON.stringify(data));
+if (data.password === data.confirm_password) {
+      try {
+         alert(JSON.stringify(data));
+      } catch (err) {
+         console.log(err)
+      }
+} else {
+setError(
+        "confirm_password",
+        { type: "unmatchPassword", message: "Passwords do not match!" },
+        { shouldFocus: true }
+      );
+}
+
+    
   };
 
   return (
