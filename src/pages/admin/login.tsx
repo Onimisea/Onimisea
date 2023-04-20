@@ -11,48 +11,38 @@ type FormValues = {
   password: string;
 };
 
-
-
-
-
 const Login = (props: Props) => {
-
-
-const {
+  const {
     register,
     handleSubmit,
-    formState: { errors }, setError,
+    formState: { errors },
+    setError,
   } = useForm<FormValues>();
 
   const onSubmit: SubmitHandler<FormValues> = (data) => {
-      try {
-         alert(JSON.stringify(data));
-      } catch (err) {
-         console.log(err)
-      }
+    try {
+      alert(JSON.stringify(data));
+    } catch (err) {
+      console.log(err);
+    }
   };
-
-
 
   return (
     <>
       <Head>
-        <title>Onimisea | Admin Register | Full-stack Web/3 Developer</title>
+        <title>Onimisea | Admin Login | Full-stack Web/3 Developer</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Your Trusted Digital Specialist" />
       </Head>
 
-      <section className="w-[90%] sm:w-[60%] lg:w-[40%] mx-auto flex flex-col items-center justify-center gap-10">
+      <section className="w-[90%] sm:w-[60%] lg:w-[30%] mx-auto flex flex-col items-center justify-center gap-10">
         <LogoBox />
 
         <section className="w-full flex flex-col items-center justify-center gap-8">
-
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="w-full flex flex-col gap-4"
           >
-            
-
             <label htmlFor="email" className="">
               <input
                 type="email"
@@ -69,8 +59,8 @@ const {
                 })}
                 aria-invalid={errors.email ? "true" : "false"}
                 placeholder="email address"
-                className="bg-white dark:bg-transparent border-[1.5px] dark:border-[2px] border-primary-500 rounded-full px-4 py-1 w-full hover:outline-none focus:outline-none hover:border-[2.5px] focus:border-[2.5px]
-hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 dark:placeholder-gray-300"
+                className="bg-white dark:bg-transparent border-[1.5px] border-primary-500 rounded-full px-4 py-1 w-full hover:outline-none focus:outline-none
+hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 dark:placeholder-gray-300 duration-500"
               />
               {errors.email && (
                 <p
@@ -82,7 +72,6 @@ hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 da
               )}
             </label>
 
-            
             <label htmlFor="password" className="">
               <input
                 type="password"
@@ -100,8 +89,8 @@ hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 da
                 })}
                 aria-invalid={errors.password ? "true" : "false"}
                 placeholder="password"
-                className="bg-white dark:bg-transparent border-[1.5px] dark:border-[2px] border-primary-500 rounded-full px-4 py-1 w-full hover:outline-none focus:outline-none hover:border-[2.5px] focus:border-[2.5px]
-hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 dark:placeholder-gray-300"
+                className="bg-white dark:bg-transparent border-[1.5px] border-primary-500 rounded-full px-4 py-1 w-full hover:outline-none focus:outline-none
+hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 dark:placeholder-gray-300 duration-500"
               />
               {errors.password && (
                 <p
@@ -124,7 +113,7 @@ hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 da
           </p>
         </section>
       </section>
-</>
+    </>
   );
-}
-export default Login
+};
+export default Login;

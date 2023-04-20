@@ -1,30 +1,24 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { HYDRATE } from "next-redux-wrapper";
-import { AppState } from "./store";
-
-
-type Admin = {
-  username: string;
-  email: string;
-  phone: number;
-  role: string;
-};
+import { AppState } from "../../store";
+import { Admin } from "@/shared/types";
 
 // Type for our state
 export interface AuthState {
   authState: boolean;
-userToken: string | null;
+  adminToken: string | null;
   error: string | null;
   success: boolean;
-  userInfo: Admin{} | null;
-  
+  adminInfo: Admin[] | null;
+  loading: boolean;
 }
 
 // Initial state
 const initialState: AuthState = {
   authState: false,
-  userInfo: {}, // for user object
-  userToken: null, // for storing the JWT
+  loading: false,
+  adminInfo: null, // for user object
+  adminToken: null, // for storing the JWT
   error: null,
   success: false, // for monitoring the registration process.
 };
@@ -38,6 +32,12 @@ export const authSlice = createSlice({
     setAuthState(state, action) {
       state.authState = action.payload;
     },
+    setAdminToken(state, action) {
+      state.adminToken = action.payload;
+    },
+    // setAdminInfo(state, action) {
+    //   state.adminInfo = action.payload;
+    // },
   },
 
   // Special reducer for hydrating the state. Special case for next-redux-wrapper
@@ -51,8 +51,10 @@ export const authSlice = createSlice({
   },
 });
 
-export const { setAuthState } = authSlice.actions;
+export const { setAuthState, setAdminToken } = authSlice.actions;
 
 export const selectAuthState = (state: AppState) => state.auth.authState;
+// export const selectAdminInfo = (state: AppState) => state.auth.adminInfo;
+export const selectAdminToken = (state: AppState) => state.auth.adminToken;
 
 export default authSlice.reducer;

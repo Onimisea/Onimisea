@@ -1,10 +1,12 @@
+
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
-import { authSlice } from "./authSlice";
+import { authSlice } from "./features/auth/authSlice";
 import { createWrapper } from "next-redux-wrapper";
 
 import { persistReducer, persistStore } from "redux-persist";
 import { combineReducers } from "redux";
 import storage from "redux-persist/lib/storage";
+import { useDispatch } from "react-redux";
 
 const rootReducer = combineReducers({
   [authSlice.name]: authSlice.reducer,
@@ -36,17 +38,21 @@ export const makeStore = () => {
     });
 
     store.__persistor = persistStore(store); // Nasty hack
+
     return store;
   }
 };
 
 export type AppStore = ReturnType<typeof makeStore>;
 export type AppState = ReturnType<AppStore["getState"]>;
+export type AppDispatch = ReturnType<AppStore["dispatch"]>;
+export const useAppDispatch: () => AppDispatch = useDispatch;
 export type AppThunk<ReturnType = void> = ThunkAction<
   ReturnType,
   AppState,
   unknown,
   Action
 >;
+
 
 export const wrapper = createWrapper<AppStore>(makeStore, { debug: true });

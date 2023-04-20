@@ -3,6 +3,16 @@ import Link from "next/link";
 import LogoBox from "@/components/LogoBox";
 import SubmitButton from "@/components/SubmitButton";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { useDispatch, useSelector } from "react-redux";
+import { AppState } from "@/redux/store";
+
+// import {
+//   selectAuthState,
+//   setAuthState,
+// } from "../../redux/features/auth/authSlice";
+
+import { AdminRegData } from "@/shared/types";
+import { RegisterAdmin } from "@/redux/features/auth/authServices";
 
 type Props = {};
 
@@ -15,28 +25,34 @@ type FormValues = {
 };
 
 const Register = (props: Props) => {
+  const { adminInfo, error, sucess, loading } = useSelector(
+    (state: AppState) => state.auth
+  );
+
+  const dispatch = useDispatch();
+
+  // const authState = useSelector(selectAuthState);
+
   const {
     register,
     handleSubmit,
-    formState: { errors }, setError,
+    formState: { errors },
+    setError,
   } = useForm<FormValues>();
 
-  const onSubmit: SubmitHandler<FormValues> = (data) => {
-if (data.password === data.confirm_password) {
-      try {
-         alert(JSON.stringify(data));
-      } catch (err) {
-         console.log(err)
-      }
-} else {
-setError(
+  const onSubmit: SubmitHandler<FormValues> = async (data: AdminRegData) => {
+    if (data.password === data.confirm_password) {
+      await RegisterAdmin(data);
+    } else {
+      setError(
         "confirm_password",
-        { type: "unmatchPassword", message: "Passwords do not match! Please, confirm your password!" },
+        {
+          type: "unmatchPassword",
+          message: "Passwords do not match! Please, confirm your password!",
+        },
         { shouldFocus: true }
       );
-}
-
-    
+    }
   };
 
   return (
@@ -47,11 +63,23 @@ setError(
         <meta name="description" content="Your Trusted Digital Specialist" />
       </Head>
 
-      <section className="w-[90%] sm:w-[60%] lg:w-[40%] mx-auto flex flex-col items-center justify-center gap-10">
+      <section className="w-[90%] sm:w-[60%] lg:w-[30%] mx-auto flex flex-col items-center justify-center gap-10">
+        {/* <div>
+          <div>{authState ? "Logged in" : "Not Logged In"}</div>
+          <button
+            onClick={() =>
+              authState
+                ? dispatch(setAuthState(false))
+                : dispatch(setAuthState(true))
+            }
+          >
+            {authState ? "Logout" : "LogIn"}
+          </button>
+        </div> */}
+
         <LogoBox />
 
         <section className="w-full flex flex-col items-center justify-center gap-8">
-
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="w-full flex flex-col gap-4"
@@ -71,8 +99,8 @@ setError(
                 })}
                 aria-invalid={errors.username ? "true" : "false"}
                 placeholder="username"
-                className="bg-white dark:bg-transparent border-[1.5px] dark:border-[2px] border-primary-500 rounded-full px-4 py-1 w-full hover:outline-none focus:outline-none hover:border-[2.5px] focus:border-[2.5px]
-hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 dark:placeholder-gray-300"
+                className="bg-white dark:bg-transparent border-[1.5px] border-primary-500 rounded-full px-4 py-1 w-full hover:outline-none focus:outline-none
+hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 dark:placeholder-gray-300 duration-500"
               />
               {errors.username && (
                 <p
@@ -100,8 +128,8 @@ hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 da
                 })}
                 aria-invalid={errors.email ? "true" : "false"}
                 placeholder="email address"
-                className="bg-white dark:bg-transparent border-[1.5px] dark:border-[2px] border-primary-500 rounded-full px-4 py-1 w-full hover:outline-none focus:outline-none hover:border-[2.5px] focus:border-[2.5px]
-hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 dark:placeholder-gray-300"
+                className="bg-white dark:bg-transparent border-[1.5px] border-primary-500 rounded-full px-4 py-1 w-full hover:outline-none focus:outline-none
+hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 dark:placeholder-gray-300 duration-500"
               />
               {errors.email && (
                 <p
@@ -132,8 +160,8 @@ hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 da
                 })}
                 aria-invalid={errors.phone ? "true" : "false"}
                 placeholder="phone number"
-                className="bg-white dark:bg-transparent border-[1.5px] dark:border-[2px] border-primary-500 rounded-full px-4 py-1 w-full hover:outline-none focus:outline-none hover:border-[2.5px] focus:border-[2.5px]
-hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 dark:placeholder-gray-300"
+                className="bg-white dark:bg-transparent border-[1.5px] border-primary-500 rounded-full px-4 py-1 w-full hover:outline-none focus:outline-none
+hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 dark:placeholder-gray-300 duration-500"
               />
               {errors.phone && (
                 <p
@@ -162,8 +190,8 @@ hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 da
                 })}
                 aria-invalid={errors.password ? "true" : "false"}
                 placeholder="password"
-                className="bg-white dark:bg-transparent border-[1.5px] dark:border-[2px] border-primary-500 rounded-full px-4 py-1 w-full hover:outline-none focus:outline-none hover:border-[2.5px] focus:border-[2.5px]
-hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 dark:placeholder-gray-300"
+                className="bg-white dark:bg-transparent border-[1.5px] border-primary-500 rounded-full px-4 py-1 w-full hover:outline-none focus:outline-none
+hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 dark:placeholder-gray-300 duration-500"
               />
               {errors.password && (
                 <p
@@ -192,8 +220,8 @@ hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 da
                 })}
                 aria-invalid={errors.password ? "true" : "false"}
                 placeholder="confirm password"
-                className="bg-white dark:bg-transparent border-[1.5px] dark:border-[2px] border-primary-500 rounded-full px-4 py-1 w-full hover:outline-none focus:outline-none hover:border-[2.5px] focus:border-[2.5px]
-hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 dark:placeholder-gray-300"
+                className="bg-white dark:bg-transparent border-[1.5px] border-primary-500 rounded-full px-4 py-1 w-full hover:outline-none focus:outline-none
+hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 dark:placeholder-gray-300 duration-500"
               />
               {errors.confirm_password && (
                 <p

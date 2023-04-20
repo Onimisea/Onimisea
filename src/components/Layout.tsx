@@ -11,8 +11,6 @@ type Props = {
 const Layout = ({ children }: PropsWithChildren) => {
   const router = useRouter();
 
-  console.log(router);
-
   return (
     <section>
       {router.asPath.includes("/admin") ? (
