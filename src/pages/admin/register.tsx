@@ -47,13 +47,28 @@ const Register = (props: Props) => {
   const onSubmit: SubmitHandler<FormValues> = async (data: AdminRegData) => {
     if (data.password === data.confirm_password) {
       const res = await RegisterAdmin(data);
+      console.log(res);
       if (
         res !== undefined &&
         res.data.message.includes("Admin registered successfully")
       ) {
         toast.success(res.data.message);
+      } else if (
+        res !== undefined &&
+        res.data.message.includes(
+          "Registration failed! Maximum number of Admins reached"
+        )
+      ) {
+        toast.error(res.data.message);
+      } else if (
+        res !== undefined &&
+        res.data.message.includes(
+          "Registration failed! Admin already registered, please login..."
+        )
+      ) {
+        toast.error(res.data.message);
       } else {
-        toast.error("An error occurred! Please try again later...");
+        toast.error("An error occurred! Please try again later");
       }
     } else {
       setError(
@@ -68,14 +83,8 @@ const Register = (props: Props) => {
   };
 
   useEffect(() => {
-    reset({
-      username: "",
-      email: "",
-      phone: 0,
-      password: "",
-      confirm_password: "",
-    });
-  }, [formState, isSubmitSuccessful]);
+    reset();
+  }, [isSubmitSuccessful]);
 
   return (
     <>

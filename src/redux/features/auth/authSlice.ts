@@ -35,9 +35,9 @@ export const authSlice = createSlice({
     setAdminToken(state, action) {
       state.adminToken = action.payload;
     },
-    // setAdminInfo(state, action) {
-    //   state.adminInfo = action.payload;
-    // },
+    setAdminInfo(state, action) {
+      state.adminInfo = action.payload;
+    },
   },
 
   // Special reducer for hydrating the state. Special case for next-redux-wrapper
@@ -51,10 +51,10 @@ export const authSlice = createSlice({
   },
 });
 
-export const { setAuthState, setAdminToken } = authSlice.actions;
+export const { setAuthState, setAdminToken, setAdminInfo } = authSlice.actions;
 
 export const selectAuthState = (state: AppState) => state.auth.authState;
-// export const selectAdminInfo = (state: AppState) => state.auth.adminInfo;
+export const selectAdminInfo = (state: AppState) => state.auth.adminInfo;
 export const selectAdminToken = (state: AppState) => state.auth.adminToken;
 
 export default authSlice.reducer;

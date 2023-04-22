@@ -21,6 +21,11 @@ export type AdminRegData = {
   confirm_password: string;
 };
 
+export type AdminLoginData = {
+  email: string;
+  password: string;
+};
+
 export type AdminRegRes = {
   message: string;
   addedAdmin: Admin;

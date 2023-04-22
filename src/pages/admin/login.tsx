@@ -3,6 +3,8 @@ import Link from "next/link";
 import LogoBox from "@/components/LogoBox";
 import SubmitButton from "@/components/SubmitButton";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { LoginAdmin } from "@/redux/features/auth/authServices";
+import { toast } from "react-hot-toast";
 
 type Props = {};
 
@@ -19,9 +21,31 @@ const Login = (props: Props) => {
     setError,
   } = useForm<FormValues>();
 
-  const onSubmit: SubmitHandler<FormValues> = (data) => {
+  const onSubmit: SubmitHandler<FormValues> = async (data) => {
     try {
-      alert(JSON.stringify(data));
+      const res = await LoginAdmin(data);
+      console.log(res);
+
+      if (
+        res !== undefined &&
+        res.data.message.includes("Admin login successful")
+      ) {
+        toast.success(res.data.message);
+      } else if (
+        res !== undefined &&
+        res.data.message.includes("Admin login failed! Incorrect password!!")
+      ) {
+        toast.error(res.data.message);
+      } else if (
+        res !== undefined &&
+        res.data.message.includes(
+          "Login failed! No Admin found with your email!!"
+        )
+      ) {
+        toast.error(res.data.message);
+      } else {
+        toast.error("An error occurred! Please try again later");
+      }
     } catch (err) {
       console.log(err);
     }

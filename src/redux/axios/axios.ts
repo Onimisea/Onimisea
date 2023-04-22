@@ -14,7 +14,7 @@ axios.defaults.baseURL = `${process.env.NEXT_PUBLIC_BASEURL}:${process.env.NEXT_
 const axiosInstance = axios.create({
   headers,
   timeout: 300000,
-  withCredentials: false,
+  withCredentials: true,
 });
 
 axiosInstance.interceptors.request.use(
