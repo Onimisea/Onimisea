@@ -5,6 +5,7 @@ import { wrapper } from "../redux/store";
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "next-themes";
 import Layout from "@/components/Layout";
+import { Toaster } from "react-hot-toast";
 
 function App({ Component, pageProps, ...rest }: AppProps) {
   <style jsx global>{`
@@ -18,6 +19,7 @@ function App({ Component, pageProps, ...rest }: AppProps) {
   return (
     <Provider store={store}>
       <ThemeProvider attribute="class">
+        <Toaster />
         <Layout>
           <Component {...props.pageProps} />
         </Layout>

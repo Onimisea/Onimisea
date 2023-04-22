@@ -5,14 +5,16 @@ import SubmitButton from "@/components/SubmitButton";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import { AppState } from "@/redux/store";
+import toast from "react-hot-toast";
 
 // import {
 //   selectAuthState,
 //   setAuthState,
 // } from "../../redux/features/auth/authSlice";
 
-import { AdminRegData } from "@/shared/types";
+import { AdminRegData, AdminRegRes } from "@/shared/types";
 import { RegisterAdmin } from "@/redux/features/auth/authServices";
+import { useEffect } from "react";
 
 type Props = {};
 
@@ -36,13 +38,23 @@ const Register = (props: Props) => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState,
+    formState: { errors, isSubmitSuccessful },
     setError,
+    reset,
   } = useForm<FormValues>();
 
   const onSubmit: SubmitHandler<FormValues> = async (data: AdminRegData) => {
     if (data.password === data.confirm_password) {
-      await RegisterAdmin(data);
+      const res = await RegisterAdmin(data);
+      if (
+        res !== undefined &&
+        res.data.message.includes("Admin registered successfully")
+      ) {
+        toast.success(res.data.message);
+      } else {
+        toast.error("An error occurred! Please try again later...");
+      }
     } else {
       setError(
         "confirm_password",
@@ -54,6 +66,16 @@ const Register = (props: Props) => {
       );
     }
   };
+
+  useEffect(() => {
+    reset({
+      username: "",
+      email: "",
+      phone: 0,
+      password: "",
+      confirm_password: "",
+    });
+  }, [formState, isSubmitSuccessful]);
 
   return (
     <>

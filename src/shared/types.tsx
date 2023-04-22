@@ -6,6 +6,7 @@ export type NavLink = {
 };
 
 export type Admin = {
+  id: number;
   username: string;
   email: string;
   phone: number;
@@ -18,4 +19,9 @@ export type AdminRegData = {
   phone: number;
   password: string;
   confirm_password: string;
+};
+
+export type AdminRegRes = {
+  message: string;
+  addedAdmin: Admin;
 };
