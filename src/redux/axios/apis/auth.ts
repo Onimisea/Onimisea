@@ -9,3 +9,11 @@ export const AdminSignUpApi = (data: AdminRegData) => {
 export const AdminSignInApi = (data: AdminLoginData) => {
   return api.post("/api/v1/admin/login", data);
 };
+
+export const AdminVerifyApi = () => {
+  return api.get("/api/v1/admin");
+};
+
+export const AdminSignOutApi = () => {
+  return api.get("/api/v1/admin/logout");
+};

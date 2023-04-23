@@ -5,51 +5,78 @@ import SubmitButton from "@/components/SubmitButton";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { LoginAdmin } from "@/redux/features/auth/authServices";
 import { toast } from "react-hot-toast";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
+import {
+  setAdminInfo,
+  setAdminToken,
+  setIsAuth,
+} from "@/redux/features/auth/authSlice";
+import { useDispatch } from "react-redux";
+import { GetServerSideProps } from "next";
 
-type Props = {};
+type Props = {
+  referringUrl: string;
+};
 
 type FormValues = {
   email: string;
   password: string;
 };
 
-const Login = (props: Props) => {
+const Login = ({ referringUrl }: Props) => {
+  console.log(referringUrl);
+
+  const router = useRouter();
+  const dispatch = useDispatch();
+
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    reset,
+    formState: { errors, isSubmitSuccessful },
     setError,
   } = useForm<FormValues>();
 
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
     try {
       const res = await LoginAdmin(data);
-      console.log(res);
 
-      if (
-        res !== undefined &&
-        res.data.message.includes("Admin login successful")
-      ) {
-        toast.success(res.data.message);
-      } else if (
-        res !== undefined &&
-        res.data.message.includes("Admin login failed! Incorrect password!!")
-      ) {
-        toast.error(res.data.message);
-      } else if (
-        res !== undefined &&
-        res.data.message.includes(
-          "Login failed! No Admin found with your email!!"
-        )
-      ) {
-        toast.error(res.data.message);
-      } else {
-        toast.error("An error occurred! Please try again later");
+      if (res !== undefined && res.data) {
+        if (res.data.adminToken) {
+          dispatch(setAdminToken(res.data.adminToken));
+        }
+
+        if (res.data.message.includes("Admin login successful")) {
+          toast.success(res.data.message);
+        } else if (
+          res.data.message.includes("Admin login failed! Incorrect password!!")
+        ) {
+          toast.error(res.data.message);
+        } else if (
+          res.data.message.includes(
+            "Login failed! No Admin found with your email!!"
+          )
+        ) {
+          toast.error(res.data.message);
+        } else {
+          toast.error("An error occurred! Please try again later");
+        }
+
+        if (referringUrl.includes("/admin/login") === false) {
+          router.push(referringUrl);
+        } else {
+          router.push("/admin");
+        }
       }
     } catch (err) {
       console.log(err);
     }
   };
+
+  useEffect(() => {
+    reset();
+  }, [isSubmitSuccessful]);
 
   return (
     <>
@@ -140,4 +167,13 @@ hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 da
     </>
   );
 };
+
 export default Login;
+
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {
+  const referringUrl = req.headers.referer ? req.headers.referer : null;
+
+  return {
+    props: { referringUrl },
+  };
+};

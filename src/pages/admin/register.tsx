@@ -47,7 +47,7 @@ const Register = (props: Props) => {
   const onSubmit: SubmitHandler<FormValues> = async (data: AdminRegData) => {
     if (data.password === data.confirm_password) {
       const res = await RegisterAdmin(data);
-      console.log(res);
+      
       if (
         res !== undefined &&
         res.data.message.includes("Admin registered successfully")

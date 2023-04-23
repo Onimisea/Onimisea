@@ -13,6 +13,12 @@ export type Admin = {
   role: string;
 };
 
+export type AuthState = {
+  isAuth: boolean;
+  adminToken: string | null;
+  adminInfo: Admin[] | null;
+};
+
 export type AdminRegData = {
   username: string;
   email: string;

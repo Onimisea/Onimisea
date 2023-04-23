@@ -1,18 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
 
-// import { useDispatch, useSelector } from "react-redux";
-
-import {
-  selectAuthState,
-  setAuthState,
-} from "../redux/features/auth/authSlice";
 import { wrapper } from "@/redux/store";
+
 import HeroSection from "@/components/HeroSection";
+import { setIsAuth } from "@/redux/features/auth/authSlice";
 
 export default function Home() {
-  
-
   return (
     <>
       <Head>
@@ -33,12 +27,10 @@ export const getServerSideProps = wrapper.getServerSideProps(
     async ({ params }) => {
       // we can set the initial state from here
       // we are setting to false but you can run your custom logic here
-      await store.dispatch(setAuthState(false));
+      // await store.dispatch(setIsAuth(false));
 
       return {
-        props: {
-          authState: false,
-        },
+        props: {},
       };
     }
 );

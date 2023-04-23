@@ -21,7 +21,7 @@ function App({ Component, pageProps, ...rest }: AppProps) {
       <ThemeProvider attribute="class">
         <Toaster />
         <Layout>
-          <Component {...props.pageProps} />
+          <Component {...pageProps} />
         </Layout>
       </ThemeProvider>
     </Provider>

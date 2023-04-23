@@ -1,26 +1,15 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { HYDRATE } from "next-redux-wrapper";
 import { AppState } from "../../store";
-import { Admin } from "@/shared/types";
+import { Admin, AuthState } from "@/shared/types";
 
 // Type for our state
-export interface AuthState {
-  authState: boolean;
-  adminToken: string | null;
-  error: string | null;
-  success: boolean;
-  adminInfo: Admin[] | null;
-  loading: boolean;
-}
 
 // Initial state
 const initialState: AuthState = {
-  authState: false,
-  loading: false,
+  isAuth: false,
   adminInfo: null, // for user object
   adminToken: null, // for storing the JWT
-  error: null,
-  success: false, // for monitoring the registration process.
 };
 
 // Actual Slice
@@ -29,8 +18,8 @@ export const authSlice = createSlice({
   initialState,
   reducers: {
     // Action to set the authentication status
-    setAuthState(state, action) {
-      state.authState = action.payload;
+    setIsAuth(state, action) {
+      state.isAuth = action.payload;
     },
     setAdminToken(state, action) {
       state.adminToken = action.payload;
@@ -51,10 +40,6 @@ export const authSlice = createSlice({
   },
 });
 
-export const { setAuthState, setAdminToken, setAdminInfo } = authSlice.actions;
-
-export const selectAuthState = (state: AppState) => state.auth.authState;
-export const selectAdminInfo = (state: AppState) => state.auth.adminInfo;
-export const selectAdminToken = (state: AppState) => state.auth.adminToken;
+export const { setIsAuth, setAdminToken, setAdminInfo } = authSlice.actions;
 
 export default authSlice.reducer;

@@ -22,15 +22,17 @@ const Layout = ({ children }: PropsWithChildren) => {
               <section className="w-full">{children}</section>
             </section>
           ) : (
-            <section className="bg-blue-200 w-[90%] mx-auto relative">
-              {/* Header */}
-              {/* <Header /> */}
+            <section className="w-full h-screen dark:bg-dark font-p22Regular text-textColor-light dark:text-secondary-500 overflow-x-hidden overflow-y-auto scrollbar-thin scrollbar-track-primary-500 scrollbar-thumb-tertiary-500 scrollbar-track-rounded-md scrollbar-thumb-rounded-md">
+              <section className="bg-white dark:bg-dark w-[90%] mx-auto relative">
+                {/* Header */}
+                {/* <Header /> */}
 
-              {/* Main */}
-              <section className="">{children}</section>
+                {/* Main */}
+                <section className="">{children}</section>
 
-              {/* Footer */}
-              {/* <Footer /> */}
+                {/* Footer */}
+                {/* <Footer /> */}
+              </section>
             </section>
           )}
         </section>
