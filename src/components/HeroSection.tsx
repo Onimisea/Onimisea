@@ -21,7 +21,7 @@ const HeroSection = (props: Props) => {
             Hello, I&apos;m
           </p>
 
-          <h1 className="text-3xl lg:text-4xl font-p22Bold">
+          <h1 className="text-3xl lg:text-4xl font-p22Heavy">
             Your Fullstack{" "}
             <span className="text-tertiary-500 dark:text-gray-300">Web/3</span>{" "}
             Developer{" "}
@@ -61,31 +61,31 @@ const HeroSection = (props: Props) => {
           <section className="w-full flex items-center justify-center gap-6">
             <Link
               href="/"
-              className="text-xl hover:text-2xl text-tertiary-500 hover:text-secondary-500 group-hover:text-primary duration-500"
+              className="text-xl text-tertiary-500 hover:text-secondary-500 group-hover:text-primary duration-500"
             >
               <BsFacebook />
             </Link>
             <Link
               href="/"
-              className="text-xl hover:text-2xl text-tertiary-500 hover:text-secondary-500 group-hover:text-primary duration-500"
+              className="text-xl text-tertiary-500 hover:text-secondary-500 group-hover:text-primary duration-500"
             >
               <BsTwitter />
             </Link>
             <Link
               href="/"
-              className="text-xl hover:text-2xl text-tertiary-500 hover:text-secondary-500 group-hover:text-primary duration-500"
+              className="text-xl text-tertiary-500 hover:text-secondary-500 group-hover:text-primary duration-500"
             >
               <BsInstagram />
             </Link>
             <Link
               href="/"
-              className="text-xl hover:text-2xl text-tertiary-500 hover:text-secondary-500 group-hover:text-primary duration-500"
+              className="text-xl text-tertiary-500 hover:text-secondary-500 group-hover:text-primary duration-500"
             >
               <BsLinkedin />
             </Link>
             <Link
               href="/"
-              className="text-xl hover:text-2xl text-tertiary-500 hover:text-secondary-500 group-hover:text-primary duration-500"
+              className="text-xl text-tertiary-500 hover:text-secondary-500 group-hover:text-primary duration-500"
             >
               <BsGithub />
             </Link>

@@ -10,23 +10,9 @@ module.exports = {
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-darkMode: "class",
+  darkMode: "class",
   theme: {
     extend: {
-      fontSize: {
-        h1_d: `2.125rem;`,
-        h1_t: `2rem;`,
-        h1_m: `1.5rem;`,
-
-        h2_d: `1.875rem;`,
-        h2_t: `1.5rem;`,
-        h2_m: `1.125rem;`,
-
-        h3_d: `1.5rem;`,
-        h3_t: `1.25rem;`,
-        h3_m: `1.125rem;`,
-      },
-
       colors: {
         primary: {
           300: "#505b85",
@@ -55,8 +41,10 @@ darkMode: "class",
       },
 
       fontFamily: {
-        p22Regular: ["p22Regular", ...fontFamily.sans],
-        p22Bold: ["p22Bold", ...fontFamily.sans],
+        p22Book: ["p22Book", ...fontFamily.sans],
+        p22Medium: ["p22Medium", ...fontFamily.sans],
+        p22Demi: ["p22Demi", ...fontFamily.sans],
+        p22Heavy: ["p22Heavy", ...fontFamily.sans],
         lmLight: ["LemonMilkLight", ...fontFamily.sans],
         lmRegular: ["LemonMilkRegular", ...fontFamily.sans],
         lmMedium: ["LemonMilkMedium", ...fontFamily.sans],
@@ -65,6 +53,7 @@ darkMode: "class",
 
       screens: {
         sm: "480px",
+        sm3: "640px",
         md: "768px",
         lg: "870px",
       },
@@ -78,9 +67,9 @@ darkMode: "class",
           "linear-gradient(45deg, #007FFF 0%, #3219C8 100%)",
         "gradient-primsec-o":
           "linear-gradient(45deg, #007FFF 0%, #4da5ff 100%)",
-"gradient-primsec-i":
+        "gradient-primsec-i":
           "linear-gradient(145deg, #051550 0%, #3219c8 50%, #007FFF 100%)",
-"gradient-primsec-ir":
+        "gradient-primsec-ir":
           "linear-gradient(145deg, #007FFF 0%, #3219c8 50%, #051550 100%)",
         // "mobile-home": "url('./assets/HomePageGraphic.png')",
       }),

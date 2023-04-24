@@ -26,7 +26,7 @@ const EmailSubscriptionForm = (props: Props) => {
           {...register("email", { required: "Email Address is required" })}
           aria-invalid={errors.email ? "true" : "false"}
           placeholder="enter email address"
-          className="bg-white dark:bg-transparent border-[1.5px] dark:border-[2px] border-tertiary-500 rounded-full px-4 py-1 w-full hover:outline-none focus:outline-none hover:border-[2.5px] focus:border-[2.5px]
+          className="bg-white dark:bg-transparent border-[1.5px] dark:border-[2px] border-tertiary-500 rounded-full px-4 py-1 w-full hover:outline-none focus:outline-none 
 hover:border-secondary-500 focus:border-secondary-500 placeholder-primary-500 dark:placeholder-gray-300"
         />
         <SubmitButton buttonText="Subscribe" buttonType="primary" />

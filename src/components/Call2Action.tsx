@@ -8,7 +8,7 @@ type Props = {
 const Call2Action = ({ buttonText, buttonType }: Props) => {
   return (
     <button
-      className={`w-fit px-4 pt-2 pb-1  ${
+      className={`w-fit px-4 py-1  ${
         buttonType === "primary"
           ? `bg-gradient-primsec-f hover:bg-gradient-primsec-b text-white text-sm rounded-full cursor-pointer duration-500 ml-4 hover:shadow-md hidden lg:flex`
           : buttonType === "secondary"

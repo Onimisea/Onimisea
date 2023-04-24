@@ -6,10 +6,11 @@ import Call2Action from "./Call2Action";
 import Sidebar from "./Sidebar";
 import { useRouter } from "next/router";
 import { NavLink } from "@/shared/types";
+import LogoutBtn from "./LogoutBtn";
 
 type Props = {};
 
-const Header = (props: Props) => {
+const AdminHeader = (props: Props) => {
   const router = useRouter();
 
   const { systemTheme, theme, setTheme } = useTheme();
@@ -32,36 +33,9 @@ const Header = (props: Props) => {
 
   useEffect(() => {
     if (typeof window !== undefined || typeof window !== null) {
-      if (router.route) {
-        setPages([
-          {
-            id: 1,
-            name: "Home",
-            href: "/",
-            active: router.route === "/" ? true : false,
-          },
-          {
-            id: 2,
-            name: "About",
-            href: "/about",
-            active: router.route === "/about" ? true : false,
-          },
-          {
-            id: 3,
-            name: "Portfolio",
-            href: "/portfolio",
-            active: router.route === "/portfolio" ? true : false,
-          },
-          {
-            id: 4,
-            name: "Contacts",
-            href: "/contacts",
-            active: router.route === "/contacts" ? true : false,
-          },
-        ]);
-      }
+      
     }
-  }, [router.isReady, router.route]);
+  }, []);
 
   return (
     <header
@@ -74,27 +48,9 @@ const Header = (props: Props) => {
           </Link>
         </section>
 
-        <nav
-          className={`w-fit hidden lg:flex flex items-center justify-between `}
-        >
-          {pages.map((p) => (
-            <Link
-              key={p.id}
-              href={p.href}
-              className={`px-4 py-1 text-[16.5px duration-500 cursor-pointer ${
-                p.active
-                  ? "text-secondary-500 hover:text-tertiary-500 dark:text-gray-200 dark:hover:text-tertiary-500"
-                  : "hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-200"
-              }`}
-            >
-              {p.name}
-            </Link>
-          ))}
-        </nav>
 
         <section className={`w-fit flex items-center justify-between`}>
-          <Call2Action buttonText="CV" buttonType="secondary" />
-          <Call2Action buttonText="Hire Me" buttonType="primary" />
+          <LogoutBtn />
 
           {darkMode ? (
             <button
@@ -113,7 +69,7 @@ const Header = (props: Props) => {
           )}
         </section>
 
-        <button
+        {/* <button
           className="text-2xl text-primary-500 hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-200 cursor-pointer w-fit duration-500 ml-7 flex lg:hidden"
           onClick={() => setIsMenuToggled(!isMenuToggled)}
         >
@@ -129,9 +85,9 @@ const Header = (props: Props) => {
             setIsMenuToggled={setIsMenuToggled}
             pages={pages}
           />
-        )}
+        )} */}
       </section>
     </header>
   );
 };
-export default Header;
+export default AdminHeader;

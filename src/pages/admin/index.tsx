@@ -14,6 +14,8 @@ import {
 import Link from "next/link";
 import { GetServerSideProps } from "next";
 import LogoutBtn from "@/components/LogoutBtn";
+import Footer from "@/components/Footer";
+import AdminHeader from "@/components/AdminHeader";
 
 type Props = {};
 
@@ -56,9 +58,24 @@ const Index = (props: Props) => {
       </Head>
 
       {isAuth ? (
-        <section className="w-full bg-red-200">
-          <section>Admin Dashboard</section>
-          <LogoutBtn />
+        <section className="w-full ">
+          {/* Header */}
+          <AdminHeader />
+
+          <section className="bg-red-200 w-full flex items-start justify-between">
+            <section className="w-[35%] sm:w-[30%] md:w-[25%] lg:w-[20%] bg-red-400">
+              Sidebar
+            </section>
+
+            <section className="w-[60%] sm:w-[65%] md:w-[70%] lg:w-[75%] bg-red-600">
+              Dashboard
+            </section>
+
+            {/* <LogoutBtn /> */}
+          </section>
+
+          {/* Footer */}
+          <Footer />
         </section>
       ) : (
         <section className="w-full h-screen flex items-center justify-center">

@@ -9,7 +9,7 @@ const Call2Action2 = ({ buttonText, buttonType }: Props) => {
 
   return (
     <button
-      className={`w-fit px-4 pt-2 pb-1  ${
+      className={`w-fit px-4 py-1  ${
         buttonType === "primary"
           ? `bg-gradient-primsec-f hover:bg-gradient-primsec-b text-white text-sm rounded-full cursor-pointer duration-500 hover:shadow-md flex `
           : buttonType === "secondary"

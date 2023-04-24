@@ -19,13 +19,23 @@
 }
 
 @font-face {
-  font-family: "p22Regular";
-  src: url("../../public/fonts/p22r.ttf");
+  font-family: "p22Book";
+  src: url("../../public/fonts/p22book.ttf");
 }
 
 @font-face {
-  font-family: "p22Bold";
-  src: url("../../public/fonts/p22h.ttf");
+  font-family: "p22Demi";
+  src: url("../../public/fonts/p22demi.ttf");
+}
+
+@font-face {
+  font-family: "p22Heavy";
+  src: url("../../public/fonts/p22heavy.ttf");
+}
+
+@font-face {
+  font-family: "p22Medium";
+  src: url("../../public/fonts/p22medium.ttf");
 }
 
 @tailwind base;
