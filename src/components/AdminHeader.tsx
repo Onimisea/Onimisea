@@ -7,17 +7,21 @@ import Sidebar from "./Sidebar";
 import { useRouter } from "next/router";
 import { NavLink } from "@/shared/types";
 import LogoutBtn from "./LogoutBtn";
+import { MdClose } from "react-icons/md";
 
-type Props = {};
+type Props = {
+  setIsAdminSidebarMenuToggled(value: boolean): void;
+  isAdminSidebarMenuToggled: boolean;
+};
 
-const AdminHeader = (props: Props) => {
+const AdminHeader = ({
+  setIsAdminSidebarMenuToggled,
+  isAdminSidebarMenuToggled,
+}: Props) => {
   const router = useRouter();
 
   const { systemTheme, theme, setTheme } = useTheme();
   const [darkMode, setDarkMode] = useState(false);
-  const [isMenuToggled, setIsMenuToggled] = useState(false);
-
-  const [pages, setPages] = useState<NavLink[]>([]);
 
   useEffect(() => {}, [router.isReady, router.asPath]);
 
@@ -33,7 +37,6 @@ const AdminHeader = (props: Props) => {
 
   useEffect(() => {
     if (typeof window !== undefined || typeof window !== null) {
-      
     }
   }, []);
 
@@ -47,7 +50,6 @@ const AdminHeader = (props: Props) => {
             <h1 className="font-lmMedium text-3xl">Onimisea</h1>
           </Link>
         </section>
-
 
         <section className={`w-fit flex items-center justify-between`}>
           <LogoutBtn />
@@ -67,27 +69,31 @@ const AdminHeader = (props: Props) => {
               <HiMoon />
             </button>
           )}
-        </section>
 
-        {/* <button
-          className="text-2xl text-primary-500 hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-200 cursor-pointer w-fit duration-500 ml-7 flex lg:hidden"
-          onClick={() => setIsMenuToggled(!isMenuToggled)}
-        >
-          <HiOutlineMenuAlt4 />
-        </button>
-
-        {isMenuToggled && (
-          <Sidebar
-            onClickOutside={() => {
-              setIsMenuToggled(false);
+          <button
+            className="text-2xl text-primary-500 hover:text-secondary-500 dark:text-secondary-500 dark:hover:text-gray-200 cursor-pointer w-fit duration-500 ml-7"
+            onClick={() => {
+              setIsAdminSidebarMenuToggled(!isAdminSidebarMenuToggled);
             }}
-            isMenuToggled={isMenuToggled}
-            setIsMenuToggled={setIsMenuToggled}
-            pages={pages}
-          />
-        )} */}
+          >
+            {isAdminSidebarMenuToggled ? <MdClose /> : <HiOutlineMenuAlt4 />}
+          </button>
+        </section>
       </section>
     </header>
   );
 };
 export default AdminHeader;
+
+// {
+//   isAdminSidebarMenuToggled && (
+//     <Sidebar
+//       onClickOutside={() => {
+//         setIsAdminSidebarMenuToggled(false);
+//       }}
+//       isAdminSidebarMenuToggled={isAdminSidebarMenuToggled}
+//       setIsAdminSidebarMenuToggled={setIsAdminSidebarMenuToggled}
+//       pages={pages}
+//     />
+//   );
+// }

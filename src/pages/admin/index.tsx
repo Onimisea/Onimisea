@@ -13,21 +13,27 @@ import {
 } from "@/redux/features/auth/authSlice";
 import Link from "next/link";
 import { GetServerSideProps } from "next";
-import LogoutBtn from "@/components/LogoutBtn";
 import Footer from "@/components/Footer";
 import AdminHeader from "@/components/AdminHeader";
+import AdminSidebar from "@/components/AdminSidebar";
+import { NavLink } from "@/shared/types";
 
 type Props = {};
 
 const Index = (props: Props) => {
   const dispatch = useDispatch();
+  const router = useRouter();
 
-  const [authAdmin, setAuthAdmin] = useState(null);
   const [authMessage, setAuthMessage] = useState<string | null>(null);
 
   const { isAuth, adminToken, adminInfo } = useSelector(
     (state: AppState) => state.auth
   );
+
+  const [isAdminSidebarMenuToggled, setIsAdminSidebarMenuToggled] =
+    useState(true);
+
+  const [adminPages, setAdminPages] = useState<NavLink[]>([]);
 
   useEffect(() => {
     try {
@@ -49,6 +55,69 @@ const Index = (props: Props) => {
     }
   }, []);
 
+  useEffect(() => {
+    if (typeof window !== undefined || typeof window !== null) {
+      if (router.route) {
+        setAdminPages([
+          {
+            id: 1,
+            name: "Dashboard",
+            href: "/admin",
+            active: router.route === "/admin" ? true : false,
+          },
+          {
+            id: 2,
+            name: "Portfolio",
+            href: "/admin/portfolio",
+            active: router.route === "/admin/portfolio" ? true : false,
+          },
+          {
+            id: 3,
+            name: "Domains",
+            href: "/admin/domains",
+            active: router.route === "/admin/domains" ? true : false,
+          },
+          {
+            id: 4,
+            name: "Blog",
+            href: "/admin/blog",
+            active: router.route === "/admin/blog" ? true : false,
+          },
+          {
+            id: 5,
+            name: "Hire Me",
+            href: "/admin/hire-me",
+            active: router.route === "/admin/hire-me" ? true : false,
+          },
+          {
+            id: 6,
+            name: "CV",
+            href: "/admin/cv",
+            active: router.route === "/admin/cv" ? true : false,
+          },
+          {
+            id: 7,
+            name: "Ads",
+            href: "/admin/ads",
+            active: router.route === "/admin/ads" ? true : false,
+          },
+          // {
+          //   id: 8,
+          //   name: "Digital Products",
+          //   href: "/admin/digital-products",
+          //   active: router.route === "/admin/digital-products" ? true : false,
+          // },
+          {
+            id: 9,
+            name: "Contacts",
+            href: "/admin/contacts",
+            active: router.route === "/admin/contacts" ? true : false,
+          },
+        ]);
+      }
+    }
+  }, [router.isReady, router.route]);
+
   return (
     <>
       <Head>
@@ -58,20 +127,79 @@ const Index = (props: Props) => {
       </Head>
 
       {isAuth ? (
-        <section className="w-full ">
+        <section className="w-full relative">
           {/* Header */}
-          <AdminHeader />
+          <AdminHeader
+            isAdminSidebarMenuToggled={isAdminSidebarMenuToggled}
+            setIsAdminSidebarMenuToggled={setIsAdminSidebarMenuToggled}
+          />
 
-          <section className="bg-red-200 w-full flex items-start justify-between">
-            <section className="w-[35%] sm:w-[30%] md:w-[25%] lg:w-[20%] bg-red-400">
-              Sidebar
+          <section className="bg-gray-200 dark:bg-tertiary-500 w-full flex items-start justify-between relative p-3">
+            <AdminSidebar
+              onClickOutside={() => {
+                setIsAdminSidebarMenuToggled(false);
+              }}
+              isAdminSidebarMenuToggled={isAdminSidebarMenuToggled}
+              setIsAdminSidebarMenuToggled={setIsAdminSidebarMenuToggled}
+              adminPages={adminPages}
+            />
+
+            <section className="w-full dark:bg-dark flex flex-col relative">
+              <section className="rounded-full flex items-start justify-start gap-6 flex-wrap">
+                <section className="bg-white w-[20%] h-[120px] flex flex-col items-center justify-center rounded-md shadow-lg gap-2">
+                  <h3 className="text-md font-p22Medium">Portfolio Items</h3>
+                  <h1 className="text-4xl font-lmMedium text-tertiary-500">
+                    7
+                  </h1>
+                </section>
+                <section className="bg-white w-[20%] h-[120px] flex flex-col items-center justify-center rounded-md shadow-lg gap-2">
+                  <h3 className="text-md font-p22Medium">Domains for Sale</h3>
+                  <h1 className="text-4xl font-lmMedium text-tertiary-500">
+                    3
+                  </h1>
+                </section>
+                <section className="bg-white w-[20%] h-[120px] flex flex-col items-center justify-center rounded-md shadow-lg gap-2">
+                  <h3 className="text-md font-p22Medium">Blog Posts</h3>
+                  <h1 className="text-4xl font-lmMedium text-tertiary-500">
+                    29
+                  </h1>
+                </section>
+                <section className="bg-white w-[20%] h-[120px] flex flex-col items-center justify-center rounded-md shadow-lg gap-2">
+                  <h3 className="text-md font-p22Medium">Hire Me Requests</h3>
+                  <h1 className="text-4xl font-lmMedium text-tertiary-500">
+                    10
+                  </h1>
+                </section>
+                <section className="bg-white w-[20%] h-[120px] flex flex-col items-center justify-center rounded-md shadow-lg gap-2">
+                  <h3 className="text-md font-p22Medium">CV Downloads</h3>
+                  <h1 className="text-4xl font-lmMedium text-tertiary-500">
+                    15
+                  </h1>
+                </section>
+                <section className="bg-white w-[20%] h-[120px] flex flex-col items-center justify-center rounded-md shadow-lg gap-2">
+                  <h3 className="text-md font-p22Medium">Ads OnPage</h3>
+                  <h1 className="text-4xl font-lmMedium text-tertiary-500">
+                    8
+                  </h1>
+                </section>
+                <section className="bg-white w-[20%] h-[120px] flex flex-col items-center justify-center rounded-md shadow-lg gap-2">
+                  <h3 className="text-md font-p22Medium">Digital Products</h3>
+                  <h1 className="text-4xl font-lmMedium text-tertiary-500">
+                    13
+                  </h1>
+                </section>
+                <section className="bg-white w-[20%] h-[120px] flex flex-col items-center justify-center rounded-md shadow-lg gap-2">
+                  <h3 className="text-md font-p22Medium">Contact Messages</h3>
+                  <h1 className="text-4xl font-lmMedium text-tertiary-500">
+                    5
+                  </h1>
+                </section>
+              </section>
+
+              {/* <section className="">J</section>
+
+              <section className="">K</section> */}
             </section>
-
-            <section className="w-[60%] sm:w-[65%] md:w-[70%] lg:w-[75%] bg-red-600">
-              Dashboard
-            </section>
-
-            {/* <LogoutBtn /> */}
           </section>
 
           {/* Footer */}

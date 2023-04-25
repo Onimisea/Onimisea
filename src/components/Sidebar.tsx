@@ -55,7 +55,7 @@ const Sidebar = ({
             <Link
               key={p.id}
               href={p.href}
-              className={`px-4 py-1 text-[16.5px duration-500 cursor-pointer ${
+              className={`px-4 py-1 text-[16.5px] duration-500 cursor-pointer ${
                 p.active
                   ? "text-gray-200 hover:text-tertiary-500 dark:text-gray-200 dark:hover:text-tertiary-500"
                   : "text-secondary-500 hover:text-gray-200 dark:text-secondary-500 dark:hover:text-gray-200"
