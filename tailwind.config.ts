@@ -16,6 +16,12 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        probook: ['var(--probook)', 'sans-serif'],
+        promedium: ['var(--promedium)', 'sans-serif'],
+        milkmedium: ['var(--milkmedium)', 'sans-serif'],
+        milkbold: ['var(--milkbold)', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
