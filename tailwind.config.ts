@@ -11,10 +11,15 @@ module.exports = {
     container: {
       center: true,
       padding: "2rem",
-      screens: {
+    },
+    screens: {
+        "sm": "480px",
+        "sm2": "568px",
+        "md": "768px",
+        "lg": "1024px",
+        "xl": "1280px",
         "2xl": "1400px",
       },
-    },
     extend: {
       fontFamily: {
         probook: ['var(--probook)', 'sans-serif'],
@@ -26,11 +31,18 @@ module.exports = {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        background: "hsl(var(--background))",
+        background2: "hsl(var(--background2))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+        },
+        primary2: {
+          DEFAULT: "hsl(var(--primary2))",
+        },
+        primary3: {
+          DEFAULT: "hsl(var(--primary3))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
