@@ -1,7 +1,7 @@
 import "./globals.css";
 import localFont from "next/font/local";
 import type { Metadata } from "next";
-import { ThemeProviderWrapper } from "../contexts/ThemeContext";
+import { Providers } from "./providers";
 
 const probook = localFont({
   src: "../public/fonts/probook.ttf",
@@ -30,7 +30,8 @@ const milkmedium = localFont({
 export const metadata: Metadata = {
   title: "Onimisea | Fullstack Web Developer",
   description: "Coolest Dev in Africa",
-  manifest: '/manifest.webmanifest'
+  manifest: '/manifest.webmanifest',
+  // icons: 
 };
 
 export default function RootLayout({
@@ -39,14 +40,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.png" />
       </head>
       <body
         className={`${probook.variable} ${promedium.variable} ${milkmedium.variable} ${milkbold.variable} font-probook bg-gradient-to-tr from-slate-50 via-slate-100 to-slate-50`}
       >
-        <ThemeProviderWrapper>{children}</ThemeProviderWrapper>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
