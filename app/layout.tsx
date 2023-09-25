@@ -30,9 +30,21 @@ const milkmedium = localFont({
 export const metadata: Metadata = {
   title: "Onimisea | Fullstack Web Developer",
   description: "Coolest Dev in Africa",
-  manifest: '/manifest.webmanifest',
-  // icons: 
+  manifest: "/favicons/site.webmanifest",
+  // icons:
 };
+
+{
+  /* <link rel="apple-touch-icon" sizes="180x180" href="/app/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/app/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/app/favicons/favicon-16x16.png">
+<link rel="manifest" href="/app/favicons/site.webmanifest">
+<link rel="mask-icon" href="/app/favicons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/app/favicons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/app/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff"></meta> */
+}
 
 export default function RootLayout({
   children,
