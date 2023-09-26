@@ -40,39 +40,39 @@ const Footer = () => {
           </p>
         </section>
 
-        <ul className="w-full sm:w-[35%] md:w-[13%] flex flex-col items-end md:items-start gap-4 bg-green-500">
+        <ul className="w-full sm:w-[35%] md:w-[13%] flex flex-col items-start gap-4 bg-green-500">
           <li className="w-full">
-            <Link href="" className="w-full block hover:text-primary2">
+            <Link href="" className="w-full block hover:text-primary2 text-right md:text-left">
               Portfolio
             </Link>
           </li>
           <li className="w-full">
-            <Link href="" className="w-full block hover:text-primary2">
+            <Link href="" className="w-full block hover:text-primary2 text-right md:text-left">
               CV
             </Link>
           </li>
           <li className="w-full">
-            <Link href="" className="w-full block hover:text-primary2">
+            <Link href="" className="w-full block hover:text-primary2 text-right md:text-left">
               Hire Me
             </Link>
           </li>
           <li className="w-full">
-            <Link href="" className="w-full block hover:text-primary2">
+            <Link href="" className="w-full block hover:text-primary2 text-right md:text-left">
               AI Services
             </Link>
           </li>
           <li className="w-full">
-            <Link href="" className="w-full block hover:text-primary2">
+            <Link href="" className="w-full block hover:text-primary2 text-right md:text-left">
               Domains
             </Link>
           </li>
           <li className="w-full">
-            <Link href="" className="w-full block hover:text-primary2">
+            <Link href="" className="w-full block hover:text-primary2 text-right md:text-left">
               APIs
             </Link>
           </li>
           <li className="w-full">
-            <Link href="" className="w-full block hover:text-primary2">
+            <Link href="" className="w-full block hover:text-primary2 text-right md:text-left">
               Contacts
             </Link>
           </li>
