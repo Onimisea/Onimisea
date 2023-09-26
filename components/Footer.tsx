@@ -78,11 +78,11 @@ const Footer = () => {
           </li>
         </ul>
 
-        <ul className="w-full sm:w-[50%] md:w-[30%] flex flex-col items-center sm:items-start gap-4">
+        <ul className="w-full sm:w-[50%] md:w-[30%] flex flex-col items-start gap-4">
           <li className="w-full">
             <Link
               href="tel:+2348034023726"
-              className="w-full hover:text-primary2 flex items-center justify-start gap-2"
+              className="w-full hover:text-primary2 flex items-center justify-center sm:justify-start gap-2"
             >
               <HiPhone />
               <p className="-mt-[3px]">08034023726</p>
@@ -91,13 +91,13 @@ const Footer = () => {
           <li className="w-full">
             <Link
               href="mailto:onimisea@gmail.com"
-              className="w-full hover:text-primary2 flex items-center justify-start gap-2"
+              className="w-full hover:text-primary2 flex items-center justify-center sm:justify-start gap-2"
             >
               <BsFillEnvelopeAtFill />
               <p className="-mt-[3px]">onimisea@gmail.com</p>
             </Link>
           </li>
-          <li className="w-full flex items-center gap-4">
+          <li className="w-full flex items-center justify-center sm:justify-start gap-4">
             <Link href="https://www.facebook.com/onimisea" className="hover:text-primary2">
               <BsFacebook />
             </Link>
@@ -114,7 +114,7 @@ const Footer = () => {
               <BsGithub />
             </Link>
           </li>
-          <li className="w-full">
+          <li className="w-full text-center sm:text-left">
             <p>Onimisea &copy; {currentYear}</p>
           </li>
         </ul>
