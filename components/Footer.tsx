@@ -17,8 +17,8 @@ const Footer = () => {
 
   return (
     <footer className="bg-primary dark:bg-background2 text-white z-30 w-full">
-      <section className="w-[80%] sm:w-[85%] md:w-[90%] mx-auto max-w-screen-2xl flex items-start justify-around py-16 text-md font-[500]">
-        <section className="w-[25%] flex flex-col items-center justify-center gap-6">
+      <section className="w-[80%] sm:w-[85%] md:w-[90%] mx-auto max-w-screen-2xl flex items-start justify-around flex-wrap py-16 text-md font-[500]">
+        <section className="w-[37%] flex flex-col items-center justify-center gap-6">
           <Link
             href="/"
             className="flex flex-col items-center justify-center gap-2"
@@ -40,7 +40,7 @@ const Footer = () => {
           </p>
         </section>
 
-        <ul className="w-[10%] flex flex-col items-start gap-4">
+        <ul className="w-[13%] flex flex-col items-start gap-4">
           <li className="w-full">
             <Link href="" className="w-full block hover:text-primary2">
               Portfolio
@@ -78,7 +78,7 @@ const Footer = () => {
           </li>
         </ul>
 
-        <ul className="w-[20%] flex flex-col items-start gap-4">
+        <ul className="w-[30%] flex flex-col items-start gap-4">
           <li className="w-full">
             <Link
               href="tel:+2348034023726"
