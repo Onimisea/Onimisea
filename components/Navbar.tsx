@@ -15,16 +15,16 @@ const Navbar = () => {
         </Link>
 
         <ul className="hidden md:flex items-center justify-center gap-x-6">
-          <li className="bg-gradient-to-r from-[#3219c8] via-[#007fff] to-[#3219c8] text-transparent bg-clip-text cursor-pointer duration-500 hover:text-[#3219c8] dark:bg-gradient-to-r dark:from-white dark:via-[#007fff] dark:to-white dark:hover:text-white">
+          <li className="bg-gradient-to-r from-[#3219c8] via-[#007fff] to-[#3219c8] text-transparent bg-clip-text cursor-pointer duration-500 hover:text-[#3219c8] dark:text-primary2 dark:hover:text-slate-300">
             <Link href="/">Home</Link>
           </li>
-          <li className="bg-gradient-to-r from-[#3219c8] via-[#007fff] to-[#3219c8] text-transparent bg-clip-text cursor-pointer duration-500 hover:text-[#3219c8] dark:bg-gradient-to-r dark:from-white dark:via-[#007fff] dark:to-white dark:hover:text-white">
+          <li className="bg-gradient-to-r from-[#3219c8] via-[#007fff] to-[#3219c8] text-transparent bg-clip-text cursor-pointer duration-500 hover:text-[#3219c8] dark:text-primary2 dark:hover:text-slate-300">
             <Link href="">About</Link>
           </li>
-          <li className="bg-gradient-to-r from-[#3219c8] via-[#007fff] to-[#3219c8] text-transparent bg-clip-text cursor-pointer duration-500 hover:text-[#3219c8] dark:bg-gradient-to-r dark:from-white dark:via-[#007fff] dark:to-white dark:hover:text-white">
+          <li className="bg-gradient-to-r from-[#3219c8] via-[#007fff] to-[#3219c8] text-transparent bg-clip-text cursor-pointer duration-500 hover:text-[#3219c8] dark:text-primary2 dark:hover:text-slate-300">
             <Link href="">Portfolio</Link>
           </li>
-          <li className="bg-gradient-to-r from-[#3219c8] via-[#007fff] to-[#3219c8] text-transparent bg-clip-text cursor-pointer duration-500 hover:text-[#3219c8] dark:bg-gradient-to-r dark:from-white dark:via-[#007fff] dark:to-white dark:hover:text-white">
+          <li className="bg-gradient-to-r from-[#3219c8] via-[#007fff] to-[#3219c8] text-transparent bg-clip-text cursor-pointer duration-500 hover:text-[#3219c8] dark:text-primary2 dark:hover:text-slate-300">
             <Link href="">Contacts</Link>
           </li>
         </ul>

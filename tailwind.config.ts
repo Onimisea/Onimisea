@@ -89,7 +89,19 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      backgroundImage: {
+        'gradient-primary': 'linear-gradient(45deg, #3219c8, #007fff)',
+        'gradient-primary-hover': 'linear-gradient(45deg, #007fff, #3219c8)',
+        'gradient-primary-outline': 'linear-gradient(45deg, #3219c8, #007fff, #3219c8)',
+        'gradient-primary-outline-hover': 'linear-gradient(45deg, #007fff, #3219c8, #007fff)',
+        'gradient-tertiary': 'linear-gradient(45deg, #051550, #3219c8, #007fff)',
+        'gradient-tertiary-hover': 'linear-gradient(45deg, #007fff, #3219c8, #051550)',
+        // Add more gradients as needed
+      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"), 
+    require('tailwind-scrollbar')({ nocompatible: true }),
+  ],
 }

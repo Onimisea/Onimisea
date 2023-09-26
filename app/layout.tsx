@@ -57,7 +57,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.png" />
       </head>
       <body
-        className={`${probook.variable} ${promedium.variable} ${milkmedium.variable} ${milkbold.variable} font-probook bg-gradient-to-tr from-slate-50 via-slate-100 to-slate-50`}
+        className={`${probook.variable} ${promedium.variable} ${milkmedium.variable} ${milkbold.variable} font-probook bg-gradient-to-r from-blue-50 via-purple-100 to-blue-50 scrollbar-thin scrollbar-track-primary dark:scrollbar-track-primary scrollbar-thumb-primary3 scrollbar-track-rounded-full scrollbar-thumb-rounded-full hover:scrollbar-thumb-primary2`}
       >
         <Providers>{children}</Providers>
       </body>
