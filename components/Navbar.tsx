@@ -9,7 +9,7 @@ const Navbar = () => {
     <nav className="bg-background text-primary3 dark:bg-background2 dark:text-primary2 fixed top-0 z-40 w-full">
       <section className="w-[80%] sm:w-[85%] md:w-[90%] mx-auto max-w-screen-2xl flex items-center justify-between py-4 text-md font-[600]">
         <Link href="/">
-          <h1 className="text-2xl font-milkbold bg-gradient-to-r from-[#3219c8] via-[#007fff] to-[#3219c8] text-transparent bg-clip-text">
+          <h1 className="text-2xl font-milkbold bg-gradient-to-r from-[#3219c8] via-[#007fff] to-[#3219c8] text-transparent bg-clip-text tracking-widest">
             onimisea
           </h1>
         </Link>

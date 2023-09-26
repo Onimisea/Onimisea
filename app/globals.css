@@ -24,7 +24,7 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(to top, #007fff, #3219c8, #007fff);
-} 
+}
  
 @layer base {
   :root {

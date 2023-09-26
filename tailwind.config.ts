@@ -95,7 +95,7 @@ module.exports = {
         'gradient-primary-outline': 'linear-gradient(45deg, #3219c8, #007fff, #3219c8)',
         'gradient-primary-outline-hover': 'linear-gradient(45deg, #007fff, #3219c8, #007fff)',
         'gradient-tertiary': 'linear-gradient(45deg, #051550, #3219c8, #007fff)',
-        'gradient-tertiary-hover': 'linear-gradient(45deg, #007fff, #3219c8, #051550)',
+        'gradient-tertiary-hover': 'linear-gradient(45deg, #007fff,  #051550)',
         // Add more gradients as needed
       },
     },
