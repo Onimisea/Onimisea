@@ -17,8 +17,8 @@ const Footer = () => {
 
   return (
     <footer className="bg-primary dark:bg-background2 text-white z-30 w-full">
-      <section className="w-[80%] sm:w-[85%] md:w-[90%] mx-auto max-w-screen-2xl flex items-start justify-center md:justify-start gap-12 md:gap-8 flex-wrap py-16 text-md font-[500]">
-        <section className="w-full md:w-[37%] flex flex-col items-center justify-center gap-6">
+      <section className="w-[80%] sm:w-[85%] md:w-[90%] mx-auto max-w-screen-2xl flex items-start justify-center gap-12 md:gap-8 flex-wrap py-16 text-md font-[500]">
+        <section className="w-full md:w-[37%] flex flex-col items-center justify-center gap-6 bg-red-500">
           <Link
             href="/"
             className="flex flex-col items-center justify-center gap-2"
@@ -40,7 +40,7 @@ const Footer = () => {
           </p>
         </section>
 
-        <ul className="w-full sm:w-[13%] md:w-[13%] flex flex-col items-start gap-4">
+        <ul className="w-full sm:w-[45%] md:w-[13%] flex flex-col items-start gap-4 bg-green-500">
           <li className="w-full">
             <Link href="" className="w-full block hover:text-primary2">
               Portfolio
@@ -78,7 +78,7 @@ const Footer = () => {
           </li>
         </ul>
 
-        <ul className="w-full sm:w-[30%] md:w-[30%] flex flex-col items-start gap-4">
+        <ul className="w-full sm:w-[45%] md:w-[30%] flex flex-col items-start gap-4 bg-blue-500">
           <li className="w-full">
             <Link
               href="tel:+2348034023726"
@@ -110,7 +110,7 @@ const Footer = () => {
             <Link href="" className="hover:text-primary2">
               <FaLinkedin />
             </Link>
-            <Link href="" className="hover:text-primary2">
+            <Link href="https://ng.linkedin.com/in/onimisea" className="hover:text-primary2">
               <BsGithub />
             </Link>
           </li>
