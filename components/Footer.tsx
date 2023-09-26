@@ -42,43 +42,43 @@ const Footer = () => {
 
         <ul className="w-full sm:w-[35%] md:w-[13%] flex flex-col items-start gap-4">
           <li className="w-full">
-            <Link href="" className="w-full block hover:text-primary2 text-right md:text-left">
+            <Link href="" className="w-full block hover:text-primary2 text-center sm:text-right md:text-left">
               Portfolio
             </Link>
           </li>
           <li className="w-full">
-            <Link href="" className="w-full block hover:text-primary2 text-right md:text-left">
+            <Link href="" className="w-full block hover:text-primary2 text-center sm:text-right md:text-left">
               CV
             </Link>
           </li>
           <li className="w-full">
-            <Link href="" className="w-full block hover:text-primary2 text-right md:text-left">
+            <Link href="" className="w-full block hover:text-primary2 text-center sm:text-right md:text-left">
               Hire Me
             </Link>
           </li>
           <li className="w-full">
-            <Link href="" className="w-full block hover:text-primary2 text-right md:text-left">
+            <Link href="" className="w-full block hover:text-primary2 text-center sm:text-right md:text-left">
               AI Services
             </Link>
           </li>
           <li className="w-full">
-            <Link href="" className="w-full block hover:text-primary2 text-right md:text-left">
+            <Link href="" className="w-full block hover:text-primary2 text-center sm:text-right md:text-left">
               Domains
             </Link>
           </li>
           <li className="w-full">
-            <Link href="" className="w-full block hover:text-primary2 text-right md:text-left">
+            <Link href="" className="w-full block hover:text-primary2 text-center sm:text-right md:text-left">
               APIs
             </Link>
           </li>
           <li className="w-full">
-            <Link href="" className="w-full block hover:text-primary2 text-right md:text-left">
+            <Link href="" className="w-full block hover:text-primary2 text-center sm:text-right md:text-left">
               Contacts
             </Link>
           </li>
         </ul>
 
-        <ul className="w-full sm:w-[50%] md:w-[30%] flex flex-col items-start gap-4">
+        <ul className="w-full sm:w-[50%] md:w-[30%] flex flex-col items-center sm:items-start gap-4">
           <li className="w-full">
             <Link
               href="tel:+2348034023726"
@@ -98,19 +98,19 @@ const Footer = () => {
             </Link>
           </li>
           <li className="w-full flex items-center gap-4">
-            <Link href="" className="hover:text-primary2">
+            <Link href="https://www.facebook.com/onimisea" className="hover:text-primary2">
               <BsFacebook />
             </Link>
-            <Link href="" className="hover:text-primary2">
+            <Link href="https://www.x.com/onimisea" className="hover:text-primary2">
               <AiFillTwitterCircle />
             </Link>
-            <Link href="" className="hover:text-primary2">
+            <Link href="https://www.instagram.com/onimisea" className="hover:text-primary2">
               <AiFillInstagram />
             </Link>
-            <Link href="" className="hover:text-primary2">
+            <Link href="https://ng.linkedin.com/in/onimisea" className="hover:text-primary2">
               <FaLinkedin />
             </Link>
-            <Link href="https://ng.linkedin.com/in/onimisea" className="hover:text-primary2">
+            <Link href="https://github.com/onimisea" className="hover:text-primary2">
               <BsGithub />
             </Link>
           </li>
