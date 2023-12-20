@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { Button } from "./ui/button";
 import { Menu } from 'lucide-react';
-import { ThemeSwitcher } from "./ThemeSwitcher";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 const Navbar = () => {
   return (
@@ -15,16 +15,16 @@ const Navbar = () => {
         </Link>
 
         <ul className="hidden md:flex items-center justify-center gap-x-6">
-          <li className="bg-gradient-to-r from-[#3219c8] via-[#007fff] to-[#3219c8] text-transparent bg-clip-text cursor-pointer duration-500 hover:text-[#3219c8] dark:text-primary2 dark:hover:text-slate-300">
+          <li className="duration-500 text-onimisea_primary_light hover:text-onimisea_secondary_light dark:text-primary2 dark:hover:text-slate-300">
             <Link href="/">Home</Link>
           </li>
-          <li className="bg-gradient-to-r from-[#3219c8] via-[#007fff] to-[#3219c8] text-transparent bg-clip-text cursor-pointer duration-500 hover:text-[#3219c8] dark:text-primary2 dark:hover:text-slate-300">
+          <li className="duration-500 text-onimisea_primary_light hover:text-onimisea_secondary_light dark:text-primary2 dark:hover:text-slate-300">
             <Link href="">About</Link>
           </li>
-          <li className="bg-gradient-to-r from-[#3219c8] via-[#007fff] to-[#3219c8] text-transparent bg-clip-text cursor-pointer duration-500 hover:text-[#3219c8] dark:text-primary2 dark:hover:text-slate-300">
+          <li className="duration-500 text-onimisea_primary_light hover:text-onimisea_secondary_light dark:text-primary2 dark:hover:text-slate-300">
             <Link href="">Portfolio</Link>
           </li>
-          <li className="bg-gradient-to-r from-[#3219c8] via-[#007fff] to-[#3219c8] text-transparent bg-clip-text cursor-pointer duration-500 hover:text-[#3219c8] dark:text-primary2 dark:hover:text-slate-300">
+          <li className="duration-500 text-onimisea_primary_light hover:text-onimisea_secondary_light dark:text-primary2 dark:hover:text-slate-300">
             <Link href="">Contacts</Link>
           </li>
         </ul>
@@ -33,9 +33,9 @@ const Navbar = () => {
           <Button
             variant="default"
             size="sm"
-            className="rounded-full bg-gradient-to-tr from-[#3219c8] via-[#007fff] to-[#3219c8] border-none relative p-[1px] hidden sm:flex"
+            className="rounded-full bg-gradient-to-tr from-onimisea_primary_light via-onimisea_secondary_light to-onimisea_primary_light border-none relative p-[1px] hidden sm:flex"
           >
-            <section className="bg-white hover:bg-onimisea_primary_light text-onimisea_primary_light hover:text-white dark:text-primary2 w-full h-full flex items-center justify-center rounded-full px-3 duration-500 hover:dark:text-white">
+            <section className="bg-white hover:bg-gradient-to-bl from-onimisea_primary_light to-onimisea_secondary_light text-onimisea_primary_light hover:text-white dark:text-primary2 w-full h-full flex items-center justify-center rounded-full px-3 duration-500 hover:dark:text-white">
               CV
             </section>
           </Button>
@@ -43,7 +43,7 @@ const Navbar = () => {
           <Button
             variant="default"
             size="sm"
-            className="rounded-full bg-onimisea_accent_light border-none text-white hover:bg-onimisea_secondary_light duration-500 hidden sm:flex font-bold"
+            className="rounded-full bg-onimisea_primary_light border-none text-white hover:bg-onimisea_secondary_light duration-500 hidden sm:flex font-bold px-8"
           >
             Hire Me
           </Button>

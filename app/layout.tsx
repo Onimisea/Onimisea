@@ -2,8 +2,7 @@ import "./globals.css";
 import localFont from "next/font/local";
 import type { Metadata } from "next";
 import { cn } from "@/lib/utils";
-import { Variable } from "lucide-react";
-
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const probook = localFont({
   src: "../public/fonts/probook.ttf",
@@ -45,11 +44,18 @@ export default function RootLayout({
         probook.variable,
         promedium.variable,
         milkbold.variable,
-        milkmedium.variable
+        milkmedium.variable,
+        "font-probook"
       )}
     >
-      
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+      >
         {children}
+      </ThemeProvider>
     </html>
   );
 }
