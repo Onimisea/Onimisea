@@ -19,7 +19,7 @@ export function ThemeSwitcher() {
   console.log("Current Theme:", theme);
 
   return (
-    <DropdownMenu className="">
+    <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="icon" className="rounded-full">
           <Sun className="h-[20px] w-[20px] rotate-0 transition-all dark:-rotate-90 dark:scale-0" />
