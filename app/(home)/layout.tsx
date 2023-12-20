@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "../globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "Onimisea | Fullstack Web/3 Developer",
@@ -15,17 +14,11 @@ export default function HomeLayout({
   children: React.ReactNode;
 }) {
   return (
-    <body className="bg-gradient-to-r from-slate-50 via-[#FFF9d9] to-slate-50">
-      <ThemeProvider
-        attribute="class"
-        defaultTheme="system"
-        enableSystem
-        disableTransitionOnChange
-      >
-        <Navbar />
-        <main className="py-24">{children}</main>
-        <Footer />
-      </ThemeProvider>
+    
+    <body className="bg-gradient-to-r from-slate-100 via-[#FFF5C2] to-slate-100 flex flex-col min-h-screen">
+      <Navbar />
+      <main className="mt-20 py-24 flex-1">{children}</main>
+      <Footer />
     </body>
   );
 }
