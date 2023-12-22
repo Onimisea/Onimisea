@@ -4,7 +4,7 @@ import onimiseaIcon from "@/public/imgs/onimisea_icon.png";
 
 const FooterLogo = () => {
   return (
-    <section className="w-full md:w-[37%] flex flex-col items-center justify-center gap-6">
+    <section className="w-full md:w-[30%] flex flex-col items-center justify-center gap-6">
       <Link
         href="/"
         className="flex flex-col items-center justify-center gap-2"
