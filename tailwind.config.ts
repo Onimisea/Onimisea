@@ -11,9 +11,17 @@ module.exports = {
     container: {
       center: true,
       padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
+    },
+    screens: {
+      xs: "375px",
+      sm: "480px",
+      sm2: "568px",
+      md: "768px",
+      md2: "840px",
+      md3: "960px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1400px",
     },
     extend: {
       fontFamily: {

@@ -30,14 +30,14 @@ export function ThemeSwitcher() {
           </Button>
         </section>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme("light")}>
+      <DropdownMenuContent align="end" className=" dark:bg-onimisea_accent dark:text-onimisea_text_light dark:font-bold">
+        <DropdownMenuItem onClick={() => setTheme("light")} className="focus:bg-onimisea_primary_light focus:text-white hover:bg-onimisea_primary_light hover:text-white hover-font-bold focus:font-bold dark:hover:focus:bg-onimisea_text_light dark:focus:focus:bg-onimisea_text_light">
           Light
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
+        <DropdownMenuItem onClick={() => setTheme("dark")} className="focus:bg-onimisea_primary_light focus:text-white hover:bg-onimisea_primary_light hover:text-white hover-font-bold focus:font-bold dark:hover:focus:bg-onimisea_text_light dark:focus:focus:bg-onimisea_text_light">
           Dark
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
+        <DropdownMenuItem onClick={() => setTheme("system")} className="focus:bg-onimisea_primary_light focus:text-white hover:bg-onimisea_primary_light hover:text-white hover-font-bold focus:font-bold dark:hover:focus:bg-onimisea_text_light dark:focus:focus:bg-onimisea_text_light">
           System
         </DropdownMenuItem>
       </DropdownMenuContent>
