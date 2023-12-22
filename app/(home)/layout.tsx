@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "../globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "Onimisea | Fullstack Web/3 Developer",
@@ -15,10 +16,17 @@ export default function HomeLayout({
 }) {
   return (
     
-    <body className="bg-gradient-to-r from-slate-100 via-[#FFF5C2] to-slate-100 flex flex-col min-h-screen">
-      <Navbar />
-      <main className="mt-20 py-24 flex-1">{children}</main>
-      <Footer />
-    </body>
+      <body className="bg-gradient-to-r from-slate-200 via-white to-slate-200 dark:from-onimisea_bg_dark dark:via-onimisea_text_light dark:to-onimisea_bg_dark flex flex-col min-h-screen">
+        <ThemeProvider
+      attribute="class"
+      defaultTheme="system"
+      enableSystem
+      disableTransitionOnChange
+    >
+        <Navbar />
+        <main className="mt-20 py-24 flex-1">{children}</main>
+        <Footer />
+    </ThemeProvider>
+      </body>
   );
 }

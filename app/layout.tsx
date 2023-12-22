@@ -2,7 +2,7 @@ import "./globals.css";
 import localFont from "next/font/local";
 import type { Metadata } from "next";
 import { cn } from "@/lib/utils";
-import { ThemeProvider } from "@/components/ThemeProvider";
+
 
 const probook = localFont({
   src: "../public/fonts/probook.ttf",
@@ -48,14 +48,9 @@ export default function RootLayout({
         "font-probook"
       )}
     >
-      <ThemeProvider
-        attribute="class"
-        defaultTheme="system"
-        enableSystem
-        disableTransitionOnChange
-      >
+      
         {children}
-      </ThemeProvider>
+      
     </html>
   );
 }

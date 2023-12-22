@@ -26,8 +26,9 @@ module.exports = {
         onimisea_text_light: "#051550",
         onimisea_primary_light: "#3219c8",
         onimisea_secondary_light: "#007fff",
-        onimisea_accent_light: "#ffb500",
+        onimisea_accent: "#F2AC00",
         onimisea_gray_light: "#dedede",
+        onimisea_bg_dark: "#00081C",
 
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
