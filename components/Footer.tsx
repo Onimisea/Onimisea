@@ -15,7 +15,7 @@ const Footer = () => {
   const currentYear = getYear(currentDate);
 
   return (
-    <footer className="bg-[#00081C] dark:bg-background2 text-white z-30 w-full">
+    <footer className="bg-onimisea_bg_dark text-onimisea_gray_light dark:text-onimisea_accent z-30 w-full">
       <section className="w-[80%] sm:w-[85%] md:w-[90%] mx-auto max-w-screen-2xl flex items-start justify-center gap-12 md:gap-8 flex-wrap py-16 text-md font-[500]">
         <FooterLogo />
 
