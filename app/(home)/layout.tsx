@@ -16,7 +16,7 @@ export default function HomeLayout({
 }) {
   return (
     
-      <body className="bg-gradient-to-r from-slate-200 via-white to-slate-200 dark:from-onimisea_bg_dark dark:via-onimisea_text_light dark:to-onimisea_bg_dark flex flex-col relative">
+      <body className="bg-gradient-to-r from-slate-200 via-[#fafafa] to-slate-200 dark:from-onimisea_bg_dark dark:via-onimisea_text_light dark:to-onimisea_bg_dark flex flex-col relative">
         <ThemeProvider
       attribute="class"
       defaultTheme="system"

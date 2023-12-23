@@ -15,15 +15,15 @@ const Footer = () => {
   const currentYear = getYear(currentDate);
 
   return (
-    <footer className="bg-onimisea_bg_dark text-onimisea_gray_light dark:text-onimisea_accent z-30 w-full">
-      <section className="w-[80%] sm:w-[85%] md:w-[90%] mx-auto max-w-screen-2xl flex items-start justify-center gap-12 md:gap-8 flex-wrap py-16 text-md">
+    <footer className="bg-onimisea_bg_dark text-onimisea_accent z-30 w-full">
+      <section className="w-[80%] sm:w-[85%] md:w-[90%] mx-auto max-w-screen-2xl flex items-start justify-center gap-12 flex-wrap py-16 text-md">
         <FooterLogo />
 
-        <ul className="w-full sm:w-[35%] md3:w-[15%] md:w-[20%] flex flex-col items-start gap-4">
+        <ul className="w-full sm:w-[35%] md3:w-[15%] flex flex-col items-start gap-4">
           <li className="w-full">
             <Link
               href=""
-              className="w-full block hover:text-onimisea_secondary_light text-center sm:text-right md:text-left"
+              className="w-full block hover:text-onimisea_primary_light text-center sm:text-right md3:text-left"
             >
               Web Development
             </Link>
@@ -31,7 +31,7 @@ const Footer = () => {
           <li className="w-full">
             <Link
               href=""
-              className="w-full block hover:text-onimisea_secondary_light text-center sm:text-right md:text-left"
+              className="w-full block hover:text-onimisea_primary_light text-center sm:text-right md3:text-left"
             >
               AI Services
             </Link>
@@ -39,7 +39,7 @@ const Footer = () => {
           <li className="w-full">
             <Link
               href=""
-              className="w-full block hover:text-onimisea_secondary_light text-center sm:text-right md:text-left"
+              className="w-full block hover:text-onimisea_primary_light text-center sm:text-right md3:text-left"
             >
               APIs
             </Link>
@@ -47,18 +47,18 @@ const Footer = () => {
           <li className="w-full">
             <Link
               href=""
-              className="w-full block hover:text-onimisea_secondary_light text-center sm:text-right md:text-left"
+              className="w-full block hover:text-onimisea_primary_light text-center sm:text-right md3:text-left"
             >
               Domains
             </Link>
           </li>
         </ul>
 
-        <ul className="w-full sm:w-[35%] md3:w-[10%] md:w-[15%] flex flex-col items-start gap-4">
+        <ul className="w-full sm:w-[35%] md3:w-[10%] flex flex-col items-start gap-4">
           <li className="w-full">
             <Link
               href=""
-              className="w-full block hover:text-onimisea_secondary_light text-center sm:text-right md:text-left"
+              className="w-full block hover:text-onimisea_secondary_light text-center sm:text-left"
             >
               Portfolio
             </Link>
@@ -66,7 +66,7 @@ const Footer = () => {
           <li className="w-full">
             <Link
               href=""
-              className="w-full block hover:text-onimisea_secondary_light text-center sm:text-right md:text-left"
+              className="w-full block hover:text-onimisea_secondary_light text-center sm:text-left"
             >
               CV
             </Link>
@@ -74,7 +74,7 @@ const Footer = () => {
           <li className="w-full">
             <Link
               href=""
-              className="w-full block hover:text-onimisea_secondary_light text-center sm:text-right md:text-left"
+              className="w-full block hover:text-onimisea_secondary_light text-center sm:text-left"
             >
               Hire Me
             </Link>
@@ -83,18 +83,18 @@ const Footer = () => {
           <li className="w-full">
             <Link
               href=""
-              className="w-full block hover:text-onimisea_secondary_light text-center sm:text-right md:text-left"
+              className="w-full block hover:text-onimisea_secondary_light text-center sm:text-left"
             >
               Contacts
             </Link>
           </li>
         </ul>
 
-        <ul className="w-full sm:w-[50%] md3:w-[20%] flex flex-col items-start gap-4">
+        <ul className="w-full sm:w-[50%] md3:w-[20%] md:w-[25%] flex flex-col items-start justify-center gap-4">
           <li className="w-full">
             <Link
               href="tel:+2348034023726"
-              className="w-full hover:text-onimisea_secondary_light flex items-center justify-center sm:justify-start gap-2"
+              className="w-full hover:text-onimisea_primary_light flex items-center justify-center md3:justify-start gap-2"
             >
               <HiPhone />
               <p className="-mt-[3px]">08034023726</p>
@@ -103,22 +103,22 @@ const Footer = () => {
           <li className="w-full">
             <Link
               href="mailto:onimisea@gmail.com"
-              className="w-full hover:text-onimisea_secondary_light flex items-center justify-center sm:justify-start gap-2"
+              className="w-full hover:text-onimisea_primary_light flex items-center justify-center md3:justify-start gap-2"
             >
               <BsFillEnvelopeAtFill />
               <p className="-mt-[3px]">onimisea@gmail.com</p>
             </Link>
           </li>
-          <li className="w-full flex items-center justify-center sm:justify-start gap-4">
+          <li className="w-full flex items-center justify-center md3:justify-start gap-4">
             <Link
               href="https://www.facebook.com/onimisea"
-              className="hover:text-onimisea_secondary_light hover:scale-150"
+              className="hover:text-onimisea_primary_light hover:scale-150"
             >
               <BsFacebook />
             </Link>
             <Link
               href="https://www.x.com/onimisea"
-              className="hover:text-onimisea_secondary_light hover:scale-150"
+              className="hover:text-onimisea_primary_light hover:scale-150"
             >
               <AiFillTwitterCircle />
             </Link>
@@ -141,7 +141,7 @@ const Footer = () => {
               <BsGithub />
             </Link>
           </li>
-          <li className="w-full text-center sm:text-left">
+          <li className="w-full text-center md3:text-left">
             <p>Onimisea &copy; {currentYear}</p>
           </li>
         </ul>
