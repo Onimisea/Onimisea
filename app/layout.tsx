@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import type { Metadata } from "next";
 import { cn } from "@/lib/utils";
 
-
 const probook = localFont({
   src: "../public/fonts/probook.ttf",
   display: "swap",
@@ -48,9 +47,7 @@ export default function RootLayout({
         "font-probook"
       )}
     >
-      
-        {children}
-      
+      {children}
     </html>
   );
 }
