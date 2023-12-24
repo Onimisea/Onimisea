@@ -1,6 +1,5 @@
 const disableBodyScroll = (mobileNav: boolean) => {
   const scrollPosition = window.scrollY;
-  console.log(scrollPosition);
 
   if (mobileNav) {
     document.body.style.overflow = "hidden";
