@@ -91,8 +91,11 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+      zIndex: {
+        "45": "45",
+        "50": "50",
+        "55": "55",
+        "60": "60",
       },
     },
   },
