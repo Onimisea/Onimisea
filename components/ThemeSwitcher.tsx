@@ -18,7 +18,7 @@ export function ThemeSwitcher() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <section className="rounded-full bg-gradient-to-tr border-none relative p-[1px] hidden sm2:flex from-[#3219c8] via-[#ffb500] to-[#3219c8] hover:bg-transparent hover:from-transparent hover:via-transparent hover:to-transparent">
+        <section className="rounded-full bg-gradient-to-tr border-none relative p-[1px] hidden xs:flex from-[#3219c8] via-[#ffb500] to-[#3219c8] hover:bg-transparent hover:from-transparent hover:via-transparent hover:to-transparent">
           <Button
             variant="ghost"
             size="icon"
