@@ -12,8 +12,6 @@ import { useAppStore } from "@/store";
 const MobileMenu = () => {
   // const [mobileNav, toggleMobileNav] = useCycle(false, true);
 
-  const MotionButton = motion(Button);
-
   const [mobileNav, toggleMobileNav] = useAppStore((state) => [
     state.mobileNav,
     state.toggleMobileNav,
@@ -40,6 +38,7 @@ const MobileMenu = () => {
               initial="closed"
               exit="closed"
             ></motion.section>
+
             <motion.section
               className="w-[300px] h-full bg-onimisea_text_light dark:bg-onimisea_text_light absolute top-0 left-0 z-50"
               variants={{
@@ -61,12 +60,7 @@ const MobileMenu = () => {
               exit="closed"
             >
               <section className="w-full flex items-center justify-end pt-5 pr-5">
-                <MotionButton
-                  variant="default"
-                  size="sm"
-                  className={`rounded-full bg-gradient-to-tr border-none relative p-[1px] flex md2:hidden from-[#3219c8] via-[#ffb500] to-[#3219c8] hover:bg-transparent hover:from-transparent hover:via-transparent hover:to-transparent dark:from-[#3219c8] dark:via-[#ffb500] dark:to-[#3219c8] w-[40px] h-[40px] ${
-                    mobileNav ? "opacity-100" : "opacity-0"
-                  } duration-500`}
+                <motion.section
                   onClick={() => toggleMobileNav(!mobileNav)}
                   variants={{
                     hide: {
@@ -83,63 +77,90 @@ const MobileMenu = () => {
                   initial="hide"
                   animate={mobileNav ? "show" : "hide"}
                 >
-                  <motion.section
-                    className="bg-onimisea_bg_dark text-onimisea_accent hover:bg-onimisea_accent hover:from-onimisea_primary_light hover:to-onimisea_secondary_light hover:text-white dark:bg-onimisea_bg_dark dark:text-onimisea_accent w-full h-full flex flex-col items-center justify-center gap-1 rounded-full duration-500 dark:hover:from-transparent dark:hover:via-transparent dark:hover:to-transparent dark:hover:text-onimisea_text_light dark:hover:bg-onimisea_accent hover:font-bold group"
-                    animate={mobileNav ? "open" : "closed"}
+                  <Button
+                    variant="default"
+                    size="sm"
+                    className={`rounded-full bg-gradient-to-tr border-none relative p-[1px] flex md2:hidden from-[#3219c8] via-[#ffb500] to-[#3219c8] hover:bg-transparent hover:from-transparent hover:via-transparent hover:to-transparent dark:from-[#3219c8] dark:via-[#ffb500] dark:to-[#3219c8] w-[40px] h-[40px] ${
+                      mobileNav ? "opacity-100" : "opacity-0"
+                    } duration-500`}
                   >
-                    <motion.span
-                      className="w-4 h-px bg-onimisea_accent group-hover:bg-onimisea_text_light  block"
-                      variants={{
-                        closed: {
-                          rotate: 0,
-                          y: 0,
-                          transition: { duration: 0.5 },
-                        },
-                        open: {
-                          rotate: 45,
-                          y: 5,
-                          transition: { duration: 0.5 },
-                        },
-                      }}
-                    ></motion.span>
-                    <motion.span
-                      className="w-4 h-px bg-onimisea_accent group-hover:bg-onimisea_text_light  block"
-                      variants={{
-                        closed: { opacity: 1, transition: { duration: 0.3 } },
-                        open: { opacity: 0, transition: { duration: 0.3 } },
-                      }}
-                    ></motion.span>
-                    <motion.span
-                      className="w-4 h-px bg-onimisea_accent group-hover:bg-onimisea_text_light  block"
-                      variants={{
-                        closed: { rotate: 0, transition: { duration: 0.5 } },
-                        open: {
-                          rotate: -45,
-                          y: -5,
-                          transition: { duration: 0.5 },
-                        },
-                      }}
-                    ></motion.span>
-                  </motion.section>
-                </MotionButton>
+                    <motion.section
+                      className="bg-onimisea_bg_dark text-onimisea_accent hover:bg-onimisea_accent hover:from-onimisea_primary_light hover:to-onimisea_secondary_light hover:text-white dark:bg-onimisea_bg_dark dark:text-onimisea_accent w-full h-full flex flex-col items-center justify-center gap-1 rounded-full duration-500 dark:hover:from-transparent dark:hover:via-transparent dark:hover:to-transparent dark:hover:text-onimisea_text_light dark:hover:bg-onimisea_accent hover:font-bold group"
+                      animate={mobileNav ? "open" : "closed"}
+                    >
+                      <motion.span
+                        className="w-4 h-px bg-onimisea_accent group-hover:bg-onimisea_text_light  block"
+                        variants={{
+                          closed: {
+                            rotate: 0,
+                            y: 0,
+                            transition: { duration: 0.5 },
+                          },
+                          open: {
+                            rotate: 45,
+                            y: 5,
+                            transition: { duration: 0.5 },
+                          },
+                        }}
+                      ></motion.span>
+                      <motion.span
+                        className="w-4 h-px bg-onimisea_accent group-hover:bg-onimisea_text_light  block"
+                        variants={{
+                          closed: { opacity: 1, transition: { duration: 0.3 } },
+                          open: { opacity: 0, transition: { duration: 0.3 } },
+                        }}
+                      ></motion.span>
+                      <motion.span
+                        className="w-4 h-px bg-onimisea_accent group-hover:bg-onimisea_text_light  block"
+                        variants={{
+                          closed: { rotate: 0, transition: { duration: 0.5 } },
+                          open: {
+                            rotate: -45,
+                            y: -5,
+                            transition: { duration: 0.5 },
+                          },
+                        }}
+                      ></motion.span>
+                    </motion.section>
+                  </Button>
+                </motion.section>
               </section>
 
               <motion.section className="w-full flex flex-col p-8">
-                <motion.ul className="w-full flex flex-col items-start gap-4 text-onimisea_accent mt-2 mb-5">
+                <motion.ul
+                  className="w-full flex flex-col items-start gap-4 text-onimisea_accent mt-2 mb-5"
+                  variants={{
+                    open: {
+                      transition: { staggerChildren: 0.07, delayChildren: 0.2 },
+                    },
+                    closed: {
+                      transition: {
+                        staggerChildren: 0.05,
+                        staggerDirection: -1,
+                      },
+                    },
+                  }}
+                >
                   <motion.li
                     className=""
                     variants={{
-                      closed: {
-                        opacity: 0,
-                        y: "25%",
-                        transition: { duration: 0.2 },
-                      },
                       open: {
+                        y: 0,
                         opacity: 1,
-                        y: "0%",
-                        transition: { duration: 0.2 },
+                        transition: {
+                          y: { stiffness: 1000, velocity: -100 },
+                        },
+                      },
+                      closed: {
+                        y: 50,
+                        opacity: 0,
+                        transition: {
+                          y: { stiffness: 1000 },
+                        },
                       },
                     }}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
                   >
                     <Link href="" className="hover:text-white">
                       Web Development
@@ -148,17 +169,23 @@ const MobileMenu = () => {
                   <motion.li
                     className=""
                     variants={{
-                      closed: {
-                        opacity: 0,
-                        y: "25%",
-                        transition: { duration: 0.2 },
-                      },
                       open: {
+                        y: 0,
                         opacity: 1,
-                        y: "0%",
-                        transition: { duration: 0.2 },
+                        transition: {
+                          y: { stiffness: 1000, velocity: -100 },
+                        },
+                      },
+                      closed: {
+                        y: 50,
+                        opacity: 0,
+                        transition: {
+                          y: { stiffness: 1000 },
+                        },
                       },
                     }}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
                   >
                     <Link href="" className="hover:text-white">
                       AI Services
@@ -167,17 +194,23 @@ const MobileMenu = () => {
                   <motion.li
                     className=""
                     variants={{
-                      closed: {
-                        opacity: 0,
-                        y: "25%",
-                        transition: { duration: 0.2 },
-                      },
                       open: {
+                        y: 0,
                         opacity: 1,
-                        y: "0%",
-                        transition: { duration: 0.2 },
+                        transition: {
+                          y: { stiffness: 1000, velocity: -100 },
+                        },
+                      },
+                      closed: {
+                        y: 50,
+                        opacity: 0,
+                        transition: {
+                          y: { stiffness: 1000 },
+                        },
                       },
                     }}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
                   >
                     <Link href="" className="hover:text-white">
                       APIs
@@ -186,17 +219,23 @@ const MobileMenu = () => {
                   <motion.li
                     className=""
                     variants={{
-                      closed: {
-                        opacity: 0,
-                        y: "25%",
-                        transition: { duration: 0.2 },
-                      },
                       open: {
+                        y: 0,
                         opacity: 1,
-                        y: "0%",
-                        transition: { duration: 0.2 },
+                        transition: {
+                          y: { stiffness: 1000, velocity: -100 },
+                        },
+                      },
+                      closed: {
+                        y: 50,
+                        opacity: 0,
+                        transition: {
+                          y: { stiffness: 1000 },
+                        },
                       },
                     }}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
                   >
                     <Link href="" className="hover:text-white">
                       Domains
@@ -205,17 +244,23 @@ const MobileMenu = () => {
                   <motion.li
                     className=""
                     variants={{
-                      closed: {
-                        opacity: 0,
-                        y: "25%",
-                        transition: { duration: 0.2 },
-                      },
                       open: {
+                        y: 0,
                         opacity: 1,
-                        y: "0%",
-                        transition: { duration: 0.2 },
+                        transition: {
+                          y: { stiffness: 1000, velocity: -100 },
+                        },
+                      },
+                      closed: {
+                        y: 50,
+                        opacity: 0,
+                        transition: {
+                          y: { stiffness: 1000 },
+                        },
                       },
                     }}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
                   >
                     <Link href="" className="hover:text-white">
                       Portfolio
@@ -224,17 +269,23 @@ const MobileMenu = () => {
                   <motion.li
                     className=""
                     variants={{
-                      closed: {
-                        opacity: 0,
-                        y: "25%",
-                        transition: { duration: 0.2 },
-                      },
                       open: {
+                        y: 0,
                         opacity: 1,
-                        y: "0%",
-                        transition: { duration: 0.2 },
+                        transition: {
+                          y: { stiffness: 1000, velocity: -100 },
+                        },
+                      },
+                      closed: {
+                        y: 50,
+                        opacity: 0,
+                        transition: {
+                          y: { stiffness: 1000 },
+                        },
                       },
                     }}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
                   >
                     <Link href="" className="hover:text-white">
                       CV
@@ -243,17 +294,23 @@ const MobileMenu = () => {
                   <motion.li
                     className=""
                     variants={{
-                      closed: {
-                        opacity: 0,
-                        y: "25%",
-                        transition: { duration: 0.2 },
-                      },
                       open: {
+                        y: 0,
                         opacity: 1,
-                        y: "0%",
-                        transition: { duration: 0.2 },
+                        transition: {
+                          y: { stiffness: 1000, velocity: -100 },
+                        },
+                      },
+                      closed: {
+                        y: 50,
+                        opacity: 0,
+                        transition: {
+                          y: { stiffness: 1000 },
+                        },
                       },
                     }}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
                   >
                     <Link href="" className="hover:text-white">
                       Hire Me
@@ -262,17 +319,23 @@ const MobileMenu = () => {
                   <motion.li
                     className=""
                     variants={{
-                      closed: {
-                        opacity: 0,
-                        y: "25%",
-                        transition: { duration: 0.2 },
-                      },
                       open: {
+                        y: 0,
                         opacity: 1,
-                        y: "0%",
-                        transition: { duration: 0.2 },
+                        transition: {
+                          y: { stiffness: 1000, velocity: -100 },
+                        },
+                      },
+                      closed: {
+                        y: 50,
+                        opacity: 0,
+                        transition: {
+                          y: { stiffness: 1000 },
+                        },
                       },
                     }}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
                   >
                     <Link href="" className="hover:text-white">
                       Contacts
