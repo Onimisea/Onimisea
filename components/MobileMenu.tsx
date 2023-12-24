@@ -12,6 +12,8 @@ import { useAppStore } from "@/store";
 const MobileMenu = () => {
   // const [mobileNav, toggleMobileNav] = useCycle(false, true);
 
+  const MotionButton = motion(Button);
+
   const [mobileNav, toggleMobileNav] = useAppStore((state) => [
     state.mobileNav,
     state.toggleMobileNav,
@@ -59,7 +61,7 @@ const MobileMenu = () => {
               exit="closed"
             >
               <section className="w-full flex items-center justify-end pt-5 pr-5">
-                <motion.Button
+                <MotionButton
                   variant="default"
                   size="sm"
                   className={`rounded-full bg-gradient-to-tr border-none relative p-[1px] flex md2:hidden from-[#3219c8] via-[#ffb500] to-[#3219c8] hover:bg-transparent hover:from-transparent hover:via-transparent hover:to-transparent dark:from-[#3219c8] dark:via-[#ffb500] dark:to-[#3219c8] w-[40px] h-[40px] ${
@@ -119,7 +121,7 @@ const MobileMenu = () => {
                       }}
                     ></motion.span>
                   </motion.section>
-                </motion.Button>
+                </MotionButton>
               </section>
 
               <motion.section className="w-full flex flex-col p-8">
