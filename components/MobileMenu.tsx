@@ -36,7 +36,7 @@ const MobileMenu = () => {
               variants={{
                 closed: {
                   x: "-100%",
-                  transition: { delay: 0.3, duration: 0.5 },
+                  transition: { delay: 0.6, duration: 0.5 },
                 },
                 open: { x: "0%", transition: { duration: 0.4 } },
               }}
