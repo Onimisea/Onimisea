@@ -1,12 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import { Button } from "./ui/button";
 import { Menu } from "lucide-react";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 import { motion, AnimatePresence } from "framer-motion";
 import { useAppStore } from "@/store";
+import disableBodyScroll from "@/bodyScrollDisabler";
 
 const Navbar = () => {
   // const [mobileNav, toggleMobileNav] = useCycle(false, true);
@@ -15,6 +16,10 @@ const Navbar = () => {
     state.mobileNav,
     state.toggleMobileNav,
   ]);
+
+  useEffect(() => {
+    disableBodyScroll(mobileNav);
+  }, [mobileNav]);
 
   return (
     <header className="bg-[#fcfcfc] dark:bg-onimisea_bg_dark fixed top-0 z-30 w-full h-20 flex items-center justify-center">

@@ -8,6 +8,8 @@ import { FaLinkedin } from "react-icons/fa";
 import { AiFillTwitterCircle, AiFillInstagram } from "react-icons/ai";
 import { BsFillEnvelopeAtFill, BsFacebook, BsGithub } from "react-icons/bs";
 import { useAppStore } from "@/store";
+import { useEffect } from "react";
+import disableBodyScroll from "@/bodyScrollDisabler";
 
 const MobileMenu = () => {
   // const [mobileNav, toggleMobileNav] = useCycle(false, true);
@@ -16,6 +18,10 @@ const MobileMenu = () => {
     state.mobileNav,
     state.toggleMobileNav,
   ]);
+
+  useEffect(() => {
+    disableBodyScroll(mobileNav);
+  }, [mobileNav]);
 
   return (
     <section>
@@ -343,8 +349,46 @@ const MobileMenu = () => {
                   </motion.li>
                 </motion.ul>
 
-                <ul className="w-full flex items-center justify-start gap-4 text-onimisea_accent mt-5">
-                  <li className="w-fit">
+                <motion.ul
+                  className="w-full flex items-center justify-start gap-4 text-onimisea_accent mt-5"
+                  variants={{
+                    open: {
+                      transition: {
+                        when: "beforeChildren",
+                        staggerChildren: 0.2,
+                        delayChildren: 0.4,
+                      },
+                    },
+                    closed: {
+                      transition: {
+                        when: "afterChildren",
+                        staggerChildren: 0.1,
+                        staggerDirection: -1,
+                      },
+                    },
+                  }}
+                >
+                  <motion.li
+                    className="w-fit"
+                    variants={{
+                      open: {
+                        y: 0,
+                        opacity: 1,
+                        transition: {
+                          y: { stiffness: 1000, velocity: -100 },
+                        },
+                      },
+                      closed: {
+                        y: 50,
+                        opacity: 0,
+                        transition: {
+                          y: { stiffness: 1000 },
+                        },
+                      },
+                    }}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
                     <Link
                       href="https://www.facebook.com/onimisea"
                       className="hover:text-onimisea_gray_light"
@@ -354,8 +398,28 @@ const MobileMenu = () => {
                         className="hover:scale-150 duration-300"
                       />
                     </Link>
-                  </li>
-                  <li className="w-fit">
+                  </motion.li>
+                  <motion.li
+                    className="w-fit"
+                    variants={{
+                      open: {
+                        y: 0,
+                        opacity: 1,
+                        transition: {
+                          y: { stiffness: 1000, velocity: -100 },
+                        },
+                      },
+                      closed: {
+                        y: 50,
+                        opacity: 0,
+                        transition: {
+                          y: { stiffness: 1000 },
+                        },
+                      },
+                    }}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
                     <Link
                       href="https://www.x.com/onimisea"
                       className="hover:text-onimisea_gray_light"
@@ -365,8 +429,28 @@ const MobileMenu = () => {
                         className="hover:scale-150 duration-300"
                       />
                     </Link>
-                  </li>
-                  <li className="w-fit">
+                  </motion.li>
+                  <motion.li
+                    className="w-fit"
+                    variants={{
+                      open: {
+                        y: 0,
+                        opacity: 1,
+                        transition: {
+                          y: { stiffness: 1000, velocity: -100 },
+                        },
+                      },
+                      closed: {
+                        y: 50,
+                        opacity: 0,
+                        transition: {
+                          y: { stiffness: 1000 },
+                        },
+                      },
+                    }}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
                     <Link
                       href="https://www.instagram.com/onimisea"
                       className="hover:text-onimisea_gray_light"
@@ -376,8 +460,28 @@ const MobileMenu = () => {
                         className="hover:scale-150 duration-300"
                       />
                     </Link>
-                  </li>
-                  <li className="w-fit">
+                  </motion.li>
+                  <motion.li
+                    className="w-fit"
+                    variants={{
+                      open: {
+                        y: 0,
+                        opacity: 1,
+                        transition: {
+                          y: { stiffness: 1000, velocity: -100 },
+                        },
+                      },
+                      closed: {
+                        y: 50,
+                        opacity: 0,
+                        transition: {
+                          y: { stiffness: 1000 },
+                        },
+                      },
+                    }}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
                     <Link
                       href="https://ng.linkedin.com/in/onimisea"
                       className="hover:text-onimisea_gray_light"
@@ -387,8 +491,28 @@ const MobileMenu = () => {
                         className="hover:scale-150 duration-300"
                       />
                     </Link>
-                  </li>
-                  <li className="w-fit">
+                  </motion.li>
+                  <motion.li
+                    className="w-fit"
+                    variants={{
+                      open: {
+                        y: 0,
+                        opacity: 1,
+                        transition: {
+                          y: { stiffness: 1000, velocity: -100 },
+                        },
+                      },
+                      closed: {
+                        y: 50,
+                        opacity: 0,
+                        transition: {
+                          y: { stiffness: 1000 },
+                        },
+                      },
+                    }}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
                     <Link
                       href="https://github.com/onimisea"
                       className="hover:text-onimisea_gray_light"
@@ -398,8 +522,8 @@ const MobileMenu = () => {
                         className="hover:scale-150 duration-300"
                       />
                     </Link>
-                  </li>
-                </ul>
+                  </motion.li>
+                </motion.ul>
               </motion.section>
             </motion.section>
           </motion.aside>
