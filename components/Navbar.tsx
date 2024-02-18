@@ -3,7 +3,6 @@
 import Link from "next/link";
 import React, { useEffect } from "react";
 import { Button } from "./ui/button";
-import { Menu } from "lucide-react";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 import { motion, AnimatePresence } from "framer-motion";
 import { useAppStore } from "@/store";
@@ -69,6 +68,7 @@ const Navbar = () => {
           </section>
         </section>
 
+        <section className="flex md2:hidden">
         <AnimatePresence>
           <motion.section
             onClick={() => toggleMobileNav(!mobileNav)}
@@ -115,6 +115,7 @@ const Navbar = () => {
             </Button>
           </motion.section>
         </AnimatePresence>
+        </section>
       </section>
     </header>
   );

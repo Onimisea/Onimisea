@@ -25,7 +25,7 @@ export default function HomeLayout({
       >
         <Navbar />
         <Sidebar />
-        <main className="relative mt-20 py-24">{children}</main>
+        <main className="relative mt-20">{children}</main>
         <Footer />
       </ThemeProvider>
     </body>
