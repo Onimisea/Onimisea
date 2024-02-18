@@ -67,7 +67,7 @@ const ReviewsSlider = () => {
               return (
                 <SwiperSlide key={i} className="transition-all duration-500">
                   <section className="rounded-[10px] flex flex-col items-center justify-center gap-4 text-center">
-                    <section className="rounded-[10px] bg-white flex items-center justify-center gap-10 p-8">
+                    <section className="rounded-[10px] bg-white dark:text-onimisea_text_light flex items-center justify-center gap-10 p-8">
                       <Image
                         src={review.client}
                         alt={review.review}

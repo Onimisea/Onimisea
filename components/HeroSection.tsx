@@ -12,18 +12,18 @@ const HeroSection = () => {
     <section className="w-full flex items-center justify-center bg-[#fafafa] dark:bg-onimisea_bg_dark py-24">
       <section className="w-[80%] sm:w-[85%] md:w-[90%] mx-auto max-w-screen-2xl flex items-center justify-between text-md xl:gap-24">
         <section className="w-full flex flex-col items-start justify-center py-10">
-          <p className="w-full text-onimisea_text_light text-lg">
+          <p className="w-full text-onimisea_text_light dark:text-onimisea_accent text-lg">
             Hello There!
             <span className="text-onimisea_primary_light font-bold font-promedium">
               {" "}
               I&lsquo;m Ahmed Tijani
             </span>
           </p>
-          <h1 className="w-full text-[48px] text-[#3f3d56] font-promedium font-bold">
+          <h1 className="w-full text-[48px] text-[#3f3d56] dark:text-onimisea_primary_light font-promedium font-bold">
             Fullstack <span className="text-onimisea_accent">Web/3</span>{" "}
             Developer
           </h1>
-          <h3 className="w-full text-[#3f3d56] text-4xl font-promedium font-bold">
+          <h3 className="w-full text-[#3f3d56] dark:text-onimisea_primary_light text-4xl font-promedium font-bold">
             & Software <span className="text-onimisea_accent">Engineer</span>
           </h3>
 
