@@ -16,7 +16,7 @@ const HeroSection = () => {
             Hello There!
             <span className="text-onimisea_primary_light font-bold font-promedium">
               {" "}
-              I'm Ahmed Tijani
+              I&lsquo;m Ahmed Tijani
             </span>
           </p>
           <h1 className="w-full text-[48px] text-[#3f3d56] font-promedium font-bold">
