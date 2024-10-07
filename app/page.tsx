@@ -22,7 +22,8 @@ export default function Home() {
     <div className="w-full relative bg-black-100 flex justify-center items-center flex-col overflow-hidden">
       <div className="w-[85%] mx-auto relative flex justify-center items-center flex-col ">
         <FloatingNav navItems={navItems} />
-        <Hero />
+        <h1 className="text-4xl font-bold">Onimisea</h1>
+        {/* <Hero /> */}
         {/* <Grid />
         <RecentProjects />
         <Clients />
