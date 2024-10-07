@@ -23,12 +23,12 @@ export default function Home() {
       <div className="w-[85%] mx-auto relative flex justify-center items-center flex-col ">
         <FloatingNav navItems={navItems} />
         <Hero />
-        <Grid />
+        {/* <Grid />
         <RecentProjects />
         <Clients />
         <Experience />
         <Approach />
-        <Footer />
+        <Footer /> */}
       </div>
     </div>
   );
