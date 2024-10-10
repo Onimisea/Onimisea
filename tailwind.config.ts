@@ -18,12 +18,6 @@ module.exports = {
         "4xl": "1920px",
         "5xl": "2560px",
       },
-      fontFamily: {
-        probook: ["var(--probook)", "sans-serif"],
-        promedium: ["var(--promedium)", "sans-serif"],
-        milkmedium: ["var(--milkmedium)", "sans-serif"],
-        milkbold: ["var(--milkbold)", "sans-serif"],
-      },
       zIndex: {
         "45": "45",
         "50": "50",
