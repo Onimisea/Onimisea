@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import onimiseaIcon from "../public/onimisea_icon.png";
+import onimiseaIcon from "@/public/onimisea_icon.png";
 
 export const metadata: Metadata = {
   title: "Onimisea | Full-stack Engineer",
@@ -25,12 +25,12 @@ export default function Home() {
               height={250}
               className="w-[120px] h-auto"
             />
-            <h1 className="uppercase text-5xl bg-gradient-to-r from-[#3219c8] via-[#ffb500] to-[#3219c8] text-transparent bg-clip-text tracking-widest font-extrabold">
+            <h1 className="uppercase text-5xl bg-gradient-to-r from-[#3219c8] via-[#ffb500] to-[#3219c8] text-transparent bg-clip-text tracking-widest font-milkmed">
               onimisea
             </h1>
           </Link>
 
-          <p className="text-center">Fullstack Web/3 Developer</p>
+          <p className="text-center tracking-widest text-lg">Fullstack Web/3 Developer</p>
         </section>
       </div>
     </div>

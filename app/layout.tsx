@@ -2,11 +2,28 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
-const josefin = localFont({
-  src: "./fonts/josefin.ttf",
-  variable: "--font-josefin",
-  weight: "100 200 300 400 500 600 700 800 900",
-  display: "swap"
+const milkbold = localFont({
+  src: "./fonts/lemonbold.otf",
+  variable: "--milkbold",
+  display: "swap",
+});
+
+const milkmedium = localFont({
+  src: "./fonts/lemonmedium.otf",
+  variable: "--milkmed",
+  display: "swap",
+});
+
+const probook = localFont({
+  src: "./fonts/probook.ttf",
+  variable: "--probook",
+  display: "swap",
+});
+
+const promedium = localFont({
+  src: "./fonts/promedium.ttf",
+  variable: "--promed",
+  display: "swap",
 });
 
 export default function RootLayout({
@@ -16,7 +33,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${josefin.className} antialiased`}>
+      <body
+        className={`${milkbold.variable} ${milkmedium.variable} ${probook.variable} ${promedium.variable} antialiased font-probook`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
