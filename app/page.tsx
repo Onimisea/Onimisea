@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import onimiseaIcon from "/onimisea_icon.png";
+import onimiseaIcon from "@/public/onimisea_icon.png";
 
 export const metadata: Metadata = {
   title: "Onimisea | Full-stack Engineer",
