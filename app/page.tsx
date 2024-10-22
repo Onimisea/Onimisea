@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import onimiseaIcon from "@/public/onimisea_icon.png";
+import { Navbar } from "./components/Navbar";
 
 export const metadata: Metadata = {
   title: "Onimisea | Full-stack Engineer",
@@ -12,7 +13,10 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="w-full relative bg-black-100 flex justify-center items-center flex-col overflow-hidden min-h-screen">
-      <div className="w-[85%] mx-auto relative flex justify-center items-center flex-col ">
+      <Navbar />
+
+
+      <div className="w-[85%] mx-auto relative flex justify-center items-center flex-col h-[900px]">
         <section className="w-full md3:w-[40%] flex flex-col items-center justify-center gap-3">
           <Link
             href="/"
@@ -30,7 +34,9 @@ export default function Home() {
             </h1>
           </Link>
 
-          <p className="text-center tracking-widest text-lg">Fullstack Web/3 Developer</p>
+          <p className="text-center tracking-widest text-lg">
+            Fullstack Web/3 Developer
+          </p>
         </section>
       </div>
     </div>
