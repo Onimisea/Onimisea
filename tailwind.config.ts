@@ -40,6 +40,14 @@ module.exports = {
         "90": "90",
         "95": "95",
       },
+      backgroundImage: {
+        hero: "url('/grid.png')",
+        hero_grd:
+          "linear-gradient(to right top, rgba(0, 3, 25, 0.2), rgba(0, 3, 25, 0.2), rgba(0, 3, 25, 0.2))",
+        onimisea_grd: "linear-gradient(to right, #3219c8, #F2AC00, #3219c8);",
+        onimisea_grd_rev:
+          "linear-gradient(to right, #F2AC00, #3219c8, #F2AC00);",
+      },
       colors: {
         onimisea_text_light: "#051550",
         onimisea_primary_light: "#3219c8",
