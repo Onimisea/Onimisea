@@ -43,10 +43,15 @@ module.exports = {
       backgroundImage: {
         hero: "url('/grid.png')",
         hero_grd:
-          "linear-gradient(to right top, rgba(0, 3, 25, 0.2), rgba(0, 3, 25, 0.2), rgba(0, 3, 25, 0.2))",
+          "linear-gradient(to right top, rgba(0, 3, 25, 0.1), rgba(5, 21, 80, 0.5), rgba(0, 3, 25, 0.1))",
         onimisea_grd: "linear-gradient(to right, #3219c8, #F2AC00, #3219c8);",
         onimisea_grd_rev:
           "linear-gradient(to right, #F2AC00, #3219c8, #F2AC00);",
+        onimisea_text_grd: "linear-gradient(90deg, #3219c8, #F2AC00)",
+        onimisea_text_grd_rev: "linear-gradient(90deg, #F2AC00, #3219c8)",
+        onimisea_text_grd2: "linear-gradient(90deg, #3219c8, #F2AC00, #3219c8)",
+        onimisea_text_grd2_rev:
+          "linear-gradient(90deg, #F2AC00, #3219c8, #F2AC00)",
       },
       colors: {
         onimisea_text_light: "#051550",
