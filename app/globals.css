@@ -79,3 +79,24 @@
     @apply active:outline-none;
   }
 }
+
+
+@layer utilities {
+  .onimisea_text_grd_outline {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: theme('backgroundImage.onimisea_text_grd2');
+    position: relative;
+  }
+
+  .onimisea_text_grd_outline::after {
+    content: attr(data-text); /* Duplicate the text */
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(50, 25, 200, 1); /* Adjust stroke color and size */
+    z-index: -1;
+  }
+}

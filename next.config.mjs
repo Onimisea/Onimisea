@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  distDir: "build",
-  output: "standalone",
+  distDir: ".next",
+  // output: "standalone",
 };
 
 export default nextConfig;
