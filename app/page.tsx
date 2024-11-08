@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
-import onimiseaIcon from "@/public/onimisea_icon.png";
 import { Navbar } from "./components/Navbar";
+import { Hero } from "./components/Hero";
 
 export const metadata: Metadata = {
   title: "Onimisea | Full-stack Engineer",
@@ -14,9 +12,9 @@ export default function Home() {
   return (
     <div className="w-full relative bg-black-100 flex justify-center items-center flex-col overflow-hidden min-h-screen">
       <Navbar />
+      <Hero />
 
-
-      <div className="w-[85%] mx-auto relative flex justify-center items-center flex-col h-[900px]">
+      {/* <div className="w-[85%] mx-auto relative flex justify-center items-center flex-col ">
         <section className="w-full md3:w-[40%] flex flex-col items-center justify-center gap-3">
           <Link
             href="/"
@@ -38,7 +36,7 @@ export default function Home() {
             Fullstack Web/3 Developer
           </p>
         </section>
-      </div>
+      </div> */}
     </div>
   );
 }

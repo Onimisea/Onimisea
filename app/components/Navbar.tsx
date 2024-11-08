@@ -2,7 +2,7 @@
 
 import { Code, Contact, House, MessagesSquare, UserPen } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { cloneElement, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import {
   Tooltip,
@@ -10,6 +10,14 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+
+const links = [
+  { href: "/", label: "Home", icon: <House /> },
+  { href: "/#about", label: "About", icon: <UserPen /> },
+  { href: "/#projects", label: "Projects", icon: <Code /> },
+  { href: "/#testimonials", label: "Testimonials", icon: <MessagesSquare /> },
+  { href: "/#contact", label: "Contact", icon: <Contact /> },
+];
 
 export function Navbar() {
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -60,91 +68,31 @@ export function Navbar() {
         transition: "transform 0.8s ease-in-out, opacity 0.8s ease-in-out",
       }}
     >
-      <Link
-        href="/"
-        className="rounded-lg bg-transparent hover:text-onimisea_accent flex items-center justify-center duration-500 md:py-4 gap-2"
-      >
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <House className="text-[16px] md:text-[18px]" />
-            </TooltipTrigger>
-            <TooltipContent className="bg-black rounded-lg text-onimisea_accent">
-              <p>Home</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
+      {links.map(({ href, label, icon }, index) => (
+        <Link
+          key={index}
+          href={href}
+          className="rounded-lg bg-transparent hover:text-onimisea_accent flex items-center justify-center duration-500 py-4 gap-2"
+          aria-label={label} // ARIA label for screen readers
+          role="button" // Define the role for better semantics
+          tabIndex={0} // Ensure keyboard navigation
+        >
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                {cloneElement(icon, {
+                  className: "text-[16px] md:text-[18px]",
+                })}
+              </TooltipTrigger>
+              <TooltipContent className="bg-black rounded-lg text-onimisea_accent">
+                <p>{label}</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
 
-        <span className="leading-none mt-1 hidden sm2:flex">Home</span>
-      </Link>
-      <Link
-        href="/#about"
-        className="rounded-lg bg-transparent hover:text-onimisea_accent flex items-center justify-center duration-500 py-4 gap-2"
-      >
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <UserPen className="text-[16px] md:text-[18px]" />
-            </TooltipTrigger>
-            <TooltipContent className="bg-black rounded-lg text-onimisea_accent">
-              <p>About</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-
-        <span className="leading-none mt-1 hidden sm2:flex">About</span>
-      </Link>
-      <Link
-        href="/#projects"
-        className="rounded-lg bg-transparent hover:text-onimisea_accent flex items-center justify-center duration-500 py-4 gap-2"
-      >
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Code className="text-[16px] md:text-[18px]" />
-            </TooltipTrigger>
-            <TooltipContent className="bg-black rounded-lg text-onimisea_accent">
-              <p>Projects</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-
-        <span className="leading-none mt-1 hidden sm2:flex">Projects</span>
-      </Link>
-      <Link
-        href="/#testimonials"
-        className="rounded-lg bg-transparent hover:text-onimisea_accent flex items-center justify-center duration-500 py-4 gap-2"
-      >
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <MessagesSquare className="text-[16px] md:text-[18px]" />
-            </TooltipTrigger>
-            <TooltipContent className="bg-black rounded-lg text-onimisea_accent">
-              <p>Testimonials</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-
-        <span className="leading-none mt-1 hidden sm2:flex">Testimonials</span>
-      </Link>
-      <Link
-        href="/#contact"
-        className="rounded-lg bg-transparent hover:text-onimisea_accent flex items-center justify-center duration-500 py-4 gap-2"
-      >
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Contact className="text-[16px] md:text-[18px]" />
-            </TooltipTrigger>
-            <TooltipContent className="bg-black rounded-lg text-onimisea_accent">
-              <p>Contact</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-
-        <span className="leading-none mt-1 hidden sm2:flex">Contact</span>
-      </Link>
+          <span className="leading-none mt-1 hidden sm2:flex">{label}</span>
+        </Link>
+      ))}
     </motion.nav>
   );
 }
