@@ -42,6 +42,7 @@ module.exports = {
       },
       backgroundImage: {
         hero: "url('/grid.png')",
+        client_bg: "url('/client2.jpg')",
         hero_grd:
           "linear-gradient(to right top, rgba(0, 3, 25, 0.1), rgba(5, 21, 80, 0.5), rgba(0, 3, 25, 0.1))",
         onimisea_grd: "linear-gradient(to right, #3219c8, #F2AC00, #3219c8);",
