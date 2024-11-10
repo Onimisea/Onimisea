@@ -44,7 +44,7 @@ export const Bentogrid = () => {
       <div className="p-6 rounded-2xl relative overflow-hidden border-[1px] border-onimisea_text_light bg-transparent group">
         <div className="text-xl sm3:text-2xl md:text-3xl w-[90%] sm3:w-[80%] md:w-[100%] xl:w-[70%]">
           <h3 className="font-bold leading-[35px] md:leading-[45px] group-hover:translate-x-[20px] group-hover:translate-y-[20px] transition-all duration-500">
-            I'm very flexible with time zone communications
+            I&apos;m very flexible with time zone communications
           </h3>
         </div>
         <Image
