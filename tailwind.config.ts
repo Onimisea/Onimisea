@@ -42,9 +42,11 @@ module.exports = {
       },
       backgroundImage: {
         hero: "url('/grid.png')",
+        scoop_bg: "url('/projects/lockedin.png')",
         client_bg: "url('/client2.jpg')",
         hero_grd:
           "linear-gradient(to right top, rgba(0, 3, 25, 0.1), rgba(5, 21, 80, 0.5), rgba(0, 3, 25, 0.1))",
+        black_transparent: "linear-gradient(to top right, #000319, rgba(0, 0, 0, 0.7))",
         onimisea_grd: "linear-gradient(to right, #3219c8, #F2AC00, #3219c8);",
         onimisea_grd_rev:
           "linear-gradient(to right, #F2AC00, #3219c8, #F2AC00);",
@@ -187,6 +189,10 @@ module.exports = {
             transform: "translate(calc(-50% - 0.5rem))",
           },
         },
+        spinXY: {
+          "0%": { transform: "rotateX(0deg) rotateY(0deg)" },
+          "100%": { transform: "rotateX(360deg) rotateY(360deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -198,6 +204,7 @@ module.exports = {
         third: "moveInCircle 40s linear infinite",
         fourth: "moveHorizontal 40s ease infinite",
         fifth: "moveInCircle 20s ease infinite",
+        spinXY: "spinXY 20s linear infinite",
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
