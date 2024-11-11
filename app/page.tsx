@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { About } from "./components/About";
+import { SkillServe } from "./components/SkillServe";
+import RecentProjects from "./components/RecentProjects";
 
 export const metadata: Metadata = {
   title: "Onimisea | Full-stack Engineer",
@@ -15,6 +17,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
+      <SkillServe />
+      <RecentProjects />
 
       {/* <div className="w-[85%] mx-auto relative flex justify-center items-center flex-col ">
         <section className="w-full md3:w-[40%] flex flex-col items-center justify-center gap-3">
