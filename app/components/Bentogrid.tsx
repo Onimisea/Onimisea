@@ -2,7 +2,6 @@ import Image from "next/image";
 import React from "react";
 
 import b4 from "@/public/b4.svg";
-import lockedin from "@/public/projects/lockedin.png";
 import globe from "@/public/globe.png";
 
 export const Bentogrid = () => {
