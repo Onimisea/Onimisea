@@ -76,7 +76,7 @@ const RecentProjects = () => {
 
   return (
     <div id="projects" className="flex flex-col items-center justify-center w-full">
-      <div className="w-[90%] mx-auto flex flex-col justify-center items-center py-20 gap-10 duration-500">
+      <div className="w-[90%] mx-auto flex flex-col justify-center items-center pt-10 pb-20 gap-10 duration-500">
         <h2 className="text-2xl md:text-4xl font-bold text-center text-transparent bg-gradient-to-r from-onimisea_primary_light via-onimisea_accent to-onimisea_primary_light bg-clip-text w-fit font-milkbold">
           Recent Projects
         </h2>
