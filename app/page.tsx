@@ -6,6 +6,7 @@ import { SkillServe } from "./components/SkillServe";
 import RecentProjects from "./components/RecentProjects";
 import { Experience } from "./components/Experience";
 import { Testimonials } from "./components/Testimonials";
+import { Approach } from "./components/Approach";
 
 export const metadata: Metadata = {
   title: "Onimisea | Full-stack Engineer",
@@ -23,6 +24,7 @@ export default function Home() {
       <RecentProjects />
       <Experience />
       <Testimonials />
+      <Approach />
 
       {/* <div className="w-[85%] mx-auto relative flex justify-center items-center flex-col ">
         <section className="w-full md3:w-[40%] flex flex-col items-center justify-center gap-3">
