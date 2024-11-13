@@ -11,18 +11,14 @@ const skills = [
   { id: 10, name: "SQL" },
   { id: 11, name: "PostgreSQL" },
   { id: 12, name: "REST APIs" },
-  { id: 13, name: "Microservices" },
   { id: 14, name: "Git" },
   { id: 15, name: "Zustand" },
-  { id: 16, name: "Recoil" },
   { id: 18, name: "Azure CI/CD" },
 ];
 
 const services = [
   { id: 1, name: "Full-stack Web Development" },
-  { id: 2, name: "Web3/Blockchain Development" },
   { id: 3, name: "API Integration" },
-  { id: 4, name: "AI Automation" },
   { id: 5, name: "Custom Chatbots and Assistants" },
   { id: 7, name: "Website/Application Quick Fixes" },
   { id: 8, name: "Data Analysis" }

@@ -5,40 +5,41 @@ export const navItems = [
   { name: "Contact", link: "#contact" },
 ];
 
-export const projects = [
+const recentProjects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/all/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "/ui.earth.com",
+    name: "Onimisea",
+    description: "A personal portfolio website to showcase my web development, AI, and digital services. Built with Next.js and styled with TailwindCSS for a modern, responsive user experience.",
+    technologies: ["Next.js", "TailwindCSS", "Framer Motion"],
+    link: "https://yourportfolio.com",
+    github: "https://github.com/yourusername/onimisea-portfolio"
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/all/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "/ui.yoom.com",
+    name: "Oyapaste",
+    description: "A NestJS-based application with a custom notification system for sending dynamic emails and push notifications using Brevo and Firebase Cloud Messaging.",
+    technologies: ["NestJS", "TypeScript", "Firebase", "Brevo"],
+    link: "https://oyapaste.com",
+    github: "https://github.com/yourusername/oyapaste"
   },
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/all/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "/ui.aiimg.com",
+    name: "LockedIn Habit Tracker",
+    description: "A habit-tracking application built with Next.js, providing users with personalized reminders and tracking insights to build consistent habits.",
+    technologies: ["Next.js", "React", "TailwindCSS"],
+    link: "https://lockedin.com",
+    github: "https://github.com/yourusername/lockedin"
   },
   {
     id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/all/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/ui.apple.com",
+    name: "EwekoAggregate Frontend",
+    description: "A frontend rebuild for EwekoAggregate, optimizing user interactions and performance with React and TailwindCSS.",
+    technologies: ["React", "TailwindCSS"],
+    link: "https://ewekoaggregate.com",
+    github: "https://github.com/yourusername/ewekoaggregate-frontend"
   },
 ];
+
 
 export const testimonials = [
   {
