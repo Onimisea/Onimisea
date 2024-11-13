@@ -32,7 +32,7 @@ export const Approach = () => {
               key={i}
               className="w-[90%] md:w-[40%] lg:w-[28%] group text-center flex flex-col gap-4 text-white"
             >
-              <h3 className="font-bold text-2xl">{appro.title}</h3>
+              <h3 className="font-bold text-xl">{appro.title}</h3>
               <p className="text-md leading-[30px]">{appro.text}</p>
             </div>
           ))}
