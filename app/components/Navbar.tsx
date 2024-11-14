@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/tooltip";
 
 const links = [
-  { href: "/", label: "Home", icon: <House /> },
+  { href: "/#home", label: "Home", icon: <House /> },
   { href: "/#about", label: "About", icon: <UserPen /> },
   { href: "/#projects", label: "Projects", icon: <Code /> },
   { href: "/#testimonials", label: "Testimonials", icon: <MessagesSquare /> },

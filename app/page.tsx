@@ -2,11 +2,43 @@ import type { Metadata } from "next";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { About } from "./components/About";
+import { SkillServe } from "./components/SkillServe";
+import RecentProjects from "./components/RecentProjects";
+import { Experience } from "./components/Experience";
+import { Testimonials } from "./components/Testimonials";
+import { Approach } from "./components/Approach";
+import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   title: "Onimisea | Full-stack Engineer",
   description:
     "Full-stack engineer with 8 years of crafting stunning, fast, mobile-friendly, high-performance, scalable websites and applications for startups and small businesses. Transforming their visions into profitable digital assets.",
+  openGraph: {
+    title: "Onimisea | Full-stack Engineer",
+    description:
+      "Experienced full-stack engineer focused on building scalable digital solutions for startups and small businesses.",
+    url: "https://onimisea.com",
+    type: "website",
+    locale: "en_US",
+    siteName: "Onimisea",
+    images: [
+      {
+        url: "https://onimisea.com/projects/onimisea.png",
+        width: 1200,
+        height: 630,
+        alt: "Onimisea | Full-stack Engineer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Onimisea | Full-stack Engineer",
+    description:
+      "Experienced full-stack engineer focused on building scalable digital solutions for startups and small businesses.",
+    site: "@onimisea",
+    creator: "@onimisea",
+    images: ["https://onimisea.com/projects/onimisea.png"],
+  },
 };
 
 export default function Home() {
@@ -15,30 +47,12 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
-
-      {/* <div className="w-[85%] mx-auto relative flex justify-center items-center flex-col ">
-        <section className="w-full md3:w-[40%] flex flex-col items-center justify-center gap-3">
-          <Link
-            href="/"
-            className="flex flex-col items-center justify-center gap-2"
-          >
-            <Image
-              src={onimiseaIcon}
-              alt="Onimisea Icon"
-              width={300}
-              height={250}
-              className="w-[120px] h-auto"
-            />
-            <h1 className="uppercase text-5xl bg-gradient-to-r from-[#3219c8] via-[#ffb500] to-[#3219c8] text-transparent bg-clip-text tracking-widest font-milkmed">
-              onimisea
-            </h1>
-          </Link>
-
-          <p className="text-center tracking-widest text-lg">
-            Fullstack Web/3 Developer
-          </p>
-        </section>
-      </div> */}
+      <SkillServe />
+      <RecentProjects />
+      <Experience />
+      <Testimonials />
+      <Approach />
+      <Footer />
     </div>
   );
 }
