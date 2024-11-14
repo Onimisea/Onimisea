@@ -14,8 +14,9 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { toast } from "react-toastify";
+import { Textarea } from "@/components/ui/textarea";
 
-const waitlistFormSchema = z.object({
+const contactFormSchema = z.object({
   full_name: z
     .string()
     .min(2, { message: "Full name must be at least 6 characters." })
@@ -25,18 +26,23 @@ const waitlistFormSchema = z.object({
     .email({ message: "Please enter a valid email address." })
     .min(3, { message: "Email must be at least 12 characters." })
     .max(50, { message: "Email must not exceed 50 characters." }),
+  message: z
+    .string()
+    .min(2, { message: "Message must be at least 12 characters." })
+    .max(50, { message: "Message must not exceed 1000 characters." }),
 });
 
-export const WaitlistForm = () => {
-  const form = useForm<z.infer<typeof waitlistFormSchema>>({
-    resolver: zodResolver(waitlistFormSchema),
+export const ContactsForm = () => {
+  const form = useForm<z.infer<typeof contactFormSchema>>({
+    resolver: zodResolver(contactFormSchema),
     defaultValues: {
       full_name: "",
       email_address: "",
+      message: "",
     },
   });
 
-  const onSubmit = async (data: z.infer<typeof waitlistFormSchema>) => {
+  const onSubmit = async (data: z.infer<typeof contactFormSchema>) => {
     console.log(data);
     const response = await fetch("/api/waitlist", {
       method: "POST",
@@ -67,10 +73,10 @@ export const WaitlistForm = () => {
                 <Input
                   placeholder="John Doe"
                   {...field}
-                  className="border border-green-600 outline-none focus-visible:outline-none focus-visible:ring-0 focus-within:ring-inherit focus-within:border-orange-500 bg-transparent"
+                  className="text-white border border-onimisea_secondary_light outline-none focus-visible:outline-none focus-visible:ring-0 focus-within:ring-inherit focus-within:border-onimisea_accent bg-transparent"
                 />
               </FormControl>
-              <FormMessage />
+              <FormMessage className="text-onimisea_accent" />
             </FormItem>
           )}
         />
@@ -85,16 +91,36 @@ export const WaitlistForm = () => {
                 <Input
                   placeholder="johndoe@gmail.com"
                   {...field}
-                  className="border border-green-600 outline-none focus-visible:outline-none focus-visible:ring-0 focus-within:ring-inherit focus-within:border-orange-500 bg-transparent"
+                  className="text-white border border-onimisea_secondary_light outline-none focus-visible:outline-none focus-visible:ring-0 focus-within:ring-inherit focus-within:border-onimisea_accent bg-transparent"
                 />
               </FormControl>
-              <FormMessage />
+              <FormMessage className="text-onimisea_accent" />
             </FormItem>
           )}
         />
+
+        <FormField
+          control={form.control}
+          name="message"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Message</FormLabel>
+              <FormControl>
+                <Textarea
+                  placeholder="I want to..."
+                  {...field}
+                  className="text-white border border-onimisea_secondary_light outline-none focus-visible:outline-none focus-visible:ring-0 focus-within:ring-inherit focus-within:border-onimisea_accent bg-transparent min-h-[150px]"
+                />
+              </FormControl>
+              <FormMessage className="text-onimisea_accent" />
+            </FormItem>
+          )}
+        />
+
+
         <Button
           type="submit"
-          className="rounded-full px-12 py-6 text-lg duration-500 transition bg-green-600 text-white hover:bg-orange-500 hover:font-bold hover:border-none leading-none"
+          className="rounded-full px-12 py-6 text-lg duration-500 transition bg-onimisea_secondary_light text-white hover:bg-onimisea_accent hover:text-onimisea_text_light hover:font-bold hover:border-none leading-none"
         >
           Submit
         </Button>

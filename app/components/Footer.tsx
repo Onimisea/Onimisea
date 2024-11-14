@@ -13,6 +13,7 @@ import onimiseaIcon from "@/public/onimisea_icon.png";
 
 import { BsFacebook, BsTwitterX } from "react-icons/bs";
 import { RiInstagramFill, RiLinkedinFill } from "react-icons/ri";
+import { ContactsForm } from "./ContactForm";
 
 const Footer = () => {
   return (
@@ -38,26 +39,25 @@ const Footer = () => {
             </h1>
           </div>
 
-          <p className="text-white text-center">
+          <h2 className="text-white text-center">
             Reach out to me today and let&apos;s discuss how I can help you
             achieve your goals.
-          </p>
+          </h2>
 
           <Dialog>
             <DialogTrigger className="rounded-full px-10 py-4 text-lg duration-500 transition bg-onimisea_secondary_light text-white hover:text-onimisea_text_light hover:bg-onimisea_accent hover:font-bold hover:border-none leading-none z-10 mt-6 md:mt-12">
               <span>Join Wait List</span>
             </DialogTrigger>
-            <DialogContent className="md:p-8 w-full bg-black-100 border border-onimisea_text_light">
+            <DialogContent className="md:p-8 w-[90%] bg-black-100 border border-onimisea_text_light">
               <DialogHeader className="flex flex-col gap-6">
                 <DialogTitle className="text-white font-bold">
-                  Welcome
+                  Send me a message
                 </DialogTitle>
                 <DialogDescription className="text-gray-300 md:text-justify">
                   What can I help you with today?
                 </DialogDescription>
               </DialogHeader>
-              <p>...loading...</p>
-              {/* <WaitlistForm /> */}
+              <ContactsForm />
             </DialogContent>
           </Dialog>
         </div>
@@ -75,9 +75,9 @@ const Footer = () => {
                   height={250}
                   className="w-[120px] h-auto"
                 />
-                <h1 className="uppercase text-5xl bg-gradient-to-r from-[#3219c8] via-[#ffb500] to-[#3219c8] text-transparent bg-clip-text tracking-widest font-milkmed">
+                <p className="uppercase text-5xl bg-gradient-to-r from-[#3219c8] via-[#ffb500] to-[#3219c8] text-transparent bg-clip-text tracking-widest font-milkmed">
                   onimisea
-                </h1>
+                </p>
               </Link>
 
               <p className="text-center tracking-widest text-lg">
