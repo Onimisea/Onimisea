@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     siteName: "Onimisea",
     images: [
       {
-        url: "https://onimisea.com/projects/onimisea.png",
+        url: "https://onimisea.azurewebsites.net/projects/onimisea.png",
         width: 1200,
         height: 630,
         alt: "Onimisea | Full-stack Engineer",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
       "Experienced full-stack engineer focused on building scalable digital solutions for startups and small businesses.",
     site: "@onimisea",
     creator: "@onimisea",
-    images: ["https://onimisea.com/projects/onimisea.png"],
+    images: ["https://onimisea.azurewebsites.net/projects/onimisea.png"],
   },
 };
 
