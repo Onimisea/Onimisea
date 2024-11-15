@@ -12,7 +12,7 @@ import Footer from "./components/Footer";
 export const metadata: Metadata = {
   title: "Onimisea | Full-stack Engineer",
   description:
-    "Full-stack engineer with 8 years of crafting stunning, fast, mobile-friendly, high-performance, scalable websites and applications for startups and small businesses. Transforming their visions into profitable digital assets.",
+    "Full-stack engineer with 5 years of crafting stunning, fast, mobile-friendly, high-performance, scalable websites and applications for startups and small businesses. Transforming their visions into profitable digital assets.",
   openGraph: {
     title: "Onimisea | Full-stack Engineer",
     description:
