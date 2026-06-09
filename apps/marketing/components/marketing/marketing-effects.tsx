@@ -269,6 +269,7 @@ export function MarketingEffects() {
     const topButtonElement = document.getElementById("scroll-top")
     const hamburgerElement = document.getElementById("ham")
     const mobileNavElement = document.getElementById("mob-nav")
+    const mobileNavCloseElement = document.getElementById("mob-nav-close")
     const mainElement = document.getElementById("main-content")
 
     if (
@@ -276,7 +277,8 @@ export function MarketingEffects() {
       !progressElement ||
       !topButtonElement ||
       !hamburgerElement ||
-      !mobileNavElement
+      !mobileNavElement ||
+      !(mobileNavCloseElement instanceof HTMLButtonElement)
     ) {
       return
     }
@@ -286,7 +288,11 @@ export function MarketingEffects() {
     const topButton = topButtonElement
     const hamburger = hamburgerElement
     const mobileNav = mobileNavElement
-    const mobileNavLinks = Array.from(mobileNav.querySelectorAll<HTMLAnchorElement>("a"))
+    const mobileNavClose = mobileNavCloseElement
+    const mobileNavFocusables = [
+      mobileNavClose,
+      ...Array.from(mobileNav.querySelectorAll<HTMLAnchorElement>("a")),
+    ]
 
     const navLinks = Array.from(
       document.querySelectorAll<HTMLAnchorElement>(
@@ -359,7 +365,11 @@ export function MarketingEffects() {
       hamburger.setAttribute("aria-label", open ? "Close menu" : "Open menu")
       document.body.style.overflow = open ? "hidden" : ""
       mainElement?.toggleAttribute("inert", open)
-      if (open) mobileNavLinks[0]?.focus()
+      if (open) mobileNavClose.focus()
+    }
+
+    const onMobileNavCloseClick = () => {
+      closeMobileNav({ restoreFocus: true })
     }
 
     const onKeydown = (event: KeyboardEvent) => {
@@ -370,18 +380,18 @@ export function MarketingEffects() {
         return
       }
 
-      if (event.key !== "Tab" || !isOpen || mobileNavLinks.length === 0) return
+      if (event.key !== "Tab" || !isOpen || mobileNavFocusables.length === 0) return
 
-      const firstLink = mobileNavLinks[0]
-      const lastLink = mobileNavLinks.at(-1)
-      if (!firstLink || !lastLink) return
+      const firstFocusable = mobileNavFocusables[0]
+      const lastFocusable = mobileNavFocusables.at(-1)
+      if (!firstFocusable || !lastFocusable) return
 
-      if (event.shiftKey && document.activeElement === firstLink) {
+      if (event.shiftKey && document.activeElement === firstFocusable) {
         event.preventDefault()
-        lastLink.focus()
-      } else if (!event.shiftKey && document.activeElement === lastLink) {
+        lastFocusable.focus()
+      } else if (!event.shiftKey && document.activeElement === lastFocusable) {
         event.preventDefault()
-        firstLink.focus()
+        firstFocusable.focus()
       }
     }
 
@@ -412,6 +422,7 @@ export function MarketingEffects() {
     }
 
     hamburger.addEventListener("click", onHamburgerClick)
+    mobileNavClose.addEventListener("click", onMobileNavCloseClick)
     document.addEventListener("keydown", onKeydown)
     topButton.addEventListener("click", onTopClick)
     window.addEventListener("scroll", requestScrollUpdate, { passive: true })
@@ -420,6 +431,7 @@ export function MarketingEffects() {
 
     return () => {
       hamburger.removeEventListener("click", onHamburgerClick)
+      mobileNavClose.removeEventListener("click", onMobileNavCloseClick)
       document.removeEventListener("keydown", onKeydown)
       topButton.removeEventListener("click", onTopClick)
       window.removeEventListener("scroll", requestScrollUpdate)

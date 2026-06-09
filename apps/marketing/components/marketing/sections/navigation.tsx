@@ -42,7 +42,7 @@ export function Navigation() {
               </a>
               <a
                 href="#contact"
-                className="inline-flex min-h-11 items-center rounded-button bg-onimisea-signal px-[18px] py-[9px] text-[13px] font-bold tracking-normal text-onimisea-cta-ink no-underline transition-[background,transform,box-shadow] duration-200 hover:-translate-y-px hover:bg-onimisea-signal-strong hover:shadow-[0_6px_20px_rgba(14,165,233,0.28)]"
+                className="inline-flex min-h-11 items-center rounded-button bg-onimisea-signal px-[18px] py-[9px] text-[13px] font-bold tracking-normal whitespace-nowrap text-onimisea-cta-ink no-underline transition-[background,transform,box-shadow] duration-200 hover:-translate-y-px hover:bg-onimisea-signal-strong hover:shadow-[0_6px_20px_rgba(14,165,233,0.28)]"
               >
                 Work With Me
               </a>
@@ -63,18 +63,33 @@ export function Navigation() {
         </div>
       </nav>
       <div
-        className="mob-nav fixed inset-0 z-[180] hidden flex-col items-center justify-center gap-8 bg-onimisea-base/95 backdrop-blur-2xl data-[open=true]:flex"
+        className="mob-nav fixed inset-0 z-[180] hidden flex-col items-center justify-center gap-8 bg-onimisea-base/95 px-5 backdrop-blur-2xl data-[open=true]:flex"
         id="mob-nav"
         role="dialog"
         aria-label="Site navigation"
         aria-modal="true"
         hidden
       >
+        <button
+          className="absolute top-5 right-5 grid size-12 place-items-center rounded-full border border-white/10 bg-white/[0.04] text-onimisea-text-primary transition-[background,border-color,color] duration-200 hover:border-onimisea-signal hover:bg-onimisea-signal/10 hover:text-onimisea-signal"
+          id="mob-nav-close"
+          type="button"
+          aria-label="Close menu"
+        >
+          <span
+            className="absolute h-[1.5px] w-[22px] rotate-45 rounded bg-current"
+            aria-hidden="true"
+          />
+          <span
+            className="absolute h-[1.5px] w-[22px] -rotate-45 rounded bg-current"
+            aria-hidden="true"
+          />
+        </button>
         {[...navItems, { href: "#contact", label: "Contact" }].map((item) => (
           <a
             key={item.href}
             href={item.href}
-            className="inline-flex min-h-11 items-center text-[22px] font-semibold tracking-normal text-onimisea-text-secondary no-underline transition-[color,transform] duration-200 hover:text-onimisea-signal data-[active=true]:translate-x-1 data-[active=true]:text-onimisea-signal"
+            className="inline-flex min-h-11 max-w-full items-center text-center text-[22px] font-semibold tracking-normal text-onimisea-text-secondary no-underline transition-[color,transform] duration-200 hover:text-onimisea-signal data-[active=true]:translate-x-1 data-[active=true]:text-onimisea-signal"
           >
             {item.label}
           </a>

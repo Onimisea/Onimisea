@@ -29,7 +29,7 @@ export function Hero() {
           <span className="mb-[18px] block animate-[onimisea-hero-rise_0.72s_cubic-bezier(0.2,0.8,0.2,1)_forwards] font-mono text-[11px] leading-relaxed font-medium tracking-normal text-onimisea-signal uppercase opacity-0 [animation-delay:0.08s] motion-reduce:animate-none motion-reduce:opacity-100">
             CTO-level judgment · Principal engineering execution · AI-native systems
           </span>
-          <h1 className="mb-[22px] animate-[onimisea-hero-rise_0.72s_cubic-bezier(0.2,0.8,0.2,1)_forwards] text-[38px] leading-[1.01] font-bold tracking-normal text-onimisea-text-primary opacity-0 [animation-delay:0.16s] motion-reduce:animate-none motion-reduce:opacity-100 sm:text-[42px] sm2:text-[46px] sm3:text-[50px] md:text-[56px] md3:text-[60px] lg:text-[64px] lg2:text-[66px]">
+          <h1 className="mb-[22px] animate-[onimisea-hero-rise_0.72s_cubic-bezier(0.2,0.8,0.2,1)_forwards] text-[34px] leading-[1.03] font-bold tracking-normal text-onimisea-text-primary opacity-0 [animation-delay:0.16s] motion-reduce:animate-none motion-reduce:opacity-100 min-[360px]:text-[38px] sm:text-[42px] sm2:text-[46px] sm3:text-[50px] md:text-[56px] md3:text-[60px] lg:text-[64px] lg2:text-[66px]">
             I engineer business-critical
             <br />
             software from idea
@@ -45,13 +45,13 @@ export function Hero() {
           <div className="flex animate-[onimisea-hero-rise_0.72s_cubic-bezier(0.2,0.8,0.2,1)_forwards] flex-wrap items-center justify-center gap-3 opacity-0 [animation-delay:0.36s] motion-reduce:animate-none motion-reduce:opacity-100 max-sm:w-full">
             <a
               href="#contact"
-              className="inline-flex min-h-12 items-center justify-center rounded-button bg-onimisea-signal px-[26px] py-[14px] text-sm font-bold tracking-normal text-onimisea-cta-ink no-underline transition-[background,transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:bg-onimisea-signal-strong hover:shadow-[0_10px_28px_rgba(14,165,233,0.3)] max-sm:w-full"
+              className="inline-flex min-h-12 items-center justify-center rounded-button bg-onimisea-signal px-4 py-[14px] text-[13px] font-bold tracking-normal whitespace-nowrap text-onimisea-cta-ink no-underline transition-[background,transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:bg-onimisea-signal-strong hover:shadow-[0_10px_28px_rgba(14,165,233,0.3)] max-sm:w-full sm:px-[26px] sm:text-sm"
             >
               Discuss Remote Engagement
             </a>
             <a
               href="#work"
-              className="inline-flex min-h-12 items-center justify-center rounded-button border border-white/15 bg-transparent px-[26px] py-[14px] text-sm font-semibold tracking-normal text-onimisea-text-primary no-underline transition-[background,border-color,transform] duration-200 hover:-translate-y-0.5 hover:border-onimisea-signal hover:bg-onimisea-signal/[0.06] max-sm:w-full"
+              className="inline-flex min-h-12 items-center justify-center rounded-button border border-white/15 bg-transparent px-4 py-[14px] text-[13px] font-semibold tracking-normal whitespace-nowrap text-onimisea-text-primary no-underline transition-[background,border-color,transform] duration-200 hover:-translate-y-0.5 hover:border-onimisea-signal hover:bg-onimisea-signal/[0.06] max-sm:w-full sm:px-[26px] sm:text-sm"
             >
               My Work
             </a>

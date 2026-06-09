@@ -15,7 +15,7 @@ import { Icon, ProductVisual, SectionLabel, Tag } from "../primitives"
 const wrapClass = "mx-auto max-w-[1200px] px-5 sm:px-8 xl:max-w-[1240px]"
 const sectionClass = "scroll-mt-[86px] py-[72px] md:py-24"
 const sectionHeaderClass =
-  "mb-10 flex translate-y-0 items-end justify-between gap-8 opacity-100 transition-[opacity,transform] duration-700 ease-out data-[animate-pending=true]:translate-y-5 data-[animate-pending=true]:opacity-0 data-[revealed=true]:translate-y-0 data-[revealed=true]:opacity-100 motion-reduce:translate-y-0 motion-reduce:opacity-100 motion-reduce:transition-none max-lg:flex-col max-lg:items-start"
+  "mb-10 flex translate-y-0 items-end justify-between gap-8 opacity-100 transition-[opacity,transform] duration-700 ease-out data-[animate-pending=true]:translate-y-5 data-[animate-pending=true]:opacity-0 data-[revealed=true]:translate-y-0 data-[revealed=true]:opacity-100 motion-reduce:translate-y-0 motion-reduce:opacity-100 motion-reduce:transition-none max-lg3:flex-col max-lg3:items-start"
 const sectionTitleClass =
   "max-w-[720px] text-[24px] font-bold leading-[1.12] tracking-normal text-onimisea-text-primary sm2:text-[28px] md:text-[32px] lg:text-[36px]"
 const introClass = "max-w-[540px] text-[15px] leading-[1.7] text-onimisea-text-secondary"
@@ -28,7 +28,7 @@ const cardClass = cn(
 const revealClass =
   "translate-y-0 opacity-100 transition-[opacity,transform,background,border-color,box-shadow] duration-700 ease-out data-[animate-pending=true]:translate-y-5 data-[animate-pending=true]:opacity-0 data-[revealed=true]:translate-y-0 data-[revealed=true]:opacity-100 motion-reduce:translate-y-0 motion-reduce:opacity-100 motion-reduce:transition-none"
 const primaryButtonClass =
-  "inline-flex min-h-12 items-center justify-center rounded-button bg-onimisea-signal px-[26px] py-[14px] text-sm font-bold tracking-normal text-onimisea-cta-ink no-underline transition-[background,transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:bg-onimisea-signal-strong hover:shadow-[0_10px_28px_rgba(14,165,233,0.3)]"
+  "inline-flex min-h-12 items-center justify-center rounded-button bg-onimisea-signal px-4 py-[14px] text-[13px] font-bold tracking-normal whitespace-nowrap text-onimisea-cta-ink no-underline transition-[background,transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:bg-onimisea-signal-strong hover:shadow-[0_10px_28px_rgba(14,165,233,0.3)] sm:px-[26px] sm:text-sm"
 
 export function DisciplinesSection() {
   return (
@@ -460,7 +460,7 @@ export function ContactSection() {
         <div
           className={cn(
             revealClass,
-            "relative z-[1] overflow-hidden rounded-card border border-onimisea-signal/25 bg-[linear-gradient(135deg,rgba(14,165,233,0.14),transparent_34%),var(--onimisea-surface)] p-7 text-left shadow-[0_22px_70px_rgba(0,0,0,0.34)] before:pointer-events-none before:absolute before:inset-0 before:bg-[radial-gradient(ellipse_48%_58%_at_18%_8%,rgba(14,165,233,0.13),transparent_72%)] before:content-[''] md:p-[54px]"
+            "relative z-[1] overflow-hidden rounded-card border border-onimisea-signal/25 bg-[linear-gradient(135deg,rgba(14,165,233,0.14),transparent_34%),var(--onimisea-surface)] p-5 text-left shadow-[0_22px_70px_rgba(0,0,0,0.34)] before:pointer-events-none before:absolute before:inset-0 before:bg-[radial-gradient(ellipse_48%_58%_at_18%_8%,rgba(14,165,233,0.13),transparent_72%)] before:content-[''] sm:p-7 md:p-[54px]"
           )}
           data-animate="reveal"
         >
@@ -479,29 +479,29 @@ export function ContactSection() {
               Start the technical conversation
             </a>
           </div>
-          <div className="relative z-[1] flex flex-wrap items-center justify-center gap-2.5">
+          <div className="relative z-[1] flex flex-wrap items-center justify-start gap-2.5 sm:justify-center">
             <a
               href="mailto:onimisea@gmail.com"
-              className="inline-flex min-h-11 items-center gap-[7px] rounded-button border border-white/[0.09] bg-white/[0.04] px-4 py-2.5 font-mono text-[11px] font-medium tracking-normal text-onimisea-text-secondary no-underline transition-[background,border-color,color] duration-200 hover:border-onimisea-signal hover:bg-onimisea-signal/[0.08] hover:text-onimisea-signal [&_svg]:size-[13px] [&_svg]:stroke-2"
+              className="inline-flex min-h-11 max-w-full items-center gap-[7px] rounded-button border border-white/[0.09] bg-white/[0.04] px-4 py-2.5 font-mono text-[11px] font-medium tracking-normal text-onimisea-text-secondary no-underline transition-[background,border-color,color] duration-200 hover:border-onimisea-signal hover:bg-onimisea-signal/[0.08] hover:text-onimisea-signal max-sm:w-full [&_svg]:size-[13px] [&_svg]:shrink-0 [&_svg]:stroke-2"
             >
               <Icon name="mail" />
-              onimisea@gmail.com
+              <span className="min-w-0 truncate">onimisea@gmail.com</span>
             </a>
             <a
               href="https://github.com/Onimisea"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex min-h-11 items-center gap-[7px] rounded-button border border-white/[0.09] bg-white/[0.04] px-4 py-2.5 font-mono text-[11px] font-medium tracking-normal text-onimisea-text-secondary no-underline transition-[background,border-color,color] duration-200 hover:border-onimisea-signal hover:bg-onimisea-signal/[0.08] hover:text-onimisea-signal [&_svg]:size-[13px] [&_svg]:stroke-2"
+              className="inline-flex min-h-11 max-w-full items-center gap-[7px] rounded-button border border-white/[0.09] bg-white/[0.04] px-4 py-2.5 font-mono text-[11px] font-medium tracking-normal text-onimisea-text-secondary no-underline transition-[background,border-color,color] duration-200 hover:border-onimisea-signal hover:bg-onimisea-signal/[0.08] hover:text-onimisea-signal max-sm:w-full [&_svg]:size-[13px] [&_svg]:shrink-0 [&_svg]:stroke-2"
             >
               <Icon name="network" />
-              github.com/Onimisea
+              <span className="min-w-0 truncate">github.com/Onimisea</span>
             </a>
             <a
               href="tel:+2348034023726"
-              className="inline-flex min-h-11 items-center gap-[7px] rounded-button border border-white/[0.09] bg-white/[0.04] px-4 py-2.5 font-mono text-[11px] font-medium tracking-normal text-onimisea-text-secondary no-underline transition-[background,border-color,color] duration-200 hover:border-onimisea-signal hover:bg-onimisea-signal/[0.08] hover:text-onimisea-signal [&_svg]:size-[13px] [&_svg]:stroke-2"
+              className="inline-flex min-h-11 max-w-full items-center gap-[7px] rounded-button border border-white/[0.09] bg-white/[0.04] px-4 py-2.5 font-mono text-[11px] font-medium tracking-normal text-onimisea-text-secondary no-underline transition-[background,border-color,color] duration-200 hover:border-onimisea-signal hover:bg-onimisea-signal/[0.08] hover:text-onimisea-signal max-sm:w-full [&_svg]:size-[13px] [&_svg]:shrink-0 [&_svg]:stroke-2"
             >
               <Icon name="signal" />
-              +234 803 402 3726
+              <span className="min-w-0 truncate">+234 803 402 3726</span>
             </a>
           </div>
         </div>
