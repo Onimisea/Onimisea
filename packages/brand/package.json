@@ -1,0 +1,29 @@
+{
+  "name": "@workspace/brand",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "next": ">=16",
+    "react": ">=19",
+    "react-dom": ">=19"
+  },
+  "devDependencies": {
+    "@workspace/eslint-config": "*",
+    "@workspace/typescript-config": "*",
+    "eslint": "^9",
+    "next": "16.2.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "typescript": "^5"
+  },
+  "exports": {
+    "./next/fonts": "./src/next/fonts.ts",
+    "./next/metadata": "./src/next/metadata.ts",
+    "./assets/*": "./src/assets/*"
+  }
+}

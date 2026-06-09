@@ -15,7 +15,16 @@
 
 # next.js
 /.next/
+**/.next/
 /out/
+
+# turbo
+/.turbo/
+**/.turbo/
+
+# cloudflare/open-next generated output
+**/.open-next/
+**/.wrangler/
 
 # production
 /build
@@ -39,3 +48,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
+.vscode
+
+frontend-ai-workflow
+
+# apps/marketing/.
