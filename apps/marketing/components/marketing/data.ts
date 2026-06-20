@@ -169,6 +169,25 @@ export const workItems = [
 
 export const products = [
   {
+    name: "OWU",
+    status: "Completed",
+    eyebrow: "Completed Fashion Operations Product · AI Integration Planned",
+    description:
+      "Fashion business management platform for Nigerian bridal, asoebi, menswear, and bespoke brands. Replaces measurement books and scattered WhatsApp follow-ups with digital client profiles, a measurement vault, consultations, order tracking, invoices, transactions, payment reminders, messaging, and a branded customer portal, with AI-assisted operations planned next.",
+    tags: [
+      "Fashion Operations",
+      "Customer Portal",
+      "Measurements",
+      "Orders & Invoices",
+      "AI Integration Planned",
+      "Next.js",
+      "TypeScript",
+    ],
+    visual: "fashion",
+    href: "https://owu.onimisea.com",
+    linkLabel: "Visit OWU →",
+  },
+  {
     name: "Onimisera",
     status: "Completed",
     eyebrow: "Completed Personal AI Product · Solo Founder",
@@ -176,6 +195,8 @@ export const products = [
       "AI-powered learning platform and AI copilot for mastering any subject. Five-level explanation depth, RAG pipelines over academic content, credit-based billing, integrated assessment workflows, and async ingestion built around production-grade learning systems.",
     tags: ["LLMs", "RAG", "pgvector", "Django", "Next.js", "Celery"],
     visual: "learning",
+    href: null,
+    linkLabel: null,
   },
   {
     name: "Oisere",
@@ -191,6 +212,8 @@ export const products = [
       "Response Workflow",
     ],
     visual: "safety",
+    href: null,
+    linkLabel: null,
   },
   {
     name: "OnimiTradeOS",
@@ -200,6 +223,8 @@ export const products = [
       "AI-infused algorithmic trading operating system. Strategy versioning, signal generation, risk decision engine, walk-forward backtesting, and a self-improving AI engine that evaluates, hypothesises, and iterates on trading strategies autonomously in production.",
     tags: ["Algorithmic Trading", "AI Engine", "Django", "Celery", "PostgreSQL"],
     visual: "trading",
+    href: null,
+    linkLabel: null,
   },
 ] as const
 

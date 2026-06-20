@@ -42,7 +42,7 @@ export function Navigation() {
               </a>
               <a
                 href="#contact"
-                className="inline-flex min-h-11 items-center rounded-button bg-onimisea-signal px-[18px] py-[9px] text-[13px] font-bold tracking-normal whitespace-nowrap text-onimisea-cta-ink no-underline transition-[background,transform,box-shadow] duration-200 hover:-translate-y-px hover:bg-onimisea-signal-strong hover:shadow-[0_6px_20px_rgba(14,165,233,0.28)]"
+                className="inline-flex min-h-11 items-center rounded-button bg-onimisea-signal px-[18px] py-[9px] text-[13px] font-bold tracking-normal whitespace-nowrap text-onimisea-cta-ink no-underline transition-[background,transform,box-shadow] duration-200 hover:-translate-y-px hover:bg-onimisea-signal-strong hover:shadow-[0_6px_20px_rgba(0,127,255,0.28)]"
               >
                 Work With Me
               </a>

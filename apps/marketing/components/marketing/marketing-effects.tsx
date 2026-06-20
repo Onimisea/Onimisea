@@ -84,7 +84,7 @@ export function MarketingEffects() {
 
           if (distance < maxDistance) {
             ctx.beginPath()
-            ctx.strokeStyle = `rgba(14,165,233,${(1 - distance / maxDistance) * 0.11})`
+            ctx.strokeStyle = `rgba(0,127,255,${(1 - distance / maxDistance) * 0.11})`
             ctx.lineWidth = 0.8
             ctx.moveTo(first.x, first.y)
             ctx.lineTo(second.x, second.y)
@@ -104,17 +104,17 @@ export function MarketingEffects() {
           const scale = 1 + Math.sin(node.ph) * 0.45
           ctx.beginPath()
           ctx.arc(node.x, node.y, node.r * 6 * scale, 0, Math.PI * 2)
-          ctx.fillStyle = "rgba(14,165,233,.035)"
+          ctx.fillStyle = "rgba(0,127,255,.035)"
           ctx.fill()
           ctx.beginPath()
           ctx.arc(node.x, node.y, node.r * 3.2 * scale, 0, Math.PI * 2)
-          ctx.fillStyle = "rgba(14,165,233,.09)"
+          ctx.fillStyle = "rgba(0,127,255,.09)"
           ctx.fill()
         }
 
         ctx.beginPath()
         ctx.arc(node.x, node.y, node.r, 0, Math.PI * 2)
-        ctx.fillStyle = node.pulse ? "rgba(14,165,233,.92)" : "rgba(14,165,233,.32)"
+        ctx.fillStyle = node.pulse ? "rgba(0,127,255,.92)" : "rgba(0,127,255,.32)"
         ctx.fill()
       })
 
@@ -122,10 +122,10 @@ export function MarketingEffects() {
       const cy = canvasHeight * 0.48
       const time = performance.now() * 0.001
       const fixed = [
-        { x: cx - 210, y: cy + 18, r: 4, c: "14,165,233" },
-        { x: cx - 92, y: cy - 56, r: 5, c: "14,165,233" },
-        { x: cx + 42, y: cy - 22, r: 4, c: "245,158,11" },
-        { x: cx + 154, y: cy + 42, r: 5, c: "14,165,233" },
+        { x: cx - 210, y: cy + 18, r: 4, c: "0,127,255" },
+        { x: cx - 92, y: cy - 56, r: 5, c: "0,127,255" },
+        { x: cx + 42, y: cy - 22, r: 4, c: "255,181,0" },
+        { x: cx + 154, y: cy + 42, r: 5, c: "0,127,255" },
         { x: cx + 235, y: cy - 68, r: 3, c: "34,197,94" },
       ]
 
@@ -137,7 +137,7 @@ export function MarketingEffects() {
         if (!current || !next) continue
 
         ctx.beginPath()
-        ctx.strokeStyle = index === 1 ? "rgba(245,158,11,.32)" : "rgba(14,165,233,.28)"
+        ctx.strokeStyle = index === 1 ? "rgba(255,181,0,.32)" : "rgba(0,127,255,.28)"
         ctx.lineWidth = 1.2
         ctx.moveTo(current.x, current.y)
         ctx.bezierCurveTo(

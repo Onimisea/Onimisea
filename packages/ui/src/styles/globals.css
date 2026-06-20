@@ -57,6 +57,8 @@
   --color-onimisea-text-muted: var(--onimisea-text-muted);
   --color-onimisea-signal: var(--onimisea-signal);
   --color-onimisea-signal-strong: var(--onimisea-signal-strong);
+  --color-onimisea-glow-violet: var(--onimisea-glow-violet);
+  --color-onimisea-glow-deep: var(--onimisea-glow-deep);
   --color-onimisea-cta-ink: var(--onimisea-cta-ink);
   --color-onimisea-judgment: var(--onimisea-judgment);
   --color-onimisea-paper: var(--onimisea-paper);
@@ -98,28 +100,57 @@
   --onimisea-text-secondary: #cbd5e1;
   --onimisea-text-tertiary: #94a3b8;
   --onimisea-text-muted: #7c8da6;
-  --onimisea-signal: #0ea5e9;
-  --onimisea-signal-strong: #0284c7;
+  --onimisea-signal: #007fff;
+  --onimisea-signal-strong: #0066cc;
+  --onimisea-glow-violet: #3219c8;
+  --onimisea-glow-deep: #051550;
   --onimisea-cta-ink: #020617;
-  --onimisea-judgment: #f59e0b;
+  --onimisea-judgment: #ffb500;
   --onimisea-paper: #f8fafc;
   --onimisea-ink: #0b1121;
   --onimisea-line-light: #cbd5e1;
 
-  --onimisea-glow-signal-soft: rgba(14, 165, 233, 0.07);
-  --onimisea-glow-signal-medium: rgba(14, 165, 233, 0.13);
-  --onimisea-glow-signal-strong: rgba(14, 165, 233, 0.18);
-  --onimisea-glow-hero: radial-gradient(
-    ellipse 42% 34% at 50% 48%,
-    rgba(14, 165, 233, 0.18) 0%,
-    rgba(14, 165, 233, 0.07) 34%,
-    transparent 70%
+  --onimisea-glow-signal-soft: rgba(0, 127, 255, 0.07);
+  --onimisea-glow-signal-medium: rgba(0, 127, 255, 0.13);
+  --onimisea-glow-signal-strong: rgba(0, 127, 255, 0.18);
+  --onimisea-glow-violet-soft: rgba(50, 25, 200, 0.07);
+  --onimisea-glow-violet-medium: rgba(50, 25, 200, 0.13);
+  --onimisea-glow-violet-strong: rgba(50, 25, 200, 0.22);
+  --onimisea-glow-deep-soft: rgba(5, 21, 80, 0.18);
+  --onimisea-glow-deep-medium: rgba(5, 21, 80, 0.34);
+  --onimisea-glow-deep-strong: rgba(5, 21, 80, 0.58);
+  --onimisea-glow-hero:
+    radial-gradient(
+      ellipse 42% 34% at 50% 48%,
+      rgba(50, 25, 200, 0.22) 0%,
+      rgba(50, 25, 200, 0.065) 38%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 58% 48% at 45% 58%,
+      rgba(5, 21, 80, 0.58) 0%,
+      rgba(5, 21, 80, 0.15) 48%,
+      transparent 76%
+    );
+  --onimisea-glow-section:
+    radial-gradient(
+      ellipse 46% 54% at 50% 48%,
+      rgba(50, 25, 200, 0.13) 0%,
+      rgba(50, 25, 200, 0.04) 42%,
+      transparent 76%
+    ),
+    radial-gradient(ellipse 58% 62% at 42% 54%, rgba(5, 21, 80, 0.34) 0%, transparent 74%);
+  --onimisea-glow-card-soft: radial-gradient(
+    ellipse 84% 74% at 50% 0%,
+    rgba(50, 25, 200, 0.07) 0%,
+    rgba(5, 21, 80, 0.18) 46%,
+    transparent 82%
   );
-  --onimisea-glow-section: radial-gradient(
-    ellipse 46% 54% at 50% 48%,
-    rgba(14, 165, 233, 0.075) 0%,
-    rgba(14, 165, 233, 0.028) 38%,
-    transparent 76%
+  --onimisea-glow-card: radial-gradient(
+    ellipse 84% 74% at 50% 0%,
+    rgba(50, 25, 200, 0.15) 0%,
+    rgba(5, 21, 80, 0.24) 46%,
+    transparent 82%
   );
 
   --onimisea-radius-button: 12px;
@@ -176,7 +207,7 @@
 
 html {
   color-scheme: dark;
-  scrollbar-color: rgba(14, 165, 233, 0.72) rgba(6, 10, 17, 0.96);
+  scrollbar-color: rgba(0, 127, 255, 0.72) rgba(6, 10, 17, 0.96);
 }
 
 @layer base {
@@ -206,7 +237,7 @@ html {
   }
 
   ::selection {
-    background: rgba(14, 165, 233, 0.28);
+    background: rgba(0, 127, 255, 0.28);
     color: var(--onimisea-text-primary);
   }
 
@@ -214,6 +245,26 @@ html {
     outline: 2px solid var(--onimisea-signal);
     outline-offset: 3px;
   }
+}
+
+.onimisea-card-glow {
+  background: var(--onimisea-glow-card-soft), var(--onimisea-surface);
+}
+
+.onimisea-card-glow:hover {
+  background: var(--onimisea-glow-card), var(--onimisea-surface);
+}
+
+.onimisea-process-card-glow {
+  background:
+    var(--onimisea-glow-card-soft),
+    linear-gradient(180deg, rgba(26, 35, 55, 0.88), rgba(17, 24, 39, 0.98));
+}
+
+.onimisea-process-card-glow:hover {
+  background:
+    var(--onimisea-glow-card),
+    linear-gradient(180deg, rgba(26, 35, 55, 0.88), rgba(17, 24, 39, 0.98));
 }
 
 @keyframes onimisea-pulse-dot {

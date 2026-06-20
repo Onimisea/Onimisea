@@ -29,7 +29,7 @@ export function MarketingHome() {
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none fixed top-0 left-0 z-[240] h-[3px] w-full origin-left scale-x-0 bg-[linear-gradient(90deg,var(--onimisea-signal),#7dd3fc,var(--onimisea-signal))] shadow-[0_0_18px_rgba(14,165,233,0.45)] will-change-transform"
+        className="pointer-events-none fixed top-0 left-0 z-[240] h-[3px] w-full origin-left scale-x-0 bg-[linear-gradient(90deg,var(--onimisea-signal),#99ccff,var(--onimisea-signal))] shadow-[0_0_18px_rgba(0,127,255,0.45)] will-change-transform"
         id="scroll-progress"
         aria-hidden="true"
       />
