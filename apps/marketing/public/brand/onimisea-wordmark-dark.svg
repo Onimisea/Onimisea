@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-8 8 392 100" fill="none">
-  <circle cx="44" cy="58" r="40" stroke="#007FFF" stroke-width="6"/>
-  <circle cx="44" cy="58" r="29" stroke="#007FFF" stroke-width="3" stroke-opacity=".45" stroke-dasharray="7 6"/>
-  <line x1="-6" y1="46" x2="4" y2="46" stroke="#007FFF" stroke-width="4" stroke-opacity=".7"/>
-  <line x1="4" y1="46" x2="100" y2="46" stroke="#007FFF" stroke-width="4"/>
-  <text x="88" y="88" fill="#0B1121" font-family="DM Sans, Inter, Arial, sans-serif" font-size="86" font-weight="700" letter-spacing="-4">nimisea</text>
-  <circle cx="100" cy="46" r="17" fill="#007FFF" fill-opacity=".07"/>
-  <circle cx="100" cy="46" r="10.5" fill="#007FFF" fill-opacity=".16"/>
-  <circle cx="100" cy="46" r="6" fill="#007FFF"/>
+  <circle cx="44" cy="58" r="40" stroke="#872F18" stroke-width="6"/>
+  <circle cx="44" cy="58" r="29" stroke="#872F18" stroke-width="3" stroke-opacity=".45" stroke-dasharray="7 6"/>
+  <line x1="-6" y1="46" x2="4" y2="46" stroke="#872F18" stroke-width="4" stroke-opacity=".7"/>
+  <line x1="4" y1="46" x2="100" y2="46" stroke="#872F18" stroke-width="4"/>
+  <text x="88" y="88" fill="#0B0806" font-family="DM Sans, system-ui, sans-serif" font-size="86" font-weight="700" letter-spacing="-4">nimisea</text>
+  <circle cx="100" cy="46" r="17" fill="#872F18" fill-opacity=".07"/>
+  <circle cx="100" cy="46" r="10.5" fill="#872F18" fill-opacity=".16"/>
+  <circle cx="100" cy="46" r="6" fill="#872F18"/>
 </svg>

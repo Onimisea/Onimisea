@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@opennextjs/cloudflare": "^1.19.11",
+    "@workspace/api": "*",
     "@workspace/brand": "*",
     "@workspace/ui": "*",
     "clsx": "^2.1.1",

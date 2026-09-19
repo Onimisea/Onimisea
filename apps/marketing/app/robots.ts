@@ -5,7 +5,8 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: "*",
-      allow: "/",
+      allow: ["/", "/blog", "/blog/"],
+      disallow: ["/api/"],
     },
     sitemap: `${onimiseaSite.url}/sitemap.xml`,
     host: onimiseaSite.url,

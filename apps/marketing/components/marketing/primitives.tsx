@@ -1,52 +1,17 @@
 import { cn } from "@workspace/ui/lib/utils"
 import Image from "next/image"
-import type { ReactNode, SVGProps } from "react"
+import type { ReactNode } from "react"
 
-export function Wordmark(props: SVGProps<SVGSVGElement>) {
+export function Wordmark({ className }: Readonly<{ className?: string }>) {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="-8 8 392 100"
-      fill="none"
+    <Image
+      src="/brand/onimisea-wordmark.svg"
+      alt=""
+      width={183}
+      height={40}
       aria-hidden="true"
-      focusable="false"
-      {...props}
-    >
-      <circle cx="44" cy="58" r="40" stroke="#007FFF" strokeWidth="6" />
-      <circle
-        cx="44"
-        cy="58"
-        r="29"
-        stroke="#007FFF"
-        strokeDasharray="7 6"
-        strokeOpacity=".45"
-        strokeWidth="3"
-      />
-      <line
-        x1="-6"
-        x2="4"
-        y1="46"
-        y2="46"
-        stroke="#007FFF"
-        strokeOpacity=".7"
-        strokeWidth="4"
-      />
-      <line x1="4" x2="100" y1="46" y2="46" stroke="#007FFF" strokeWidth="4" />
-      <text
-        x="88"
-        y="88"
-        fill="#F8FAFC"
-        fontFamily="DM Sans,Inter,Arial,sans-serif"
-        fontSize="86"
-        fontWeight="700"
-        letterSpacing="-4"
-      >
-        nimisea
-      </text>
-      <circle cx="100" cy="46" r="17" fill="#007FFF" fillOpacity=".07" />
-      <circle cx="100" cy="46" r="10.5" fill="#007FFF" fillOpacity=".16" />
-      <circle cx="100" cy="46" r="6" fill="#007FFF" />
-    </svg>
+      className={className}
+    />
   )
 }
 
@@ -56,11 +21,11 @@ export function SectionLabel({ children }: Readonly<{ children: ReactNode }>) {
       className="mb-12 flex translate-y-0 items-center gap-3 opacity-100 transition-[opacity,transform] duration-700 ease-out data-[animate-pending=true]:translate-y-5 data-[animate-pending=true]:opacity-0 data-[revealed=true]:translate-y-0 data-[revealed=true]:opacity-100 motion-reduce:translate-y-0 motion-reduce:opacity-100 motion-reduce:transition-none"
       data-animate="reveal"
     >
-      <span className="font-mono text-[10px] font-medium whitespace-nowrap text-onimisea-signal uppercase">
+      <span className="font-mono text-[10px] font-medium whitespace-nowrap text-onimisea-saharan-gold uppercase">
         {children}
       </span>
       <span
-        className="h-px flex-1 bg-[linear-gradient(to_right,rgba(0,127,255,0.3),transparent)]"
+        className="h-px flex-1 bg-[linear-gradient(to_right,rgba(212,144,15,0.3),transparent)]"
         aria-hidden="true"
       />
     </div>
@@ -77,9 +42,10 @@ export function Tag({
         "inline-block rounded-compact border px-[9px] py-[3px] font-mono text-[10px] font-medium tracking-normal",
         tone === "neutral" &&
           "border-white/[0.08] bg-white/[0.04] text-onimisea-text-tertiary",
-        tone === "good" && "border-green-400/15 bg-green-500/[0.07] text-green-400",
+        tone === "good" &&
+          "border-onimisea-saharan-gold/25 bg-onimisea-saharan-gold/[0.08] text-onimisea-saharan-gold",
         tone === "default" &&
-          "border-onimisea-signal/15 bg-onimisea-signal/[0.08] text-onimisea-signal"
+          "border-onimisea-laterite/15 bg-onimisea-laterite/[0.08] text-onimisea-laterite"
       )}
     >
       {children}
@@ -103,9 +69,9 @@ export function Icon({ name }: Readonly<{ name: string }>) {
           <rect x="2" y="3" width="20" height="5" rx="1.5" />
           <rect x="2" y="10" width="20" height="5" rx="1.5" />
           <rect x="2" y="17" width="20" height="5" rx="1.5" />
-          <circle cx="6" cy="5.5" r=".9" fill="#007FFF" stroke="none" />
-          <circle cx="6" cy="12.5" r=".9" fill="#007FFF" stroke="none" />
-          <circle cx="6" cy="19.5" r=".9" fill="#007FFF" stroke="none" />
+          <circle cx="6" cy="5.5" r=".9" fill="#872F18" stroke="none" />
+          <circle cx="6" cy="12.5" r=".9" fill="#872F18" stroke="none" />
+          <circle cx="6" cy="19.5" r=".9" fill="#872F18" stroke="none" />
         </svg>
       )
     case "ai":
@@ -230,7 +196,7 @@ export function ProductVisual({ type }: Readonly<{ type: string }>) {
           cx="130"
           cy="64"
           r="42"
-          stroke="#007FFF"
+          stroke="#872F18"
           strokeDasharray="5 5"
           strokeOpacity=".28"
         />
@@ -238,28 +204,28 @@ export function ProductVisual({ type }: Readonly<{ type: string }>) {
           cx="130"
           cy="64"
           r="24"
-          stroke="#007FFF"
+          stroke="#872F18"
           strokeOpacity=".38"
           strokeWidth="1.2"
         />
-        <circle cx="130" cy="64" r="7" fill="#007FFF" />
+        <circle cx="130" cy="64" r="7" fill="#872F18" />
         <path
           d="M130 64 C100 28 58 34 42 62 C32 80 42 102 66 106"
-          stroke="#007FFF"
+          stroke="#872F18"
           strokeOpacity=".34"
           fill="none"
         />
         <path
           d="M130 64 C160 28 202 34 218 62 C228 80 218 102 194 106"
-          stroke="#007FFF"
+          stroke="#872F18"
           strokeOpacity=".34"
           fill="none"
         />
-        <circle cx="66" cy="106" r="5" fill="#FFB500" fillOpacity=".75" />
-        <circle cx="194" cy="106" r="5" fill="#22C55E" fillOpacity=".75" />
-        <circle cx="42" cy="62" r="4" fill="#007FFF" fillOpacity=".55" />
-        <circle cx="218" cy="62" r="4" fill="#007FFF" fillOpacity=".55" />
-        <path d="M130 31 l8 14 h-16 l8-14z" fill="#FFB500" fillOpacity=".55" />
+        <circle cx="66" cy="106" r="5" fill="#D4900F" fillOpacity=".75" />
+        <circle cx="194" cy="106" r="5" fill="#D4900F" fillOpacity=".75" />
+        <circle cx="42" cy="62" r="4" fill="#872F18" fillOpacity=".55" />
+        <circle cx="218" cy="62" r="4" fill="#872F18" fillOpacity=".55" />
+        <path d="M130 31 l8 14 h-16 l8-14z" fill="#D4900F" fillOpacity=".55" />
       </svg>
     )
   }
@@ -274,24 +240,24 @@ export function ProductVisual({ type }: Readonly<{ type: string }>) {
         aria-hidden="true"
         focusable="false"
       >
-        <line x1="18" y1="120" x2="242" y2="120" stroke="#22C55E" strokeOpacity=".18" />
-        <line x1="18" y1="88" x2="242" y2="88" stroke="#22C55E" strokeOpacity=".12" />
-        <line x1="18" y1="56" x2="242" y2="56" stroke="#22C55E" strokeOpacity=".12" />
-        <line x1="18" y1="24" x2="242" y2="24" stroke="#22C55E" strokeOpacity=".12" />
+        <line x1="18" y1="120" x2="242" y2="120" stroke="#D4900F" strokeOpacity=".18" />
+        <line x1="18" y1="88" x2="242" y2="88" stroke="#D4900F" strokeOpacity=".12" />
+        <line x1="18" y1="56" x2="242" y2="56" stroke="#D4900F" strokeOpacity=".12" />
+        <line x1="18" y1="24" x2="242" y2="24" stroke="#D4900F" strokeOpacity=".12" />
         <polygon
           points="18,108 52,88 78,96 108,56 138,66 164,32 192,42 218,22 242,36 242,120 18,120"
-          fill="#22C55E"
+          fill="#D4900F"
           fillOpacity=".05"
         />
         <polyline
           points="18,108 52,88 78,96 108,56 138,66 164,32 192,42 218,22 242,36"
-          stroke="#22C55E"
+          stroke="#D4900F"
           strokeOpacity=".6"
           strokeWidth="1.8"
           fill="none"
         />
-        <circle cx="164" cy="32" r="4" fill="#007FFF" fillOpacity=".85" />
-        <circle cx="218" cy="22" r="4" fill="#007FFF" fillOpacity=".85" />
+        <circle cx="164" cy="32" r="4" fill="#872F18" fillOpacity=".85" />
+        <circle cx="218" cy="22" r="4" fill="#872F18" fillOpacity=".85" />
       </svg>
     )
   }
@@ -309,26 +275,26 @@ export function ProductVisual({ type }: Readonly<{ type: string }>) {
         cx="130"
         cy="65"
         r="22"
-        stroke="#007FFF"
+        stroke="#872F18"
         strokeDasharray="4 3.5"
         strokeWidth="1.5"
       />
-      <circle cx="130" cy="65" r="10" fill="#007FFF" fillOpacity=".25" />
-      <circle cx="130" cy="65" r="5" fill="#007FFF" />
+      <circle cx="130" cy="65" r="10" fill="#872F18" fillOpacity=".25" />
+      <circle cx="130" cy="65" r="5" fill="#872F18" />
       {learningNodes.map((node) => (
         <circle
           key={`${node.cx}-${node.cy}`}
           cx={node.cx}
           cy={node.cy}
           r={node.r}
-          fill="#007FFF"
+          fill="#872F18"
           fillOpacity={node.fillOpacity}
         />
       ))}
-      <line x1="130" y1="55" x2="70" y2="37" stroke="#007FFF" strokeOpacity=".3" />
-      <line x1="130" y1="55" x2="190" y2="37" stroke="#007FFF" strokeOpacity=".3" />
-      <line x1="130" y1="75" x2="50" y2="83" stroke="#007FFF" strokeOpacity=".2" />
-      <line x1="130" y1="75" x2="210" y2="83" stroke="#007FFF" strokeOpacity=".2" />
+      <line x1="130" y1="55" x2="70" y2="37" stroke="#872F18" strokeOpacity=".3" />
+      <line x1="130" y1="55" x2="190" y2="37" stroke="#872F18" strokeOpacity=".3" />
+      <line x1="130" y1="75" x2="50" y2="83" stroke="#872F18" strokeOpacity=".2" />
+      <line x1="130" y1="75" x2="210" y2="83" stroke="#872F18" strokeOpacity=".2" />
     </svg>
   )
 }

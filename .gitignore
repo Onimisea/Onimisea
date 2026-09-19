@@ -13,6 +13,7 @@
 # testing
 /coverage
 /output
+/test-results
 
 # next.js
 /.next/
@@ -53,6 +54,9 @@ next-env.d.ts
 
 .vscode
 
-frontend-ai-workflow
+# Local AI-agent operating artifacts. Never commit these files.
+/frontend-ai-workflow/
+/backend-ai-workflow/
+/*-ai-workflow-prompt.md
 
 # apps/marketing/.

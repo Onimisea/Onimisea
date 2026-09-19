@@ -5,7 +5,7 @@ export function Hero() {
       className="relative flex min-h-[96vh] flex-col justify-center overflow-hidden px-0 pt-[118px] pb-[78px] max-md:min-h-[82vh] max-md:pt-[90px] max-md:pb-[42px] md:max-lg:min-h-[82vh]"
     >
       <div
-        className="pointer-events-none absolute inset-0 z-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] [mask-image:radial-gradient(ellipse_92%_72%_at_50%_48%,#000_0%,rgba(0,0,0,0.72)_54%,rgba(0,0,0,0.24)_76%,transparent_94%)] bg-[length:44px_44px]"
+        className="pointer-events-none absolute inset-0 z-0 bg-[linear-gradient(rgba(235,229,218,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(235,229,218,0.04)_1px,transparent_1px)] [mask-image:radial-gradient(ellipse_92%_72%_at_50%_48%,#000_0%,rgba(0,0,0,0.72)_54%,rgba(0,0,0,0.24)_76%,transparent_94%)] bg-[length:44px_44px]"
         aria-hidden="true"
       />
       <div
@@ -34,8 +34,9 @@ export function Hero() {
           </p>
           <div className="flex animate-[onimisea-hero-rise_0.72s_cubic-bezier(0.2,0.8,0.2,1)_forwards] flex-wrap items-center justify-center gap-3 opacity-0 [animation-delay:0.2s] motion-reduce:animate-none motion-reduce:opacity-100 max-sm:w-full">
             <a
-              href="#contact"
-              className="inline-flex min-h-12 items-center justify-center rounded-button bg-onimisea-signal px-4 py-[14px] text-[13px] font-bold tracking-normal whitespace-nowrap text-onimisea-cta-ink no-underline transition-[background,transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:bg-onimisea-signal-strong hover:shadow-[0_10px_28px_rgba(0,127,255,0.3)] max-sm:w-full sm:px-[26px] sm:text-sm"
+              href="/contact"
+              data-contact-modal
+              className="inline-flex min-h-12 items-center justify-center rounded-button bg-onimisea-laterite px-4 py-[14px] text-[13px] font-bold tracking-normal whitespace-nowrap text-onimisea-harmattan no-underline transition-[background,transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:bg-onimisea-laterite/90 hover:shadow-[0_10px_28px_rgba(135,47,24,0.3)] max-sm:w-full sm:px-[26px] sm:text-sm"
             >
               Discuss Remote Engagement
             </a>

@@ -39,7 +39,7 @@ export const onimiseaMetadataBase = new URL(onimiseaSite.url)
 
 export const onimiseaViewport: Viewport = {
   colorScheme: "dark",
-  themeColor: "#060A11",
+  themeColor: "#0B0806",
   width: "device-width",
   initialScale: 1,
 }
@@ -112,8 +112,8 @@ export function createOnimiseaManifest(): MetadataRoute.Manifest {
     start_url: "/",
     scope: "/",
     display: "standalone",
-    background_color: "#060A11",
-    theme_color: "#060A11",
+    background_color: "#0B0806",
+    theme_color: "#0B0806",
     icons: [
       {
         src: "/android-chrome-192x192.png",

@@ -4,14 +4,14 @@ import { Wordmark } from "../primitives"
 const wrapClass = "mx-auto max-w-[1200px] px-5 sm:px-8 xl:max-w-[1240px]"
 
 const navLinkClass =
-  "relative inline-flex min-h-11 min-w-11 items-center text-[13px] font-medium tracking-normal text-onimisea-text-secondary no-underline transition-colors duration-200 after:absolute after:inset-x-0 after:-bottom-2 after:h-px after:origin-left after:scale-x-0 after:bg-onimisea-signal after:opacity-55 after:transition-transform after:duration-200 hover:text-onimisea-text-primary data-[active=true]:text-onimisea-text-primary data-[active=true]:after:scale-x-100"
+  "relative inline-flex min-h-11 min-w-11 items-center text-[13px] font-medium tracking-normal text-onimisea-text-secondary no-underline transition-colors duration-200 after:absolute after:inset-x-0 after:-bottom-2 after:h-px after:origin-left after:scale-x-0 after:bg-onimisea-laterite after:opacity-55 after:transition-transform after:duration-200 hover:text-onimisea-text-primary data-[active=true]:text-onimisea-text-primary data-[active=true]:after:scale-x-100"
 
 export function Navigation() {
   return (
     <>
       <nav
         id="nav"
-        className="fixed inset-x-0 top-0 z-[100] border-b border-transparent py-[18px] transition-[background,padding,border-color] duration-300 data-[scrolled=true]:border-onimisea-signal/[0.08] data-[scrolled=true]:bg-onimisea-base/95 data-[scrolled=true]:py-[13px] data-[scrolled=true]:backdrop-blur-[14px]"
+        className="fixed inset-x-0 top-0 z-[100] border-b border-transparent py-[18px] transition-[background,padding,border-color] duration-300 data-[scrolled=true]:border-onimisea-laterite/[0.08] data-[scrolled=true]:bg-onimisea-base/95 data-[scrolled=true]:py-[13px] data-[scrolled=true]:backdrop-blur-[14px]"
       >
         <div className={wrapClass}>
           <div className="flex items-center justify-between">
@@ -36,13 +36,13 @@ export function Navigation() {
                 href="https://github.com/Onimisea"
                 target="_blank"
                 rel="noreferrer"
-                className="hidden min-h-11 items-center rounded-button border border-white/10 bg-transparent px-4 py-2 text-[13px] font-medium tracking-normal text-onimisea-text-secondary no-underline transition-[background,border-color,color] duration-200 hover:border-onimisea-signal/35 hover:bg-onimisea-signal/[0.05] hover:text-onimisea-text-primary nav:inline-flex"
+                className="hidden min-h-11 items-center rounded-button border border-white/10 bg-transparent px-4 py-2 text-[13px] font-medium tracking-normal text-onimisea-text-secondary no-underline transition-[background,border-color,color] duration-200 hover:border-onimisea-laterite/35 hover:bg-onimisea-laterite/[0.05] hover:text-onimisea-text-primary nav:inline-flex"
               >
                 GitHub
               </a>
               <a
                 href="#contact"
-                className="inline-flex min-h-11 items-center rounded-button bg-onimisea-signal px-[18px] py-[9px] text-[13px] font-bold tracking-normal whitespace-nowrap text-onimisea-cta-ink no-underline transition-[background,transform,box-shadow] duration-200 hover:-translate-y-px hover:bg-onimisea-signal-strong hover:shadow-[0_6px_20px_rgba(0,127,255,0.28)]"
+                className="inline-flex min-h-11 items-center rounded-button bg-onimisea-laterite px-[18px] py-[9px] text-[13px] font-bold tracking-normal whitespace-nowrap text-onimisea-harmattan no-underline transition-[background,transform,box-shadow] duration-200 hover:-translate-y-px hover:bg-onimisea-laterite/90 hover:shadow-[0_6px_20px_rgba(135,47,24,0.28)]"
               >
                 Work With Me
               </a>
@@ -85,7 +85,7 @@ export function Navigation() {
             aria-hidden="true"
           />
         </button>
-        {[...navItems, { href: "#contact", label: "Contact" }].map((item) => (
+        {navItems.map((item) => (
           <a
             key={item.href}
             href={item.href}

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next"
 import { createOnimiseaMetadata, onimiseaViewport } from "@workspace/brand/next/metadata"
 import { onimiseaFontClassName as fontClassName } from "@workspace/brand/next/fonts"
+import { ContactModalProvider } from "@/components/visitor/contact-modal-provider"
 
 import "@workspace/ui/globals.css"
 
@@ -15,7 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={fontClassName}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <ContactModalProvider />
+      </body>
     </html>
   )
 }

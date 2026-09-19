@@ -21,10 +21,12 @@
   --breakpoint-lg2: 1280px;
   --breakpoint-xl: 1440px;
 
-  --font-sans: var(--font-dm-sans);
+  --font-sans: var(--font-ibm-plex-sans);
   --font-display: var(--font-dm-sans);
   --font-heading: var(--font-dm-sans);
-  --font-mono: var(--font-jetbrains-mono);
+  --font-body: var(--font-ibm-plex-sans);
+  --font-mono: var(--font-ibm-plex-mono);
+  --font-serif: var(--font-instrument-serif);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -47,6 +49,10 @@
   --color-ring: var(--ring);
 
   --color-onimisea-void: var(--onimisea-void);
+  --color-onimisea-obsidian: var(--onimisea-obsidian);
+  --color-onimisea-harmattan: var(--onimisea-harmattan);
+  --color-onimisea-laterite: var(--onimisea-laterite);
+  --color-onimisea-saharan-gold: var(--onimisea-saharan-gold);
   --color-onimisea-base: var(--onimisea-base);
   --color-onimisea-deep: var(--onimisea-deep);
   --color-onimisea-surface: var(--onimisea-surface);
@@ -91,65 +97,73 @@
 }
 
 :root {
-  --onimisea-void: #060a11;
-  --onimisea-base: #080c14;
-  --onimisea-deep: #0b1121;
-  --onimisea-surface: #111827;
-  --onimisea-raised: #1a2337;
-  --onimisea-text-primary: #f8fafc;
-  --onimisea-text-secondary: #cbd5e1;
-  --onimisea-text-tertiary: #94a3b8;
-  --onimisea-text-muted: #7c8da6;
-  --onimisea-signal: #007fff;
-  --onimisea-signal-strong: #0066cc;
-  --onimisea-glow-violet: #3219c8;
-  --onimisea-glow-deep: #051550;
-  --onimisea-cta-ink: #020617;
-  --onimisea-judgment: #ffb500;
-  --onimisea-paper: #f8fafc;
-  --onimisea-ink: #0b1121;
-  --onimisea-line-light: #cbd5e1;
+  /* Brand Identity v2.0 Colors */
+  --onimisea-obsidian: #0B0806;
+  --onimisea-saharan-gold: #D4900F;
+  --onimisea-laterite: #872F18;
+  --onimisea-harmattan: #EBE5DA;
 
-  --onimisea-glow-signal-soft: rgba(0, 127, 255, 0.07);
-  --onimisea-glow-signal-medium: rgba(0, 127, 255, 0.13);
-  --onimisea-glow-signal-strong: rgba(0, 127, 255, 0.18);
-  --onimisea-glow-violet-soft: rgba(50, 25, 200, 0.07);
-  --onimisea-glow-violet-medium: rgba(50, 25, 200, 0.13);
-  --onimisea-glow-violet-strong: rgba(50, 25, 200, 0.22);
-  --onimisea-glow-deep-soft: rgba(5, 21, 80, 0.18);
-  --onimisea-glow-deep-medium: rgba(5, 21, 80, 0.34);
-  --onimisea-glow-deep-strong: rgba(5, 21, 80, 0.58);
+  /* Legacy color names mapped to brand palette */
+  --onimisea-void: var(--onimisea-obsidian);
+  --onimisea-base: var(--onimisea-obsidian);
+  --onimisea-deep: var(--onimisea-obsidian);
+  --onimisea-surface: #181410;
+  --onimisea-raised: #181410;
+  --onimisea-text-primary: var(--onimisea-harmattan);
+  --onimisea-text-secondary: rgba(235, 229, 218, 0.7);
+  --onimisea-text-tertiary: rgba(235, 229, 218, 0.5);
+  --onimisea-text-muted: rgba(235, 229, 218, 0.38);
+  --onimisea-signal: var(--onimisea-laterite);
+  --onimisea-signal-strong: var(--onimisea-laterite);
+  --onimisea-glow-violet: var(--onimisea-laterite);
+  --onimisea-glow-deep: var(--onimisea-obsidian);
+  --onimisea-cta-ink: var(--onimisea-harmattan);
+  --onimisea-judgment: var(--onimisea-saharan-gold);
+  --onimisea-paper: var(--onimisea-harmattan);
+  --onimisea-ink: var(--onimisea-obsidian);
+  --onimisea-line-light: var(--onimisea-laterite);
+
+  /* Brand Identity v2.0 Glow Effects */
+  --onimisea-glow-signal-soft: rgba(212, 144, 15, 0.07);
+  --onimisea-glow-signal-medium: rgba(212, 144, 15, 0.13);
+  --onimisea-glow-signal-strong: rgba(212, 144, 15, 0.18);
+  --onimisea-glow-laterite-soft: rgba(135, 47, 24, 0.07);
+  --onimisea-glow-laterite-medium: rgba(135, 47, 24, 0.13);
+  --onimisea-glow-laterite-strong: rgba(135, 47, 24, 0.22);
+  --onimisea-glow-deep-soft: rgba(61, 26, 13, 0.18);
+  --onimisea-glow-deep-medium: rgba(61, 26, 13, 0.34);
+  --onimisea-glow-deep-strong: rgba(61, 26, 13, 0.58);
   --onimisea-glow-hero:
     radial-gradient(
       ellipse 42% 34% at 50% 48%,
-      rgba(50, 25, 200, 0.22) 0%,
-      rgba(50, 25, 200, 0.065) 38%,
+      rgba(135, 47, 24, 0.22) 0%,
+      rgba(135, 47, 24, 0.065) 38%,
       transparent 70%
     ),
     radial-gradient(
       ellipse 58% 48% at 45% 58%,
-      rgba(5, 21, 80, 0.58) 0%,
-      rgba(5, 21, 80, 0.15) 48%,
+      rgba(61, 26, 13, 0.58) 0%,
+      rgba(61, 26, 13, 0.15) 48%,
       transparent 76%
     );
   --onimisea-glow-section:
     radial-gradient(
       ellipse 46% 54% at 50% 48%,
-      rgba(50, 25, 200, 0.13) 0%,
-      rgba(50, 25, 200, 0.04) 42%,
+      rgba(135, 47, 24, 0.13) 0%,
+      rgba(135, 47, 24, 0.04) 42%,
       transparent 76%
     ),
-    radial-gradient(ellipse 58% 62% at 42% 54%, rgba(5, 21, 80, 0.34) 0%, transparent 74%);
+    radial-gradient(ellipse 58% 62% at 42% 54%, rgba(61, 26, 13, 0.34) 0%, transparent 74%);
   --onimisea-glow-card-soft: radial-gradient(
     ellipse 84% 74% at 50% 0%,
-    rgba(50, 25, 200, 0.07) 0%,
-    rgba(5, 21, 80, 0.18) 46%,
+    rgba(135, 47, 24, 0.07) 0%,
+    rgba(61, 26, 13, 0.18) 46%,
     transparent 82%
   );
   --onimisea-glow-card: radial-gradient(
     ellipse 84% 74% at 50% 0%,
-    rgba(50, 25, 200, 0.15) 0%,
-    rgba(5, 21, 80, 0.24) 46%,
+    rgba(135, 47, 24, 0.15) 0%,
+    rgba(61, 26, 13, 0.24) 46%,
     transparent 82%
   );
 
@@ -159,13 +173,25 @@
   --onimisea-radius-compact: 10px;
   --onimisea-radius-control: 12px;
 
+  /* Brand Identity v2.0 Spacing System */
   --onimisea-space: 8px;
+  --onimisea-space-1: 4px;
+  --onimisea-space-2: 8px;
+  --onimisea-space-3: 16px;
+  --onimisea-space-4: 24px;
+  --onimisea-space-5: 32px;
+  --onimisea-space-6: 48px;
+  --onimisea-space-7: 64px;
+  --onimisea-space-8: 96px;
+  --onimisea-space-9: 128px;
   --onimisea-gap-masonry: 24px;
   --onimisea-gap-grid: 16px;
 
-  --onimisea-font-display: "DM Sans", Inter, ui-sans-serif, system-ui;
-  --onimisea-font-body: "DM Sans", Inter, ui-sans-serif, system-ui;
-  --onimisea-font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular;
+  /* Brand Identity v2.0 Typography */
+  --onimisea-font-display: "DM Sans", ui-sans-serif, system-ui;
+  --onimisea-font-body: "IBM Plex Sans", ui-sans-serif, system-ui;
+  --onimisea-font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular;
+  --onimisea-font-serif: "Instrument Serif", Georgia, serif;
 
   --onimisea-mark-lead-opacity: 0.7;
   --onimisea-mark-dash-opacity: 0.45;
@@ -189,10 +215,10 @@
   --muted-foreground: var(--onimisea-text-muted);
   --accent: var(--onimisea-signal);
   --accent-foreground: var(--onimisea-cta-ink);
-  --destructive: #ef4444;
+  --destructive: var(--onimisea-laterite);
   --destructive-foreground: var(--onimisea-text-primary);
-  --border: rgba(248, 250, 252, 0.09);
-  --input: rgba(248, 250, 252, 0.11);
+  --border: rgba(235, 229, 218, 0.12);
+  --input: rgba(235, 229, 218, 0.12);
   --ring: var(--onimisea-signal);
   --radius: 15px;
   --sidebar: var(--onimisea-surface);
@@ -201,13 +227,13 @@
   --sidebar-primary-foreground: var(--onimisea-cta-ink);
   --sidebar-accent: var(--onimisea-raised);
   --sidebar-accent-foreground: var(--onimisea-text-primary);
-  --sidebar-border: rgba(248, 250, 252, 0.09);
+  --sidebar-border: rgba(235, 229, 218, 0.12);
   --sidebar-ring: var(--onimisea-signal);
 }
 
 html {
   color-scheme: dark;
-  scrollbar-color: rgba(0, 127, 255, 0.72) rgba(6, 10, 17, 0.96);
+  scrollbar-color: var(--onimisea-laterite) var(--onimisea-obsidian);
 }
 
 @layer base {
@@ -220,9 +246,9 @@ html {
     overflow-x: hidden;
     background: var(--background);
     color: var(--foreground);
-    font-family: var(--font-dm-sans), Inter, ui-sans-serif, system-ui;
+    font-family: var(--font-ibm-plex-sans), ui-sans-serif, system-ui;
     font-size: 16px;
-    line-height: 1.7;
+    line-height: 1.65;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
@@ -237,7 +263,7 @@ html {
   }
 
   ::selection {
-    background: rgba(0, 127, 255, 0.28);
+    background: rgba(135, 47, 24, 0.72);
     color: var(--onimisea-text-primary);
   }
 
@@ -258,22 +284,22 @@ html {
 .onimisea-process-card-glow {
   background:
     var(--onimisea-glow-card-soft),
-    linear-gradient(180deg, rgba(26, 35, 55, 0.88), rgba(17, 24, 39, 0.98));
+    var(--onimisea-surface);
 }
 
 .onimisea-process-card-glow:hover {
   background:
     var(--onimisea-glow-card),
-    linear-gradient(180deg, rgba(26, 35, 55, 0.88), rgba(17, 24, 39, 0.98));
+    var(--onimisea-surface);
 }
 
 @keyframes onimisea-pulse-dot {
   0%,
   100% {
-    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4);
+    box-shadow: 0 0 0 0 rgba(135, 47, 24, 0.4);
   }
   50% {
-    box-shadow: 0 0 0 5px rgba(34, 197, 94, 0);
+    box-shadow: 0 0 0 5px rgba(135, 47, 24, 0);
   }
 }
 

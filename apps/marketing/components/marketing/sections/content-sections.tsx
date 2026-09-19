@@ -19,16 +19,16 @@ const sectionHeaderClass =
 const sectionTitleClass =
   "max-w-[720px] text-[24px] font-bold leading-[1.12] tracking-normal text-onimisea-text-primary sm2:text-[28px] md:text-[32px] lg:text-[36px]"
 const introClass = "max-w-[540px] text-[15px] leading-[1.7] text-onimisea-text-secondary"
-const blueCardHover =
-  "hover:-translate-y-1 hover:border-onimisea-signal/25 hover:shadow-[0_14px_44px_rgba(0,0,0,0.42)]"
+const lateriteCardHover =
+  "hover:-translate-y-1 hover:border-onimisea-laterite/25 hover:shadow-[0_14px_44px_rgba(0,0,0,0.42)]"
 const cardClass = cn(
   "onimisea-card-glow min-w-0 overflow-hidden rounded-card border border-white/[0.06] transition-[background,border-color,transform,box-shadow] duration-300",
-  blueCardHover
+  lateriteCardHover
 )
 const revealClass =
   "translate-y-0 opacity-100 transition-[opacity,transform,background,border-color,box-shadow] duration-700 ease-out data-[animate-pending=true]:translate-y-5 data-[animate-pending=true]:opacity-0 data-[revealed=true]:translate-y-0 data-[revealed=true]:opacity-100 motion-reduce:translate-y-0 motion-reduce:opacity-100 motion-reduce:transition-none"
 const primaryButtonClass =
-  "inline-flex min-h-12 items-center justify-center rounded-button bg-onimisea-signal px-4 py-[14px] text-[13px] font-bold tracking-normal whitespace-nowrap text-onimisea-cta-ink no-underline transition-[background,transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:bg-onimisea-signal-strong hover:shadow-[0_10px_28px_rgba(0,127,255,0.3)] sm:px-[26px] sm:text-sm"
+  "inline-flex min-h-12 items-center justify-center rounded-button bg-onimisea-laterite px-4 py-[14px] text-[13px] font-bold tracking-normal whitespace-nowrap text-onimisea-harmattan no-underline transition-[background,transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:bg-onimisea-laterite/90 hover:shadow-[0_10px_28px_rgba(135,47,24,0.3)] sm:px-[26px] sm:text-sm"
 
 export function DisciplinesSection() {
   return (
@@ -185,9 +185,7 @@ export function ProductsSection() {
               <div
                 className={cn(
                   "relative flex h-[168px] items-center justify-center overflow-hidden after:pointer-events-none after:absolute after:inset-0 after:bg-[linear-gradient(180deg,transparent_55%,var(--onimisea-surface)_100%)] after:content-[''] [&_svg]:opacity-65",
-                  product.visual === "trading"
-                    ? "bg-[linear-gradient(135deg,var(--onimisea-raised)_0%,#091a10_100%)]"
-                    : "bg-[linear-gradient(135deg,var(--onimisea-raised)_0%,#091834_100%)]"
+                  "bg-onimisea-raised"
                 )}
               >
                 <ProductVisual type={product.visual} />
@@ -257,7 +255,7 @@ export function ProcessSection() {
               key={step}
               className={cn(
                 revealClass,
-                "onimisea-process-card-glow relative z-[1] flex min-h-[172px] flex-col items-start overflow-hidden rounded-card border border-white/[0.07] p-6 text-left before:absolute before:inset-x-0 before:top-0 before:h-0.5 before:bg-[linear-gradient(90deg,var(--onimisea-signal),rgba(0,127,255,0.08))] before:content-[''] after:absolute after:top-[22px] after:right-[22px] after:size-[9px] after:rounded-full after:bg-onimisea-signal after:shadow-[0_0_0_8px_rgba(0,127,255,0.08)] after:content-[''] hover:-translate-y-1 hover:border-onimisea-signal/30 hover:shadow-[0_14px_40px_rgba(0,0,0,0.35)]"
+                "onimisea-process-card-glow relative z-[1] flex min-h-[172px] flex-col items-start overflow-hidden rounded-card border border-onimisea-harmattan/[0.07] p-6 text-left before:absolute before:inset-x-0 before:top-0 before:h-0.5 before:bg-onimisea-laterite before:content-[''] after:absolute after:top-[22px] after:right-[22px] after:size-[9px] after:rounded-full after:bg-onimisea-laterite after:shadow-[0_0_0_8px_rgba(135,47,24,0.16)] after:content-[''] hover:-translate-y-1 hover:border-onimisea-laterite/30 hover:shadow-[0_14px_40px_rgba(0,0,0,0.35)]"
               )}
               data-animate="reveal"
             >
@@ -400,7 +398,7 @@ export function AboutSection() {
                   <span
                     className={cn(
                       "text-[13px] font-semibold text-onimisea-text-primary",
-                      label === "Availability" && "text-green-400"
+                      label === "Availability" && "text-onimisea-saharan-gold"
                     )}
                   >
                     {value}
@@ -463,14 +461,14 @@ export function ContactSection() {
       className={cn(sectionClass, "relative overflow-hidden bg-onimisea-void")}
     >
       <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_55%_70%_at_50%_92%,rgba(50,25,200,0.13)_0%,rgba(5,21,80,0.34)_42%,transparent_82%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_55%_70%_at_50%_92%,rgba(135,47,24,0.16)_0%,rgba(11,8,6,0.34)_42%,transparent_82%)]"
         aria-hidden="true"
       />
       <div className={wrapClass}>
         <div
           className={cn(
             revealClass,
-            "relative z-[1] overflow-hidden rounded-card border border-onimisea-signal/25 bg-[linear-gradient(135deg,rgba(50,25,200,0.13),transparent_34%),var(--onimisea-surface)] p-5 text-left shadow-[0_22px_70px_rgba(0,0,0,0.34)] before:pointer-events-none before:absolute before:inset-0 before:bg-[radial-gradient(ellipse_48%_58%_at_18%_8%,rgba(5,21,80,0.58),transparent_72%)] before:content-[''] sm:p-7 md:p-[54px]"
+            "relative z-[1] overflow-hidden rounded-card border border-onimisea-laterite/25 bg-onimisea-surface p-5 text-left shadow-[0_22px_70px_rgba(0,0,0,0.34)] before:pointer-events-none before:absolute before:inset-0 before:bg-[radial-gradient(ellipse_48%_58%_at_18%_8%,rgba(135,47,24,0.18),transparent_72%)] before:content-[''] sm:p-7 md:p-[54px]"
           )}
           data-animate="reveal"
         >
@@ -484,7 +482,8 @@ export function ContactSection() {
           <div className="relative z-[1] mb-7 flex flex-wrap items-center gap-3">
             <a
               className={cn(primaryButtonClass, "max-md:w-full")}
-              href="mailto:onimisea@gmail.com?subject=Remote%20CTO-level%20engineering%20engagement"
+              href="/contact"
+              data-contact-modal
             >
               Start the technical conversation
             </a>

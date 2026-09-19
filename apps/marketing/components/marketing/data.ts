@@ -11,6 +11,9 @@ type WorkItem = {
 }
 
 export const navItems = [
+  { href: "/work", label: "Work" },
+  { href: "/blog", label: "Blog" },
+  { href: "/contact", label: "Contact" },
   { href: "#disciplines", label: "Value" },
   { href: "#work", label: "Proof" },
   { href: "#products", label: "Products" },
